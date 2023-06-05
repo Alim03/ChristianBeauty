@@ -550,3 +550,5 @@ F:\ChristianBeauty\ChristianBeauty\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Raz
 F:\ChristianBeauty\ChristianBeauty\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 F:\ChristianBeauty\ChristianBeauty\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 F:\ChristianBeauty\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cs
+F:\ChristianBeauty\ChristianBeauty\bin\Debug\net6.0\AutoMapper.dll
+F:\ChristianBeauty\ChristianBeauty\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

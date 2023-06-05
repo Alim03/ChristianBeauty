@@ -1,4 +1,8 @@
 using ChristianBeauty.Data.Context;
+using ChristianBeauty.Data.Interfaces;
+using ChristianBeauty.Data.Interfaces.Materials;
+using ChristianBeauty.Data.Repositories;
+using ChristianBeauty.Data.Repositories.Materials;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,8 +13,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ChristianBeautyDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 
 var app = builder.Build();
 
