@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChristianBeauty.Migrations
 {
     [DbContext(typeof(ChristianBeautyDbContext))]
-    [Migration("20230604162520_AddProductAndGalleryAndCategoryAndMaterial")]
+    [Migration("20230605161905_AddProductAndGalleryAndCategoryAndMaterial")]
     partial class AddProductAndGalleryAndCategoryAndMaterial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,6 @@ namespace ChristianBeauty.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ParentCategoryId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -203,8 +202,7 @@ namespace ChristianBeauty.Migrations
                     b.HasOne("ChristianBeauty.Models.Category", "ParentCategory")
                         .WithMany("Subcategories")
                         .HasForeignKey("ParentCategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("ParentCategory");
                 });

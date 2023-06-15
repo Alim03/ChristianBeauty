@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChristianBeauty.Migrations
 {
     [DbContext(typeof(ChristianBeautyDbContext))]
-    [Migration("20230603231603_AddUserAndUserRoleModel")]
+    [Migration("20230605161733_AddUserAndUserRoleModel")]
     partial class AddUserAndUserRoleModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

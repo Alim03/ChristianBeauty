@@ -1,0 +1,59 @@
+﻿@model List<ChristianBeauty.ViewModels.Categories.CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Index Category</h1>
+</div>
+
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Sub Categories</th>
+
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="playlist">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @if (item.Subcategories.Any())
+                        {
+                            <ul>
+                                @foreach (var subcategory in item.Subcategories)
+                                {
+                                    <li>@subcategory.Name
+                                        <a asp-action="Edit" asp-route-id="@subcategory.Id" asp-route-parentId="@item.Id">Edit</a>|
+                                        <a asp-action="Delete" asp-route-id="@subcategory.Id">Delete</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <p>No subcategories available</p>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="AddSubCategory" asp-route-parentCategoryId="@item.Id">Add Sub Category</a>|
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

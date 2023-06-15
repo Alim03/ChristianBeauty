@@ -1,7 +1,9 @@
 using ChristianBeauty.Data.Context;
 using ChristianBeauty.Data.Interfaces;
+using ChristianBeauty.Data.Interfaces.Categories;
 using ChristianBeauty.Data.Interfaces.Materials;
 using ChristianBeauty.Data.Repositories;
+using ChristianBeauty.Data.Repositories.Categories;
 using ChristianBeauty.Data.Repositories.Materials;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +22,7 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 

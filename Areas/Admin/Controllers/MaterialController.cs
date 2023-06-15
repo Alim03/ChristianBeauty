@@ -44,6 +44,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 var material = new Material() { Name = viewModel.MaterialName };
                 await _repository.AddAsync(material);
                 await _repository.SaveAsync();
+                return RedirectToAction("Index");
             }
             return View(viewModel);
         }
