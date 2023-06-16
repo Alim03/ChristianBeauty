@@ -4,6 +4,7 @@ using ChristianBeauty.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChristianBeauty.Migrations
 {
     [DbContext(typeof(ChristianBeautyDbContext))]
-    partial class ChristianBeautyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230615152650_ChangeColorToNullable")]
+    partial class ChangeColorToNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

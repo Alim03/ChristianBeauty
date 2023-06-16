@@ -1,0 +1,157 @@
+﻿@model ChristianBeauty.ViewModels.Products.EditProductViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Edit Product</h1>
+</div>
+
+
+
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">ویرایش کردن محصول</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <form asp-action="Edit" enctype="multipart/form-data" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Name" type="text" placeholder="نام محصول"
+                                                class="form-control" />
+
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label asp-for="IsFinished"></label>
+                                            <input asp-for="IsFinished" type="checkbox" />
+                                            <span asp-validation-for="IsFinished" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="ProductCode" placeholder="کد محصول" class="form-control" />
+                                            <span asp-validation-for="ProductCode" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Description" placeholder="توضیحات" class="form-control" />
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Size" placeholder="سایز" class="form-control" />
+                                            <span asp-validation-for="Size" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Weight" placeholder="وزن" class="form-control" />
+                                            <span asp-validation-for="Weight" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Features" placeholder="ویژگی ها" class="form-control" />
+                                            <span asp-validation-for="Features" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="OtherDetails" placeholder="جزییات" class="form-control" />
+                                            <span asp-validation-for="OtherDetails" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="DigikalLink" placeholder="لینک دیجیکالا"
+                                                class="form-control" />
+                                            <span asp-validation-for="DigikalLink" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="BasalamLink" placeholder="لینک باسلام"
+                                                class="form-control" />
+                                            <span asp-validation-for="BasalamLink" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Materials</label>
+                                            <select class="form-control" asp-for="SelectedMaterialId"
+                                                asp-items=@Model.Materials>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedMaterialId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 form-group ">
+                                    <button type="submit" class="btn btn-primary">ثبت</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
