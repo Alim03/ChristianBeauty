@@ -17,5 +17,14 @@ namespace ChristianBeauty.Utilities
                 .Select(item => new SelectListItem { Value = item.Id.ToString(), Text = item.Name })
                 .ToList();
         }
+
+        public static List<SelectListItem> ConvertCategoryToSelectListItems(
+            List<Category> categories
+        )
+        {
+            return categories
+                .Select(item => new SelectListItem { Value = item.Id.ToString(), Text = item.Name })
+                .ToList();
+        }
     }
 }

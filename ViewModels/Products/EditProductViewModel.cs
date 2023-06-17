@@ -36,7 +36,10 @@ namespace ChristianBeauty.ViewModels.Products
         [MaxLength(256)]
         public string? BasalamLink { get; set; }
         public int SelectedMaterialId { get; set; }
-
         public List<SelectListItem>? Materials { get; set; }
+        public int SelectedCategoryId { get; set; }
+        public List<SelectListItem>? Categories { get; set; }
+        public int? SelectedSubCategoryId { get; set; }
+        public List<SelectListItem>? SubCategories { get; set; }
     }
 }

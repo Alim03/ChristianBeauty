@@ -25,5 +25,30 @@ namespace ChristianBeauty.Data.Repositories.Categories
                 .Include(c => c.Subcategories)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Category>> GetAllParentCategoriesAsync()
+        {
+            return await Context.Categories.Where(x => x.ParentCategoryId == null).ToListAsync();
+        }
+
+        public IEnumerable<Category> GetAllParentsSubCategories(int id)
+        {
+            return Context.Categories
+                .Where(x => x.ParentCategoryId == id)
+                .Select(x => new Category { Id = x.Id, Name = x.Name, })
+                .ToList();
+        }
+
+        public async Task<bool> IsSubCategoryAsync(int id)
+        {
+            var category = await Context.Categories.SingleOrDefaultAsync(x => x.Id == id);
+            return category.ParentCategoryId != null;
+        }
+
+        public async Task<int> GetSubCategoryParentAsync(int id)
+        {
+            var category = await Context.Categories.SingleOrDefaultAsync(x => x.Id == id);
+            return category.ParentCategoryId.Value;
+        }
     }
 }

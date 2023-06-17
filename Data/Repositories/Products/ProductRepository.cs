@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ChristianBeauty.Data.Context;
 using ChristianBeauty.Data.Interfaces.Products;
 using ChristianBeauty.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChristianBeauty.Data.Repositories.Products
 {
@@ -25,6 +26,35 @@ namespace ChristianBeauty.Data.Repositories.Products
                         }
                 )
                 .ToList();
+        }
+
+        public void AddSubcategoryToProduct(Product product, int subcategoryId)
+        {
+            var subcategory = Context.Categories.FirstOrDefault(c => c.Id == subcategoryId);
+
+            if (product != null && subcategory != null)
+            {
+                product.Category = subcategory;
+            }
+        }
+
+        public void AddSubcategoryToProduct(int productId, int subcategoryId)
+        {
+            var product = Context.Products.FirstOrDefault(p => p.Id == productId);
+            var subcategory = Context.Categories.FirstOrDefault(c => c.Id == subcategoryId);
+
+            if (product != null && subcategory != null)
+            {
+                product.Category = subcategory;
+            }
+        }
+
+        public async Task<Product> GetTestAsync(int id)
+        {
+            return await Context.Products
+                .Include(p => p.Category)
+                .ThenInclude(c => c.Subcategories)
+                .FirstOrDefaultAsync(p => p.Id == id);
         }
     }
 }

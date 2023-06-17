@@ -36,5 +36,12 @@ namespace ChristianBeauty.ViewModels.Products
         public int SelectedMaterialId { get; set; }
 
         public List<SelectListItem>? Materials { get; set; }
+        public int SelectedCategoryId { get; set; }
+
+        public List<SelectListItem>? Categories { get; set; }
+
+        public int? SelectedSubCategoryId { get; set; }
+
+        public List<SelectListItem>? SubCategories { get; set; }
     }
 }

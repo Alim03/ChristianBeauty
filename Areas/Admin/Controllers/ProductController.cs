@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using ChristianBeauty.Data.Interfaces.Categories;
 using ChristianBeauty.Data.Interfaces.Materials;
 using ChristianBeauty.Data.Interfaces.Products;
 using ChristianBeauty.Models;
@@ -19,17 +20,20 @@ namespace ChristianBeauty.Areas.Admin.Controllers
     {
         private protected IProductRepository _repository;
         private protected IMaterialRepository _materialRepository;
+        private protected ICategoryRepository _categoryRepository;
 
         private protected IMapper _mapper;
 
         public ProductController(
             IProductRepository repository,
             IMaterialRepository materialRepository,
+            ICategoryRepository categoryRepository,
             IMapper mapper
         )
         {
             _repository = repository;
             _materialRepository = materialRepository;
+            _categoryRepository = categoryRepository;
             _mapper = mapper;
         }
 
@@ -44,12 +48,18 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         public async Task<IActionResult> Add()
         {
             var material = await _materialRepository.GetAllAsync();
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
             var materialsSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
                 material.ToList()
             );
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
+
             var addProductViewModel = new AddProductViewModel
             {
-                Materials = materialsSelectListItem.ToList()
+                Materials = materialsSelectListItem.ToList(),
+                Categories = categoriesSelectListItem.ToList()
             };
             return View(addProductViewModel);
         }
@@ -60,16 +70,29 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var product = _mapper.Map<Product>(viewModel);
-                product.CategoryId = 1;
+                if (viewModel.SelectedSubCategoryId != null)
+                {
+                    _repository.AddSubcategoryToProduct(
+                        product,
+                        viewModel.SelectedSubCategoryId.Value
+                    );
+                }
                 await _repository.AddAsync(product);
                 await _repository.SaveAsync();
                 return RedirectToAction("Index");
             }
             var material = await _materialRepository.GetAllAsync();
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
+
             var materialsSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
                 material.ToList()
             );
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
+
             viewModel.Materials = materialsSelectListItem.ToList();
+            viewModel.Categories = categoriesSelectListItem.ToList();
             return View(viewModel);
         }
 
@@ -77,17 +100,48 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _repository.GetAsync(id);
-
             if (product == null)
             {
                 return RedirectToAction("Index");
             }
+            var isSubCategory = await _categoryRepository.IsSubCategoryAsync(product.CategoryId);
+
             var viewmodel = _mapper.Map<EditProductViewModel>(product);
+            if (isSubCategory)
+            {
+                viewmodel.SelectedSubCategoryId = product.CategoryId;
+                var parentCategoryId = await _categoryRepository.GetSubCategoryParentAsync(
+                    product.CategoryId
+                );
+                viewmodel.SelectedCategoryId = parentCategoryId;
+                var subCategories = _categoryRepository.GetAllParentsSubCategories(
+                    parentCategoryId
+                );
+                var subCategoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                    subCategories.ToList()
+                );
+                viewmodel.SubCategories = subCategoriesSelectListItem;
+            }
+            else
+            {
+                var parentsSubcategories = _categoryRepository.GetAllParentsSubCategories(
+                    product.CategoryId
+                );
+                var subCategoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                    parentsSubcategories.ToList()
+                );
+                viewmodel.SubCategories = subCategoriesSelectListItem;
+            }
             var material = await _materialRepository.GetAllAsync();
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
             var materialsSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
                 material.ToList()
             );
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
             viewmodel.Materials = materialsSelectListItem.ToList();
+            viewmodel.Categories = categoriesSelectListItem.ToList();
             return View(viewmodel);
         }
 
@@ -98,11 +152,21 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             var materialsSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
                 material.ToList()
             );
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
             if (!ModelState.IsValid)
             {
                 viewModel.Materials = materialsSelectListItem.ToList();
+                viewModel.Categories = categoriesSelectListItem.ToList();
                 return View(viewModel);
             }
+            if (viewModel.SelectedSubCategoryId != null)
+            {
+                viewModel.SelectedCategoryId = viewModel.SelectedSubCategoryId.Value;
+            }
+
             var product = await _repository.GetAsync(viewModel.Id);
             if (product != null)
             {
@@ -122,6 +186,13 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 await _repository.SaveAsync();
             }
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult GetSubCategories(int categoryId)
+        {
+            var subcategories = _categoryRepository.GetAllParentsSubCategories(categoryId);
+            return Json(subcategories);
         }
     }
 }

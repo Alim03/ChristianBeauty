@@ -138,6 +138,35 @@
                                     </div>
                                 </div>
 
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Category</label>
+                                            <select class="form-control" asp-for="SelectedCategoryId"
+                                                asp-items=@Model.Categories>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Sub Category</label>
+                                            <select class="form-control" asp-for="SelectedSubCategoryId"
+                                                asp-items=@Model.SubCategories>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedSubCategoryId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
@@ -149,9 +178,82 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        @* // Get references to the dropdown lists
+            const categoryDropdown = document.getElementById('SelectedCategoryId');
+            const subCategoryDropdown = document.getElementById('SelectedSubCategoryId');
+
+            // Add event listener for the change event on the category dropdown
+            categoryDropdown.addEventListener('change', function ()
+            {
+            const categoryId = this.value;
+
+            // Make an AJAX request to fetch subcategories based on the selected category
+            fetch(`GetSubCategories?categoryId=${categoryId}`)
+            .then(response => response.json())
+            .then(data =>
+            {
+            // Clear previous options from the subcategory dropdown
+            subCategoryDropdown.innerHTML = '<option value="">-- Select --</option>';
+
+            // Populate the subcategory dropdown with new options
+            data.forEach(subCategory =>
+            {
+            const option = document.createElement('option');
+            option.value = subCategory.id;
+            option.textContent = subCategory.name;
+            subCategoryDropdown.appendChild(option);
+            });
+
+            // Enable the subcategory dropdown
+            subCategoryDropdown.disabled = false;
+            })
+            .catch(error =>
+            {
+            console.error('Error:', error);
+            });
+            }); *@
+        const categoryDropdown = document.querySelector('#SelectedCategoryId');
+        const subCategoryDropdown = document.querySelector('#SelectedSubCategoryId');
+
+        // Add an event listener to the Category dropdown list
+        categoryDropdown.addEventListener('change', () =>
+        {
+            // Get the selected Category value
+            const categoryId = categoryDropdown.value;
+
+            // Clear the Sub Category dropdown list
+            subCategoryDropdown.innerHTML = '<option value="">-- Select --</option>';
+
+            // Disable the Sub Category dropdown if Category is "-- Select --"
+            subCategoryDropdown.disabled = categoryId === '';
+
+            // If a Category is selected, make an AJAX request to fetch the Sub Categories
+            if (categoryId !== '')
+            {
+                // Make an AJAX request to the server to get the Sub Categories based on the selected Category
+                // Replace the placeholder URL with your actual endpoint
+                fetch(`/Admin/Product/GetSubCategories?categoryId=${categoryId}`)
+                    .then(response => response.json())
+                    .then(data =>
+                    {
+                        // Iterate over the received Sub Categories and create options for the Sub Category dropdown
+                        data.forEach(subCategory =>
+                        {
+                            const option = document.createElement('option');
+                            option.value = subCategory.id;
+                            option.textContent = subCategory.name;
+                            subCategoryDropdown.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        });
+    </script>

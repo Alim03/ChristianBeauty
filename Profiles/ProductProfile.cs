@@ -16,11 +16,20 @@ namespace ChristianBeauty.Profiles
                 .ForMember(
                     dest => dest.MaterialId,
                     opt => opt.MapFrom(src => src.SelectedMaterialId)
+                )
+                .ForMember(
+                    dest => dest.CategoryId,
+                    opt => opt.MapFrom(src => src.SelectedCategoryId)
                 );
+
             CreateMap<Product, EditProductViewModel>()
                 .ForMember(
                     dest => dest.SelectedMaterialId,
                     opt => opt.MapFrom(src => src.MaterialId)
+                )
+                .ForMember(
+                    dest => dest.SelectedCategoryId,
+                    opt => opt.MapFrom(src => src.CategoryId)
                 )
                 .ReverseMap();
             ;

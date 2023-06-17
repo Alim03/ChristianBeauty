@@ -14,6 +14,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// builder.Services.AddDbContext<ChristianBeautyDbContext>(
+//     options =>
+//     {
+//         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+//     },
+//     ServiceLifetime.Transient
+// );
 builder.Services.AddDbContext<ChristianBeautyDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
