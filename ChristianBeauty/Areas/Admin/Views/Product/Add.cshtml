@@ -1,0 +1,273 @@
+﻿@model ChristianBeauty.ViewModels.Products.AddProductViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Add Product</h1>
+</div>
+
+
+
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">اضافه کردن محصول</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <form asp-action="Add" enctype="multipart/form-data" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Name" type="text" placeholder="نام محصول"
+                                                class="form-control" />
+
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label asp-for="IsFinished"></label>
+                                            <input asp-for="IsFinished" type="checkbox" />
+                                            <span asp-validation-for="IsFinished" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="ProductCode" placeholder="کد محصول" class="form-control" />
+                                            <span asp-validation-for="ProductCode" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Description" placeholder="توضیحات" class="form-control" />
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Size" placeholder="سایز" class="form-control" />
+                                            <span asp-validation-for="Size" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Weight" placeholder="وزن" class="form-control" />
+                                            <span asp-validation-for="Weight" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="Features" placeholder="ویژگی ها" class="form-control" />
+                                            <span asp-validation-for="Features" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="OtherDetails" placeholder="جزییات" class="form-control" />
+                                            <span asp-validation-for="OtherDetails" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="DigikalLink" placeholder="لینک دیجیکالا"
+                                                class="form-control" />
+                                            <span asp-validation-for="DigikalLink" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <input asp-for="BasalamLink" placeholder="لینک باسلام"
+                                                class="form-control" />
+                                            <span asp-validation-for="BasalamLink" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Materials</label>
+                                            <select class="form-control" asp-for="SelectedMaterialId"
+                                                asp-items=@Model.Materials>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedMaterialId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Category</label>
+                                            <select class="form-control" asp-for="SelectedCategoryId"
+                                                asp-items=@Model.Categories>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label>Sub Category</label>
+                                            <select class="form-control" asp-for="SelectedSubCategoryId" disabled>
+                                                <option value="">-- Select --</option>
+
+
+                                            </select>
+                                            <span asp-validation-for="SelectedSubCategoryId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label asp-for="Gallery" class="control-label">Images</label>
+                                            <div id="image-upload-container">
+                                                <input type="file" name="Gallery" class="form-control" />
+                                            </div>
+                                            <button type="button" onclick="addImageInput()" class="btn btn-primary mt-2">Add Image</button>
+                                            <span asp-validation-for="Gallery" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12 form-group ">
+                                    <button type="submit" class="btn btn-primary">ثبت</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function addImageInput() {
+        var container = document.getElementById('image-upload-container');
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.name = 'Gallery';
+        input.className = 'form-control mt-2';
+        container.appendChild(input);
+    }
+
+    // Get references to the elements
+    const categorySelect = document.getElementById('SelectedCategoryId');
+    const subCategorySelect = document.getElementById('SelectedSubCategoryId');
+
+    // Add event listener to the Category select
+    categorySelect.addEventListener('change', function ()
+    {
+        const categoryId = categorySelect.value;
+
+        // Enable or disable Sub Category select based on the selected Category
+        if (categoryId)
+        {
+            subCategorySelect.disabled = false;
+            loadSubCategories(categoryId);
+        } else
+        {
+            subCategorySelect.disabled = true;
+            clearSubCategories();
+        }
+    });
+
+    // Function to load Sub Categories from the backend
+    function loadSubCategories(categoryId)
+    {
+        // Make an asynchronous request to the backend API
+        // Replace 'backend/api/subcategories?categoryId=' with the actual endpoint
+        fetch(`GetSubCategories?categoryId=${categoryId}`)
+            .then(response => response.json())
+            .then(data =>
+            {
+                // Populate the Sub Category select with the fetched data
+                populateSubCategories(data);
+            })
+            .catch(error =>
+            {
+                console.error('Error:', error);
+            });
+    }
+
+    // Function to populate the Sub Category select with options
+    function populateSubCategories(data)
+    {
+        // Clear existing options
+        clearSubCategories();
+
+        // Populate with new options
+        data.forEach(subCategory =>
+        {
+            const option = document.createElement('option');
+            option.value = subCategory.id;
+            option.textContent = subCategory.name;
+            subCategorySelect.appendChild(option);
+        });
+    }
+
+    // Function to clear the Sub Category select
+    function clearSubCategories()
+    {
+        subCategorySelect.innerHTML = '<option value="">-- Select --</option>';
+    }
+</script>
