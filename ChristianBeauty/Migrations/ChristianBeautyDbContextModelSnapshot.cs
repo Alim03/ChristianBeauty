@@ -102,6 +102,9 @@ namespace ChristianBeauty.Migrations
                     b.Property<int?>("Color")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
@@ -113,6 +116,9 @@ namespace ChristianBeauty.Migrations
                     b.Property<string>("Features")
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
+
+                    b.Property<bool>("IsEnable")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsFinished")
                         .HasColumnType("bit");

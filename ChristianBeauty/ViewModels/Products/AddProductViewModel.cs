@@ -13,6 +13,7 @@ namespace ChristianBeauty.ViewModels.Products
         [MaxLength(64)]
         public string Name { get; set; }
         public bool IsFinished { get; set; }
+        public bool IsEnable { get; set; }
 
         [MaxLength(64)]
         public string ProductCode { get; set; }
@@ -43,6 +44,7 @@ namespace ChristianBeauty.ViewModels.Products
         public int? SelectedSubCategoryId { get; set; }
 
         public List<SelectListItem>? SubCategories { get; set; }
+
         [Required]
         public IFormFileCollection Gallery { get; set; }
     }

@@ -35,6 +35,8 @@ namespace ChristianBeauty.Models
 
         [MaxLength(256)]
         public string? BasalamLink { get; set; }
+        public bool IsEnable { get; set; }
+        public DateTime CreatedDate { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         public int MaterialId { get; set; }
