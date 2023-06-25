@@ -61,6 +61,8 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 var principal = new ClaimsPrincipal(identity);
                 var properties = new AuthenticationProperties { IsPersistent = true };
                 HttpContext.SignInAsync(principal, properties);
+                _toastNotification.Success(ErrorsMessages.Success, 10);
+
                 return RedirectToAction("Index", "Home", new { area = "Admin" });
             }
             return View(viewModel);
