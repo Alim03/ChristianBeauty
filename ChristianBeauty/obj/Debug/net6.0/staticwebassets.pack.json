@@ -5,16 +5,1396 @@
       "PackagePath": "staticwebassets\\ChristianBeauty.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\2_20230623202731373.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\2_20230623202731373.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\419a6f1e-99aa-49f9-96ca-cdc750b679d3_20230623210219462.png",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\419a6f1e-99aa-49f9-96ca-cdc750b679d3_20230623210219462.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\4_20230622162556404.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\4_20230622162556404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-06.jpg",
+      "PackagePath": "staticwebassets\\Images\\activity\\activity-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Images\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\badge.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\badge.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-01.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-02.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-03.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-04.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-05.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-05.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-06.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-07.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-07.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-08.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-08.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-10.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-10.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\banner-sm-06.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\banner-sm-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\h-three-banner-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\h-three-banner-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\h-three-banner-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\h-three-banner-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\h-three-banner-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner\\h-three-banner-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-1.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-2.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-3.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-4.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-4.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-5.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\banner\\sm-icon\\icon-6.png",
+      "PackagePath": "staticwebassets\\Images\\banner\\sm-icon\\icon-6.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-1.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-1.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-1.svg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-10.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-11.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-11.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-12.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-12.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-13.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-14.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-15.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-16.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-17.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-18.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-19.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-2.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-2.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-20.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-21.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-22.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-23.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-24.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-25.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-25.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-26.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-26.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-27.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-27.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-28.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-28.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-29.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-29.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-3.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-3.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-30.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-30.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-31.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-31.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-32.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-32.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-33.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-33.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-34.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-34.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-35.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-35.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-36.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-36.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-37.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-37.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-38.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-38.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-39.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-39.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-4.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-4.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-40.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-40.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-5.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-5.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-6.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-7.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-7.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-8.html",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-8.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\bg-image-9.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg\\bg-image-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\noise.gif",
+      "PackagePath": "staticwebassets\\Images\\bg\\noise.gif"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-06.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-07.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-08.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\blog-09.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\blog-09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\comment\\comment-01.png",
+      "PackagePath": "staticwebassets\\Images\\blog\\comment\\comment-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\community\\community-post-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\community\\community-post-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\community\\community-post-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\community\\community-post-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\blog\\lg\\blog-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\blog\\lg\\blog-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-01.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-02.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-03.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-04.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-06.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\brand\\brand-07.png",
+      "PackagePath": "staticwebassets\\Images\\brand\\brand-07.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-1.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-10.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-10.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-11.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-11.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-12.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-12.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-13.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-13.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-14.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-14.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-15.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-15.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-2.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-3.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-4.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-4.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-5.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-6.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-6.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-7.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-7.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-8.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-8.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\client-9.png",
+      "PackagePath": "staticwebassets\\Images\\client\\client-9.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\client\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\client\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-lg-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-lg-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-lg-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-lg-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-lg-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-lg-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-lg-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-lg-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-lg-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-lg-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-06.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-07.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-08.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-09.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-10.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-11.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\collection\\collection-sm-12.jpg",
+      "PackagePath": "staticwebassets\\Images\\collection\\collection-sm-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\connect\\connect-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\connect\\connect-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\contact\\contact1.png",
+      "PackagePath": "staticwebassets\\Images\\contact\\contact1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\favicon.png",
+      "PackagePath": "staticwebassets\\Images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\boy-avater.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\boy-avater.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\facebook.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\google.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\linkedin.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\meta.svg",
+      "PackagePath": "staticwebassets\\Images\\icons\\meta.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\quote2.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\quote2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\rating-2.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\rating-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-1.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-10.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-10.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-11.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-11.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-13.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-13.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-5.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-6.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-6.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-7.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-7.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\shape-9.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\shape-9.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\sun-01.svg",
+      "PackagePath": "staticwebassets\\Images\\icons\\sun-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\trophy.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\trophy.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\tweeter.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\tweeter.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\vector.svg",
+      "PackagePath": "staticwebassets\\Images\\icons\\vector.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\1.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\2.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\3.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\4.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\5.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\6.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\7.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\wallet\\8.png",
+      "PackagePath": "staticwebassets\\Images\\icons\\wallet\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\award-logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\award-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-dark.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\logo-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-white.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-white1.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\logo-white1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-white223.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\logo-white223.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-white6.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\logo-white6.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\slogo-dark.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\slogo-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\newsletter\\newsletter-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\newsletter\\newsletter-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\lg\\portfolio-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\lg\\portfolio-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\lg\\portfolio-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\lg\\portfolio-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\lg\\portfolio-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\lg\\portfolio-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-05.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-06.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-07.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-08.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-09.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-10.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\portfolio-11.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\portfolio-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\sm\\portfolio-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\sm\\portfolio-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\sm\\portfolio-02.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\sm\\portfolio-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\portfolio\\sm\\portfolio-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\portfolio\\sm\\portfolio-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\products\\Untitled.png",
+      "PackagePath": "staticwebassets\\Images\\products\\Untitled.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\products\\Untitled2.png",
+      "PackagePath": "staticwebassets\\Images\\products\\Untitled2.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\products\\Untitled3.png",
+      "PackagePath": "staticwebassets\\Images\\products\\Untitled3.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\products\\Untitled4.png",
+      "PackagePath": "staticwebassets\\Images\\products\\Untitled4.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\products\\Untitled5.png",
+      "PackagePath": "staticwebassets\\Images\\products\\Untitled5.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\profile\\cover-03.jpg",
+      "PackagePath": "staticwebassets\\Images\\profile\\cover-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\profile\\cover-04.png",
+      "PackagePath": "staticwebassets\\Images\\profile\\cover-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\profile\\profile-01.jpg",
+      "PackagePath": "staticwebassets\\Images\\profile\\profile-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\slider\\banner-06.png",
+      "PackagePath": "staticwebassets\\Images\\slider\\banner-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\slider\\slider-1.png",
+      "PackagePath": "staticwebassets\\Images\\slider\\slider-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\comb-3-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\comb-3-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\eyelashes-svgrepo-com (1).svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\eyelashes-svgrepo-com (1).svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\eyelashes-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\eyelashes-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\hair-brush-svgrepo-com (1).svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\hair-brush-svgrepo-com (1).svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\hair-brush-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\hair-brush-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\hair-clip-beauty-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\hair-clip-beauty-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\manicure-fashion-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\manicure-fashion-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\nail-polish-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\nail-polish-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\reflect-svgrepo-com (1).svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\reflect-svgrepo-com (1).svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\svg\\reflect-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\Images\\svg\\reflect-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\upload-variants\\multiple.jpg",
+      "PackagePath": "staticwebassets\\Images\\upload-variants\\multiple.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\upload-variants\\single.jpg",
+      "PackagePath": "staticwebassets\\Images\\upload-variants\\single.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\vedio\\banner01.mp4",
+      "PackagePath": "staticwebassets\\Images\\vedio\\banner01.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\ltr-style.css",
+      "PackagePath": "staticwebassets\\css\\ltr-style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\feature.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\feature.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_glass_75_d0e5f5_1x400.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_glass_75_d0e5f5_1x400.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_glass_85_dfeffc_1x400.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_glass_85_dfeffc_1x400.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_glass_95_fef1ec_1x400.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_glass_95_fef1ec_1x400.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_gloss-wave_55_5c9ccc_500x100.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_inset-hard_100_f5f8f9_1x100.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-bg_inset-hard_100_fcfdfd_1x100.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_217bc0_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_217bc0_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_2e83ff_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_2e83ff_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_469bdd_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_469bdd_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_6da8d5_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_6da8d5_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_cd0a0a_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_cd0a0a_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_d8e7f3_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_d8e7f3_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\images\\ui-icons_f9bd01_256x240.html",
+      "PackagePath": "staticwebassets\\css\\plugins\\images\\ui-icons_f9bd01_256x240.html"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\plugins\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\rtl-style.css",
+      "PackagePath": "staticwebassets\\css\\rtl-style.css"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\odometer.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\odometer.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\slick.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\slick.css"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\Feather144f.svg",
+      "PackagePath": "staticwebassets\\fonts\\Feather144f.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\Feather144f.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Feather144f.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\Feather144f.woff",
+      "PackagePath": "staticwebassets\\fonts\\Feather144f.woff"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\aviny-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\aviny-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\aviny-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\aviny-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-500.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-500.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-500.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\azarmehr-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\azarmehr-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\dana-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\dana-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\dana-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\dana-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\dana-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\dana-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\dana-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\dana-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\helvetica-neue-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\helvetica-neue-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-500.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-500.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-500.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-sans-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-sans-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-500.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-500.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-500.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\iran-yekan-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\iran-yekan-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\lalezar-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\lalezar-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\lalezar-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\lalezar-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\mikhak-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\mikhak-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\sahel-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\sahel-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-500.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-500.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-500.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\shabnam-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\shabnam-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-500.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-500.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-500.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-700.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-700.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\fa-num\\vazir-700.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-num\\vazir-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\slickd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\slickd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\aviny.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\aviny.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\azarmehr.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\azarmehr.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\dana.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\dana.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\helvetica-neue.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\helvetica-neue.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\iran-sans.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\iran-sans.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\iran-yekan.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\iran-yekan.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\lalezar.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\lalezar.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\mikhak.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\mikhak.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\sahel.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\sahel.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\shabnam.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\shabnam.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\fonts\\styles-fa-num\\vazir.css",
+      "PackagePath": "staticwebassets\\fonts\\styles-fa-num\\vazir.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\backtoTop.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\backtoTop.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\count-down.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\count-down.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\feather.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\feather.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\imageloaded.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\imageloaded.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\isotop.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\isotop.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery-appear.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-appear.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery.custom-file-input.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.custom-file-input.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\jquery.style.swicher.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.style.swicher.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\js.cookie.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\js.cookie.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\maralis.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\maralis.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\modernizer.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\modernizer.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\nft.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\nft.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\odometer.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\odometer.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\particles.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\particles.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\sal.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\sal.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\savePopup.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\savePopup.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\scrolltrigger.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\scrolltrigger.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\vanilla.tilt.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\vanilla.tilt.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\js\\vendor\\web3.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\web3.min.js"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -243,6 +1623,10 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\wwwroot.rar",
+      "PackagePath": "staticwebassets\\wwwroot.rar"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChristianBeauty.Microsoft.AspNetCore.StaticWebAssets.props",
