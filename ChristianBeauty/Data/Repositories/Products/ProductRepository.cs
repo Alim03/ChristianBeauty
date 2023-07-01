@@ -61,8 +61,94 @@ namespace ChristianBeauty.Data.Repositories.Products
         {
             return await Context.Products
                 .Include(c => c.Gallery)
-                .FirstOrDefaultAsync(c => c.Id == id)
-                ;
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize)
+        {
+            int skip = (pageNumber - 1) * pageSize;
+            List<Product> products = await Context.Products
+                .Include(p => p.Gallery)
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+            return products;
+        }
+
+        public async Task<List<Product>> GetPaginatedProductsAsync(
+            int pageNumber,
+            int pageSize,
+            string query
+        )
+        {
+            int skip = (pageNumber - 1) * pageSize;
+            List<Product> products = await Context.Products
+                .Include(p => p.Gallery)
+                .Where(x => x.Name.Contains(query))
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+            return products;
+        }
+
+        public async Task<List<Product>> GetPaginatedProductsByCategoryAsync(
+            int pageNumber,
+            int pageSize,
+            int categoryId
+        )
+        {
+            int skip = (pageNumber - 1) * pageSize;
+            List<Product> products = await Context.Products
+                .Include(p => p.Gallery)
+                .Where(x => x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+            return products;
+        }
+
+        public async Task<int> GetTotalCountProductsAsync()
+        {
+            return await Context.Products.CountAsync();
+        }
+
+        public async Task<int> GetTotalCountProductsAsync(string query)
+        {
+            return await Context.Products.Where(x => x.Name.Contains(query)).CountAsync();
+        }
+
+        public async Task<int> GetTotalCountProductsByCategoryAsync(int categoryId)
+        {
+            return await Context.Products
+                .Where(x => x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
+                .CountAsync();
         }
     }
 }

@@ -5,8 +5,7 @@
                 <div class="logo-thumbnail logo-custom-css">
                     <a class="logo-light" href="index.html"><img src="~/Images/logo/logo-white.png" alt="nft-logo"></a>
                     <a class="logo-dark" href="index.html">
-                        <img src="~/Images/logo/logo-dark.png"
-                             alt="nft-logo">
+                        <img src="~/Images/logo/logo-dark.png" alt="nft-logo">
                     </a>
                 </div>
                 <div class="mainmenu-wrapper">
@@ -20,10 +19,10 @@
                                 <a href="about.html">محصولات <i class="feather-package"></i></a>
                                 <ul class="submenu">
                                     <li><a href="index.html"> برس ها <i data-feather="list"></i></a></li>
-                                    <li><a href="index-four.html">  ناخن ها <i data-feather="list"></i></a></li>
+                                    <li><a href="index-four.html"> ناخن ها <i data-feather="list"></i></a></li>
                                     <li><a href="index-five.html"> کلیپس ها <i data-feather="list"></i></a></li>
                                     <li><a href="index-six.html"> آینه ها<i data-feather="list"></i></a></li>
-                                    <li><a href="index-seven.html">  شونه<i data-feather="list"></i></a></li>
+                                    <li><a href="index-seven.html"> شونه<i data-feather="list"></i></a></li>
 
                                 </ul>
                             </li>
@@ -36,8 +35,8 @@
             </div>
             <div class="header-right">
                 <div class="setting-option d-none d-lg-block">
-                    <form class="search-form-wrapper" action="#">
-                        <input type="search" placeholder="اینجا بگردید" aria-label="جستجو">
+                    <form class="search-form-wrapper" asp-action="Search" asp-controller="Home" method="GET">
+                        <input type="search" placeholder="اینجا بگردید" aria-label="جستجو" name="q">
                         <div class="search-icon">
                             <button><i class="feather-search"></i></button>
                         </div>
