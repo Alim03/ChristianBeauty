@@ -63,6 +63,11 @@ namespace ChristianBeauty.Data.Repositories.Products
                 .Include(c => c.Gallery)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
+        public async Task<List<Product>> GetAllProductWithImagesEagerLoadAsync()
+        {
+            return await Context.Products
+                .Include(c => c.Gallery).ToListAsync();
+        }
 
         public async Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize)
         {
