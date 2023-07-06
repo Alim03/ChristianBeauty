@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ChristianBeauty.Models;
+using ChristianBeauty.ViewModels.Categories;
 
 namespace ChristianBeauty.Data.Interfaces.Categories
 {
     public interface ICategoryRepository : IRepository<Category>
     {
         Task<IEnumerable<Category>> GetAllParentCategoriesEagerLoadAsync();
+        Task<GetCategoryViewModel> GetCategoryAndSubNameAsync(int id);
         Task<IEnumerable<Category>> GetAllParentCategoriesAsync();
         IEnumerable<Category> GetAllParentsSubCategories(int id);
 

@@ -5,116 +5,121 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChristianBeauty
 build_property.RootNamespace = ChristianBeauty
-build_property.ProjectDir = F:\ChristianBeautyNewClone\ChristianBeauty\ChristianBeauty\
+build_property.ProjectDir = C:\Users\Ariyan\Desktop\cb\ChristianBeauty\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = F:\ChristianBeautyNewClone\ChristianBeauty\ChristianBeauty
+build_property.MSBuildProjectDirectory = C:\Users\Ariyan\Desktop\cb\ChristianBeauty
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Category/Add.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Category/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Category/AddSubCategory.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Category/AddSubCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkU3ViQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Category/Edit.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Category/Index.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Material/Add.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Material/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF0ZXJpYWxcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Material/Edit.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Material/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF0ZXJpYWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Material/Index.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Material/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWF0ZXJpYWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Product/Add.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Product/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Product/Edit.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Home/Index.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Home/Privacy.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Product/Detail.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Shared/PartialViews/Footer/_Footer.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Shared/PartialViews/Footer/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xGb290ZXJcX0Zvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Shared/PartialViews/Navbar/_Navbar.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Shared/PartialViews/Navbar/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xOYXZiYXJcX05hdmJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Shared/_LoginLayout.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Shared/_LoginLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/User/Login.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/_ViewImports.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/_ViewStart.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ChristianBeautyNewClone/ChristianBeauty/ChristianBeauty/Views/Shared/_Layout.cshtml]
+[C:/Users/Ariyan/Desktop/cb/ChristianBeauty/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tapmo2n5ua

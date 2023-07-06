@@ -12,6 +12,8 @@ namespace ChristianBeauty.Data.Interfaces.Products
         void AddSubcategoryToProduct(Product product, int subcategoryId);
         void AddSubcategoryToProduct(int productId, int subcategoryId);
         Task<Product> GetProductWithImagesEagerLoadAsync(int id);
+        Task<List<Product>> GetAllProductWithImagesEagerLoadAsync();
+
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize);
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize, string query);
         Task<int> GetTotalCountProductsAsync();

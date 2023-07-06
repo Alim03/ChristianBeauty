@@ -24,8 +24,10 @@ namespace ChristianBeauty.Profiles
                     dest => dest.CategoryId,
                     opt => opt.MapFrom(src => src.SelectedCategoryId)
                 );
+          
+            ;
 
-            CreateMap<Product, EditProductViewModel>()
+            CreateMap<Product, EditProductViewModel>()  
                 .ForMember(
                     dest => dest.SelectedMaterialId,
                     opt => opt.MapFrom(src => src.MaterialId)
@@ -37,6 +39,9 @@ namespace ChristianBeauty.Profiles
                 .ReverseMap();
             ;
             CreateMap<Product, ProductViewModel>();
+            CreateMap<Product, GetProductViewModel>().ReverseMap();
+            CreateMap<Product, AllProductsViewModel>().ReverseMap();
+            
         }
     }
 }

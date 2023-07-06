@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\ChristianBeauty.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\1_20230629185217069.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\1_20230629185217069.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\1_20230702222742195.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\1_20230702222742195.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\2_20230623202731373.jpg",
       "PackagePath": "staticwebassets\\Images\\ProductImages\\2_20230623202731373.jpg"
     },
@@ -15,6 +23,34 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\4_20230622162556404.jpg",
       "PackagePath": "staticwebassets\\Images\\ProductImages\\4_20230622162556404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\4_20230630021126597.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\4_20230630021126597.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\imageProfile .jpg_20230702222742186.png",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\imageProfile .jpg_20230702222742186.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\in rainbows_20230629185216726.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\in rainbows_20230629185216726.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230702222742109.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230702222742109.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459446.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459446.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459485.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459485.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459502.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\شوپنهاور-نویسنده-کتاب-درباب-حکمت-زندگی_20230703192459502.jpg"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\activity\\activity-01.jpg",
@@ -665,8 +701,16 @@
       "PackagePath": "staticwebassets\\Images\\icons\\wallet\\8.png"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\R.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\R.png"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\award-logo.png",
       "PackagePath": "staticwebassets\\Images\\logo\\award-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\dig.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\dig.png"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\logo-dark.png",
@@ -691,6 +735,10 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\slogo-dark.png",
       "PackagePath": "staticwebassets\\Images\\logo\\slogo-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\whatsapp.png",
+      "PackagePath": "staticwebassets\\Images\\logo\\whatsapp.png"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\newsletter\\newsletter-01.jpg",
@@ -931,6 +979,10 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\vendor\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\font-awesome_6.4.0_css_all.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\font-awesome_6.4.0_css_all.css"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\css\\vendor\\nice-select.css",

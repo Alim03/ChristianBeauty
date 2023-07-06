@@ -13644,6 +13644,40 @@ button.btn.btn-primary-alta {
     background: var(--color-primary-alta);
     color: var(--color-white);
 }
+
+    a.btn.btn-whatsapp-alta,
+    button.btn.btn-whatsapp-alta {
+        background: #1c9a53;
+        color: var(--color-white);
+    }
+    a.btn.btn-digikala-alta,
+    button.btn.btn-digikala-alta {
+        background: #b71313;
+        color: var(--color-white);
+    }
+    a.btn.btn-basalam-alta,
+    button.btn.btn-basalam-alta {
+        background: #d43a18;
+        color: var(--color-white);
+    }
+
+    a.btn.btn-digikala-alta:hover,
+    button.btn.btn-digikala-alta:hover {
+        background: #791212;
+        color: var(--color-white) !important;
+    }
+
+    a.btn.btn-whatsapp-alta:hover,
+    button.btn.btn-whatsapp-alta:hover {
+        background: #145530;
+        color: var(--color-white) !important;
+    }
+    a.btn.btn-basalam-alta:hover,
+    button.btn.btn-basalam-alta:hover {
+        background: #942912;
+        color: var(--color-white) !important;
+    }
+
 a.btn.btn-primary-alta:hover,
 button.btn.btn-primary-alta:hover {
     background: var(--color-primary);
