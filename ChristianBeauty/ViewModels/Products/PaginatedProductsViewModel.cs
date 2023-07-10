@@ -13,5 +13,6 @@ namespace ChristianBeauty.ViewModels.Products
         public List<Product> Products { get; set; }
         public PaginationMetadata Metadata { get; set; }
         public List<SelectListItem>? Categories { get; set; }
+        public List<SelectListItem>? Materials { get; set; }
     }
 }

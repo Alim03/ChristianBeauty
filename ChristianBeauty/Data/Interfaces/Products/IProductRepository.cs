@@ -18,12 +18,19 @@ namespace ChristianBeauty.Data.Interfaces.Products
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize, string query);
         Task<int> GetTotalCountProductsAsync();
         Task<int> GetTotalCountProductsAsync(string query);
-        Task<int> GetTotalCountProductsByCategoryAsync(int categoryId);
-        Task<List<Product>> GetPaginatedProductsByCategoryAsync(
+        Task<int> GetTotalCountProductsByFilterAsync(int? categoryId, int? materialId);
+        Task<List<Product>> GetPaginatedProductsByFilterAsync(
             int pageNumber,
             int pageSize,
-            int categoryId
+            int? categoryId,
+            int? materialId
         );
+        Task<List<Product>> GetProductsByCategoryWithLimitAsync(
+            int categoryId,
+            int limit,
+            int excludedProductId
+        );
+        Task<List<Product>> GetRandomProductsAsync(int number);
         Task<Product> GetTestAsync(int id);
     }
 }

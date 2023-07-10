@@ -8,6 +8,8 @@ using ChristianBeauty.Data.Interfaces.Categories;
 using ChristianBeauty.Data.Interfaces.Materials;
 using ChristianBeauty.Data.Interfaces.Products;
 using ChristianBeauty.Models;
+using ChristianBeauty.Utilities;
+using ChristianBeauty.ViewModels.Common;
 using ChristianBeauty.ViewModels.Marterials;
 using ChristianBeauty.ViewModels.Products;
 using Microsoft.AspNetCore.Mvc;
@@ -20,32 +22,132 @@ namespace ChristianBeauty.Controllers
         private protected IProductRepository _productRepository;
         private protected ICategoryRepository _categoryRepository;
         private protected IMaterialRepository _materialRepository;
+        private const int PAGESIZE = 1;
 
         private readonly IMapper _mapper;
 
-
-        public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository, IMaterialRepository materialRepository, IMapper mapper)
+        public ProductController(
+            IProductRepository productRepository,
+            ICategoryRepository categoryRepository,
+            IMaterialRepository materialRepository,
+            IMapper mapper
+        )
         {
             _productRepository = productRepository;
             _mapper = mapper;
             _categoryRepository = categoryRepository;
             _materialRepository = materialRepository;
         }
+
         [HttpGet]
         public async Task<IActionResult> Detail(int id)
         {
             var product = await _productRepository.GetProductWithImagesEagerLoadAsync(id);
-            var category = await _categoryRepository.GetCategoryAndSubNameAsync(product.CategoryId);
-            var material = await _materialRepository.GetAsync(product.MaterialId);
-            var viewModel = _mapper.Map<GetProductViewModel>(product);
+            var similarProduct = await _productRepository.GetProductsByCategoryWithLimitAsync(
+                product.CategoryId,
+                3,
+                id
+            );
+            var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(similarProduct);
+            // var category = await _categoryRepository.GetCategoryAndSubNameAsync(product.CategoryId);
+            // var material = await _materialRepository.GetAsync(product.MaterialId);
+            var productViewModel = _mapper.Map<GetProductViewModel>(product);
+            var productDetailViewModel = new ProductDetailViewModel
+            {
+                ProductDetail = productViewModel,
+                SimilarProducts = similarProductViewModel
+            };
+            return View(productDetailViewModel);
+        }
+
+        public async Task<IActionResult> Index(
+            int page = 1,
+            int? categoryId = null,
+            int? material = null
+        )
+        {
+            List<Product> products;
+            int totalCount;
+            if (categoryId != null || material != null)
+            {
+                products = await _productRepository.GetPaginatedProductsByFilterAsync(
+                    page,
+                    PAGESIZE,
+                    categoryId,
+                    material
+                );
+                totalCount = await _productRepository.GetTotalCountProductsByFilterAsync(
+                    categoryId,
+                    material
+                );
+            }
+            else
+            {
+                products = await _productRepository.GetPaginatedProductsAsync(page, PAGESIZE);
+                totalCount = await _productRepository.GetTotalCountProductsAsync();
+            }
+
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
+
+            var materials = await _materialRepository.GetAllAsync();
+            var materialssSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
+                materials.ToList()
+            );
+            PaginationMetadata paginationMetadata = new PaginationMetadata
+            {
+                TotalCount = totalCount,
+                PageSize = PAGESIZE,
+                CurrentPage = page
+            };
+            var viewModel = new PaginatedProductsViewModel
+            {
+                Products = products,
+                Metadata = paginationMetadata,
+                Categories = categoriesSelectListItem,
+                Materials = materialssSelectListItem
+            };
+
             return View(viewModel);
         }
-        [HttpGet]
-        public async Task <IActionResult> Index()
+
+        public async Task<IActionResult> Search(string q, int page = 1)
         {
-            var product = await _productRepository.GetAllProductWithImagesEagerLoadAsync();
-            var viewModel = _mapper.Map<List<AllProductsViewModel>>(product);
-            return View(viewModel);
+            var products = await _productRepository.GetPaginatedProductsAsync(page, PAGESIZE, q);
+            var totalCount = await _productRepository.GetTotalCountProductsAsync(q);
+            var category = await _categoryRepository.GetAllParentCategoriesAsync();
+            var categoriesSelectListItem = SelectListHelper.ConvertCategoryToSelectListItems(
+                category.ToList()
+            );
+
+            var materials = await _materialRepository.GetAllAsync();
+            var materialssSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
+                materials.ToList()
+            );
+            PaginationMetadata paginationMetadata = new PaginationMetadata
+            {
+                TotalCount = totalCount,
+                PageSize = PAGESIZE,
+                CurrentPage = page
+            };
+            var viewModel = new PaginatedProductsViewModel
+            {
+                Products = products,
+                Metadata = paginationMetadata,
+                Categories = categoriesSelectListItem,
+                Materials = materialssSelectListItem
+            };
+
+            return View("Index", viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult GetSubCategories(int categoryId)
+        {
+            var subcategories = _categoryRepository.GetAllParentsSubCategories(categoryId);
+            return Json(subcategories);
         }
     }
 }

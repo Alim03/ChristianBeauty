@@ -1,4 +1,4 @@
-﻿@model ChristianBeauty.ViewModels.Products.PaginatedProductsViewModel
+﻿@model List<ChristianBeauty.ViewModels.Products.ProductListViewModel>
 <style>
     /* Pagination container */
     .pagination-container {
@@ -322,457 +322,86 @@
                 <div
                     class="banner-one-slick slick-activation-03 slick-arrow-style-one rn-slick-dot-style slick-gutter-15">
                     <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-07.jpg"
+                    @foreach (var item in Model)
+                    {
+                        <div class="single-slide-product">
+                            <div class="product-style-one">
+                                <div class="card-thumbnail">
+                                    <a href="product-details.html"><img src="~/images/portfolio/portfolio-07.jpg"
                                         alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2022-11-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
+                                    <div class="countdown" data-date="2022-11-09">
+                                        <div class="countdown-container days">
+                                            <span class="countdown-value">87</span>
+                                            <span class="countdown-heading">روز</span>
+                                        </div>
+                                        <div class="countdown-container hours">
+                                            <span class="countdown-value">23</span>
+                                            <span class="countdown-heading">ساعت</span>
+                                        </div>
+                                        <div class="countdown-container minutes">
+                                            <span class="countdown-value">38</span>
+                                            <span class="countdown-heading">دقیقه</span>
+                                        </div>
+                                        <div class="countdown-container seconds">
+                                            <span class="countdown-value">27</span>
+                                            <span class="countdown-heading">ثانیه</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="مارک جوردن"><img
+                                <div class="product-share-wrapper">
+                                    <div class="profile-share">
+                                        <a href="author.html" class="avatar" data-tooltip="مارک جوردن"><img
                                             src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="مارک"><img
+                                        <a href="author.html" class="avatar" data-tooltip="مارک"><img
                                             src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="جوردن"><img
+                                        <a href="author.html" class="avatar" data-tooltip="جوردن"><img
                                             src="~/images/client/client-5.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">20+ درخواست</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
+                                        <a class="more-author-text" href="#">20+ درخواست</a>
+                                    </div>
+                                    <div class="share-btn share-btn-activation dropdown">
+                                        <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
                                             class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
                                                 fill="currentColor"></path>
-                                        </svg>
-                                    </button>
+                                            </svg>
+                                        </button>
 
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
+                                        <div class="share-btn-setting dropdown-menu dropdown-menu-end">
+                                            <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
                                             data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
+                                                اشتراک گذاری
+                                            </button>
+                                            <button type="button" class="btn-setting-text report-text"
                                             data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
+                                                گزارش
+                                            </button>
+                                        </div>
+
                                     </div>
 
                                 </div>
-
-                            </div>
-                            <a href="product-details.html"><span class="product-name">پیش ادعا</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
+                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
+                                    <span class="product-name">@item.Name</span>
+                                </a>
+                                <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
+                                <div class="bid-react-area">
+                                    <div class="last-bid">0.244wETH</div>
+                                    <div class="react-area">
+                                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
                                         class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
+                                            <path
                                             d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
                                             stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">322</span>
+                                        </svg>
+                                        <span class="number">322</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-10.jpg"
-                                        alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2022-10-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="فاریک شیخ"><img
-                                            src="~/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="شیخ"><img
-                                            src="~/images/client/client-6.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="نسرین"><img
-                                            src="~/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">15+ درخواست</a>
-                                </div>
+                    }
 
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                            data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
-                                            data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <a href="product-details.html"><span class="product-name">واندر ومن</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
-                                            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                            stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">322</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-03.jpg"
-                                        alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-12-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="مینا"><img
-                                            src="~/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="لیسا"><img
-                                            src="~/images/client/client-4.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="مونا"><img
-                                            src="~/images/client/client-9.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">12+ درخواست</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                            data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
-                                            data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="product-details.html"><span class="product-name">دست شیشه</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 2/31</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.2128wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
-                                            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                            stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">12</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-04.jpg"
-                                        alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2024-10-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="مهدی"><img
-                                            src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="صابری"><img
-                                            src="~/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="بهلول"><img
-                                            src="~/images/client/client-11.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">16+ درخواست</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                            data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
-                                            data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="product-details.html"><span class="product-name">مورگان11</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 3/16</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.265wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
-                                            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                            stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">20</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-06.jpg"
-                                        alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-11-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="شاهرخ"><img
-                                            src="~/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="ندا"><img
-                                            src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="ماعده"><img
-                                            src="~/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">10+ درخواست</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                            data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
-                                            data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="product-details.html"><span class="product-name">اطلس</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 6/50</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
-                                            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                            stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">205</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="product-details.html"><img src="~/images/portfolio/portfolio-10.jpg"
-                                        alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-11-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">روز</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">ساعت</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">دقیقه</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">ثانیه</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="author.html" class="avatar" data-tooltip="شاهرخ"><img
-                                            src="~/images/client/client-10.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="ندا"><img
-                                            src="~/images/client/client-6.png" alt="Nft_Profile"></a>
-                                    <a href="author.html" class="avatar" data-tooltip="ماعده"><img
-                                            src="~/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">11+ درخواست</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                            data-bs-target="#shareModal">
-                                            اشتراک گذاری
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text"
-                                            data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            گزارش
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="product-details.html"><span class="product-name">دلتا 25</span></a>
-                            <span class="latest-bid">بالاترین پیشنهاد 6/30</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.234wETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path
-                                            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                            stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">205</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- end single product -->
 
                 </div>
@@ -791,273 +420,198 @@
             </div>
         </div>
 
-        <div class="default-exp-wrapper">
-            <div class="inner">
-                <div class="filter-select-option">
-                    <label class="filter-leble">لایک ها</label>
-                    <select>
-                        <option data-display="بیشترین لایک">بیشترین لایک</option>
-                        <option value="1">کمترین لایک</option>
-                    </select>
-                </div>
 
-
-
-                @* <div class="form-group">
-                    <label for="categoryId">Category:</label>
-                    <select id="categoryId" name="categoryId" class="form-control" onchange="window.location.href =
-                    '@Url.Action("FilterByCategory", "Products")?categoryId=' + this.value;">
-                    <option value="">All</option>
-                    @foreach (var category in ViewBag.Categories as SelectList)
-                    {
-                    <option value="@category.Value" @(Model.Count > 0 && category.Value == Model[0].Category.Id.ToString() ?
-                    "selected" : "")>@category.Text</option>
-                    }
-                    </select>
-                    </div> *@
-
-
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">دسته</label>
-                    <select id="categoryId" name="categoryId"
-                        onchange="window.location.href = '@Url.Action("Index", "Home")?categoryId=' + this.value;">
-                        <option data-display="دسته">دسته</option>
-                        @if (Model.Categories != null)
-                        {
-                            @foreach (var category in Model.Categories)
-                            {
-                                <option value="@category.Value">@category.Text</option>
-                            }
-                        }
-
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">مجموعه ها</label>
-                    <select>
-                        <option data-display="مجموعه ها">مجموعه ها</option>
-                        <option value="1">گل های تازه</option>
-                        <option value="2">کلوب ویدئو</option>
-                        <option value="4">لیمو استودیو</option>
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">نوع فروش</label>
-                    <select>
-                        <option data-display="نوع فروش">نوع فروش</option>
-                        <option value="1">قیمت ثابت</option>
-                        <option value="2">حراج به موقع</option>
-                        <option value="4">برای فروش نیست</option>
-                        <option value="4">برای پیشنهادات باز کنید</option>
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">بازه قیمت</label>
-                    <div class="price_filter s-filter clear">
-                        <form action="#" method="GET">
-                            <div id="slider-range"></div>
-                            <div class="slider__range--output">
-                                <div class="price__output--wrap">
-                                    <div class="price--output">
-                                        <span>قیمت :</span><input type="text" id="amount" readonly>
-                                    </div>
-                                    <div class="price--filter">
-                                        <a class="btn btn-primary btn-small" href="#">فیلتر</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row g-5 mt_dec--30">
+        @*
+            <div class="row g-5 mt_dec--30">
 
             @foreach (var item in Model.Products)
             {
-                <!-- start single product -->
-                <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="150"
-                data-sal-duration="800">
-                    <div class="product-style-one no-overlay with-placeBid">
-                        <div class="card-thumbnail">
-                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
+            <!-- start single product -->
+            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="150"
+            data-sal-duration="800">
+            <div class="product-style-one no-overlay with-placeBid">
+            <div class="card-thumbnail">
+            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
 
-                                @if (item?.Gallery != null && item.Gallery.Count > 0)
-                                {
-                                    <img src="~/Images/ProductImages/@item.Gallery[0].ImageName" alt="NFT_portfolio">
-                                }
-                                else
-                                {
-                                    <img src="" alt="NFT_portfolio">
-                                }
-                            </a>
-                            <a href="product-details.html" class="btn btn-primary">ثبت پیشنهاد</a>
-                        </div>
-                        <div class="product-share-wrapper">
-                            <div class="profile-share">
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-4.png" alt="Nft_Profile"></a>
-                                <a class="more-author-text" href="#">9+ درخواست</a>
-                            </div>
-                            <div class="share-btn share-btn-activation dropdown">
-                                <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                    class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                        fill="currentColor"></path>
-                                    </svg>
-                                </button>
+            @if (item?.Gallery != null && item.Gallery.Count > 0)
+            {
+            <img src="~/Images/ProductImages/@item.Gallery[0].ImageName" alt="NFT_portfolio">
+            }
+            else
+            {
+            <img src="" alt="NFT_portfolio">
+            }
+            </a>
+            <a href="product-details.html" class="btn btn-primary">ثبت پیشنهاد</a>
+            </div>
+            <div class="product-share-wrapper">
+            <div class="profile-share">
+            <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
+            src="~/images/client/client-2.png" alt="Nft_Profile"></a>
+            <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
+            src="~/images/client/client-3.png" alt="Nft_Profile"></a>
+            <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
+            src="~/images/client/client-4.png" alt="Nft_Profile"></a>
+            <a class="more-author-text" href="#">9+ درخواست</a>
+            </div>
+            <div class="share-btn share-btn-activation dropdown">
+            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
+            class="sc-bdnxRM sc-hKFxyN hOiKLt">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5
+            3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7
+            0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5
+            11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+            fill="currentColor"></path>
+            </svg>
+            </button>
 
-                                <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                    <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                    data-bs-target="#shareModal">
-                                        اشتراک گذاری
-                                    </button>
-                                    <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
-                                    data-bs-target="#reportModal">
-                                        گزارش
-                                    </button>
-                                </div>
+            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
+            <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
+            data-bs-target="#shareModal">
+            اشتراک گذاری
+            </button>
+            <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
+            data-bs-target="#reportModal">
+            گزارش
+            </button>
+            </div>
 
-                            </div>
-                        </div>
-                        <a href="product-details.html"><span class="product-name">@item.Name</span></a>
-                        <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
-                        <div class="bid-react-area">
-                            <div class="last-bid">0.244wETH</div>
-                            <div class="react-area">
-                                <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                    <path
-                                    d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                    stroke="currentColor" stroke-width="2"></path>
-                                </svg>
-                                <span class="number">322</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single product -->
+            </div>
+            </div>
+            <a href="product-details.html"><span class="product-name">@item.Name</span></a>
+            <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
+            <div class="bid-react-area">
+            <div class="last-bid">0.244wETH</div>
+            <div class="react-area">
+            <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
+            class="sc-bdnxRM sc-hKFxyN kBvkOu">
+            <path
+            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207
+            1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482
+            2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
+            stroke="currentColor" stroke-width="2"></path>
+            </svg>
+            <span class="number">322</span>
+            </div>
+            </div>
+            </div>
+            </div>
+            <!-- end single product -->
 
             }
-        </div>
+            </div>
 
 
-        <div class="pagination-container">
+            <div class="pagination-container">
             <ul class="pagination-list">
-                @if (Model.Metadata.HasPreviousPage)
-                {
-                    <li class="pagination-item">
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage - 1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">قبلی</a>
+            @if (Model.Metadata.HasPreviousPage)
+            {
+            <li class="pagination-item">
+
+            @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage - 1)&categoryId=@Context.Request.Query["categoryId"]">قبلی</a>
+
+            }
+            else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage - 1)&q=@Context.Request.Query["q"]">قبلی</a>
+
+            }
+            else if
+            (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
+            !string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage -
+            1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">قبلی</a>
+
+            }
+            else
+            {
+            <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage - 1)">قبلی</a>
+
+            }
 
 
 
-                        @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-                        {
-                            <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage - 1)&categoryId=@Context.Request.Query["categoryId"]">قبلی</a>
+            </li>
+            }
 
-                        }
-                        else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                        {
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage - 1)&q=@Context.Request.Query["q"]">قبلی</a>
+            @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
+            {
+            if (i >= 1 && i <= Model.Metadata.TotalPages)
+            {
+            <li class="pagination-item @(i == Model.Metadata.CurrentPage ? "current" : "")">
+            @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
+            {
+            <a class="pagination-link" href="?page=@i&categoryId=@Context.Request.Query["categoryId"]">@i</a>
 
-                        }
-                        else if
-                        (!string.IsNullOrEmpty(Context.Request.Query["categoryId"])&&!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                        {
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage - 1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">قبلی</a>
+            }
+            else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link" href="?page=@i&q=@Context.Request.Query["q"]">@i</a>
+            }
+            else if
+            (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
+            !string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link"
+            href="?page=@i&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">@i</a>
+            }
+            else
+            {
+            <a class="pagination-link" href="?page=@i">@i</a>
+            }
 
-                        }
-                        else{
-                        <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage - 1)">قبلی</a>
+            </li>
+            }
+            }
 
-                        }
-
-
-
-                    </li>
-                }
-
-                @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
-                {
-                    if (i >= 1 && i <= Model.Metadata.TotalPages)
-                    {
-                        <li class="pagination-item @(i == Model.Metadata.CurrentPage ? "current" : "")">
-                            @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-                            {
-                            <a class="pagination-link" href="?page=@i&categoryId=@Context.Request.Query["categoryId"]">@i</a>
-
-                            }
-                            else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                            {
-                            <a class="pagination-link" href="?page=@i&q=@Context.Request.Query["q"]">@i</a>
-                            }
-                            else if
-                            (!string.IsNullOrEmpty(Context.Request.Query["categoryId"])&&!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                            {
-                            <a class="pagination-link"
-                        href="?page=@i&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">@i</a>
-                            }
-                            else{
-                            <a class="pagination-link" href="?page=@i">@i</a>
-                            }
-
-                        </li>
-                    }
-                }
-
-                @if (Model.Metadata.HasNextPage)
-                {
-                    <li class="pagination-item">
+            @if (Model.Metadata.HasNextPage)
+            {
+            <li class="pagination-item">
 
 
 
-                        @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-                        {
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage + 1)&categoryId=@Context.Request.Query["categoryId"]">بعدی</a>
+            @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage + 1)&categoryId=@Context.Request.Query["categoryId"]">بعدی</a>
 
-                        }
-                        else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                        {
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage + 1)&q=@Context.Request.Query["q"]">بعدی</a>
+            }
+            else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage + 1)&q=@Context.Request.Query["q"]">بعدی</a>
 
-                        }
-                        else if
-                        (!string.IsNullOrEmpty(Context.Request.Query["categoryId"])&&!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                        {
-                        <a class="pagination-link"
-                        href="?page=@(Model.Metadata.CurrentPage + 1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">بعدی</a>
+            }
+            else if
+            (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
+            !string.IsNullOrEmpty(Context.Request.Query["q"]))
+            {
+            <a class="pagination-link"
+            href="?page=@(Model.Metadata.CurrentPage +
+            1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">بعدی</a>
 
-                        }
-                        else{
-                        <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage + 1)">بعدی</a>
+            }
+            else
+            {
+            <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage + 1)">بعدی</a>
 
-                        }
+            }
 
 
 
-                    </li>
-                }
+            </li>
+            }
             </ul>
-        </div>
-
+            </div>
+        *@
 
 
 

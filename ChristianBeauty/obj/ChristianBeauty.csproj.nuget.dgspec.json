@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\ChristianBeauty.csproj": {}
+    "F:\\ChristianBeautyNewNewClone\\ChristianBeauty\\ChristianBeauty\\ChristianBeauty.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\ChristianBeauty.csproj": {
+    "F:\\ChristianBeautyNewNewClone\\ChristianBeauty\\ChristianBeauty\\ChristianBeauty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\ChristianBeauty.csproj",
+        "projectUniqueName": "F:\\ChristianBeautyNewNewClone\\ChristianBeauty\\ChristianBeauty\\ChristianBeauty.csproj",
         "projectName": "ChristianBeauty",
-        "projectPath": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\ChristianBeauty.csproj",
-        "packagesPath": "C:\\Users\\Ariyan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\obj\\",
+        "projectPath": "F:\\ChristianBeautyNewNewClone\\ChristianBeauty\\ChristianBeauty\\ChristianBeauty.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "F:\\ChristianBeautyNewNewClone\\ChristianBeauty\\ChristianBeauty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ariyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\Microservice_Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

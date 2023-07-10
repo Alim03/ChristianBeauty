@@ -16,18 +16,15 @@ namespace ChristianBeauty.Profiles
                 .ForMember(
                     dest => dest.MaterialId,
                     opt => opt.MapFrom(src => src.SelectedMaterialId)
-                ).ForMember(
-                dest => dest.Gallery,
-                opt => opt.Ignore()
                 )
+                .ForMember(dest => dest.Gallery, opt => opt.Ignore())
                 .ForMember(
                     dest => dest.CategoryId,
                     opt => opt.MapFrom(src => src.SelectedCategoryId)
                 );
-          
             ;
 
-            CreateMap<Product, EditProductViewModel>()  
+            CreateMap<Product, EditProductViewModel>()
                 .ForMember(
                     dest => dest.SelectedMaterialId,
                     opt => opt.MapFrom(src => src.MaterialId)
@@ -41,7 +38,14 @@ namespace ChristianBeauty.Profiles
             CreateMap<Product, ProductViewModel>();
             CreateMap<Product, GetProductViewModel>().ReverseMap();
             CreateMap<Product, AllProductsViewModel>().ReverseMap();
-            
+            CreateMap<Product, ProductListViewModel>()
+                .ForMember(
+                    dest => dest.Image,
+                    opt =>
+                        opt.MapFrom(
+                            src => src.Gallery.Count > 0 ? src.Gallery.First().ImageName : null
+                        )
+                );
         }
     }
 }

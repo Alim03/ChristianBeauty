@@ -63,10 +63,10 @@ namespace ChristianBeauty.Data.Repositories.Products
                 .Include(c => c.Gallery)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
+
         public async Task<List<Product>> GetAllProductWithImagesEagerLoadAsync()
         {
-            return await Context.Products
-                .Include(c => c.Gallery).ToListAsync();
+            return await Context.Products.Include(c => c.Gallery).ToListAsync();
         }
 
         public async Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize)
@@ -114,16 +114,33 @@ namespace ChristianBeauty.Data.Repositories.Products
             return products;
         }
 
-        public async Task<List<Product>> GetPaginatedProductsByCategoryAsync(
+        public async Task<List<Product>> GetPaginatedProductsByFilterAsync(
             int pageNumber,
             int pageSize,
-            int categoryId
+            int? categoryId,
+            int? materialId
         )
         {
             int skip = (pageNumber - 1) * pageSize;
-            List<Product> products = await Context.Products
+
+            IQueryable<Product> query = Context.Products;
+
+            if (categoryId != null)
+            {
+                query = query.Where(
+                    x =>
+                        x.CategoryId == categoryId.Value
+                        || x.Category.ParentCategoryId == categoryId.Value
+                );
+            }
+
+            if (materialId != null)
+            {
+                query = query.Where(x => x.MaterialId == materialId.Value);
+            }
+
+            return await query
                 .Include(p => p.Gallery)
-                .Where(x => x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
                 .Select(
                     p =>
                         new Product
@@ -136,7 +153,6 @@ namespace ChristianBeauty.Data.Repositories.Products
                 .Skip(skip)
                 .Take(pageSize)
                 .ToListAsync();
-            return products;
         }
 
         public async Task<int> GetTotalCountProductsAsync()
@@ -149,11 +165,56 @@ namespace ChristianBeauty.Data.Repositories.Products
             return await Context.Products.Where(x => x.Name.Contains(query)).CountAsync();
         }
 
-        public async Task<int> GetTotalCountProductsByCategoryAsync(int categoryId)
+        public async Task<int> GetTotalCountProductsByFilterAsync(int? categoryId, int? materialId)
         {
-            return await Context.Products
-                .Where(x => x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
-                .CountAsync();
+            IQueryable<Product> query = Context.Products;
+
+            if (categoryId != null)
+            {
+                query = query.Where(
+                    x =>
+                        x.CategoryId == categoryId.Value
+                        || x.Category.ParentCategoryId == categoryId.Value
+                );
+            }
+
+            if (materialId != null)
+            {
+                query = query.Where(x => x.MaterialId == materialId.Value);
+            }
+            return await query.CountAsync();
+        }
+
+        public async Task<List<Product>> GetProductsByCategoryWithLimitAsync(
+            int categoryId,
+            int limit,
+            int excludedProductId
+        )
+        {
+            var products = await Context.Products
+                .Where(
+                    x =>
+                        (x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
+                        && x.Id != excludedProductId
+                )
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Take(limit)
+                .ToListAsync();
+
+            return products;
+        }
+
+        public async Task<List<Product>> GetRandomProductsAsync(int number)
+        {
+            return await Context.Products.OrderBy(r => Guid.NewGuid()).Take(number).ToListAsync();
         }
     }
 }

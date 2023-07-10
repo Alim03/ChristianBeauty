@@ -1,4 +1,4 @@
-﻿@model ChristianBeauty.ViewModels.Products.GetProductViewModel
+﻿@model ChristianBeauty.ViewModels.Products.ProductDetailViewModel
 @{
     ViewData["Title"] = "جزئیات محصول";
 }
@@ -32,15 +32,18 @@
 
 
 
-                        <div class="nav rn-pd-nav rn-pd-rt-content nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div class="nav rn-pd-nav rn-pd-rt-content nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
                             @{
                                 var index = 0;
-                                foreach (var item in Model.Gallery)
+                                foreach (var item in Model.ProductDetail.Gallery)
                                 {
                                     index++;
                                     if (index == 1)
                                     {
-                                        <button class="nav-link active" id="v-pills-@index-tab" data-bs-toggle="pill" data-bs-target="#v-pills-@index" type="button" role="tab" aria-controls="v-pills-@index" aria-selected="true">
+                                        <button class="nav-link active" id="v-pills-@index-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-@index" type="button" role="tab" aria-controls="v-pills-@index"
+                                    aria-selected="true">
                                             <span class="rn-pd-sm-thumbnail">
                                                 <img src="~/images/ProductImages/@item.ImageName" alt="Nft_Profile">
                                             </span>
@@ -49,7 +52,9 @@
                                     else
                                     {
 
-                                        <button class="nav-link" id="v-pills-@index-tab" data-bs-toggle="pill" data-bs-target="#v-pills-@index" type="button" role="tab" aria-controls="v-pills-@index" aria-selected="true">
+                                        <button class="nav-link" id="v-pills-@index-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-@index" type="button" role="tab" aria-controls="v-pills-@index"
+                                    aria-selected="true">
                                             <span class="rn-pd-sm-thumbnail">
                                                 <img src="~/images/ProductImages/@item.ImageName" alt="Nft_Profile">
                                             </span>
@@ -62,13 +67,14 @@
                             @{
                                 var index2 = 0;
 
-                                foreach (var item in Model.Gallery)
+                                foreach (var item in Model.ProductDetail.Gallery)
                                 {
                                     index2++;
 
                                     if (index2 == 1)
                                     {
-                                        <div class="tab-pane fade show active" id="v-pills-@index2" role="tabpanel" aria-labelledby="v-pills-@index2-tab">
+                                        <div class="tab-pane fade show active" id="v-pills-@index2" role="tabpanel"
+                                    aria-labelledby="v-pills-@index2-tab">
                                             <div class="rn-pd-thumbnail">
                                                 <img img src="~/images/ProductImages/@item.ImageName" alt="Nft_Profile">
                                             </div>
@@ -76,7 +82,8 @@
                                     }
                                     else
                                     {
-                                        <div class="tab-pane fade" id="v-pills-@index2" role="tabpanel" aria-labelledby="v-pills-@index2-tab">
+                                        <div class="tab-pane fade" id="v-pills-@index2" role="tabpanel"
+                                    aria-labelledby="v-pills-@index2-tab">
                                             <div class="rn-pd-thumbnail">
                                                 <img img src="~/images/ProductImages/@item.ImageName" alt="Nft_Profile">
                                             </div>
@@ -95,7 +102,7 @@
             <div class="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
                 <div class="rn-pd-content-area">
                     <div class="pd-title-area">
-                        <h4 class="title">@Model.Name</h4>
+                        <h4 class="title">@Model.ProductDetail.Name</h4>
                         <div class="pd-react-area">
                             <div class="heart-count">
                                 <i data-feather="heart"></i>
@@ -104,16 +111,21 @@
                             <div class="count">
                                 <div class="share-btn share-btn-activation dropdown">
                                     <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
+                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
+                                            class="sc-bdnxRM sc-hKFxyN hOiKLt">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+                                                fill="currentColor"></path>
                                         </svg>
                                     </button>
 
                                     <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
+                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
+                                            data-bs-target="#shareModal">
                                             اشتراک گذاری
                                         </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
+                                        <button type="button" class="btn-setting-text report-text"
+                                            data-bs-toggle="modal" data-bs-target="#reportModal">
                                             گزارش
                                         </button>
                                     </div>
@@ -128,9 +140,15 @@
                         <div class="tab-wrapper-one">
                             <nav class="tab-button-one">
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">مشخصات</button>
-                                    <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"> معرفی</button>
-                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">ویژگی ها</button>
+                                    <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-profile" type="button" role="tab"
+                                        aria-controls="nav-profile" aria-selected="false">مشخصات</button>
+                                    <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                        aria-selected="true"> معرفی</button>
+                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-contact" type="button" role="tab"
+                                        aria-controls="nav-contact" aria-selected="false">ویژگی ها</button>
                                 </div>
                             </nav>
                             <div class="tab-content rn-bid-content" id="nav-tabContent">
@@ -144,13 +162,15 @@
                                         <div class="property-wrapper">
                                             <!-- single property -->
                                             <div class="pd-property-inner">
-                                                <span class="color-white value">@Model.Description</span>
+                                                <span
+                                                    class="color-white value">@Model?.ProductDetail?.Description</span>
                                             </div>
                                             <!-- single property End -->
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
                                     <!-- single -->
                                     <div class="rn-pd-bd-wrapper">
 
@@ -162,11 +182,14 @@
                                             <div class="property-wrapper">
                                                 <!-- single property -->
                                                 <div class="pd-property-inner">
-                                                    @if (Model.IsFinished == true)
+                                                    @if (Model?.ProductDetail?.IsFinished == true)
                                                     {
                                                         <span class="color-white value">ناموجود</span>
                                                     }
-                                                    <span class="color-white value">موجود</span>
+                                                    else
+                                                    {
+                                                        <span class="color-white value">موجود</span>
+                                                    }
                                                 </div>
                                                 <!-- single property End -->
                                             </div>
@@ -178,7 +201,8 @@
                                             <div class="property-wrapper">
                                                 <!-- single property -->
                                                 <div class="pd-property-inner">
-                                                    <span class="color-white value">@Model.Size سانتیمتر</span>
+                                                    <span class="color-white value">@Model?.ProductDetail?.Size
+                                                        سانتیمتر</span>
                                                 </div>
                                                 <!-- single property End -->
                                             </div>
@@ -192,7 +216,8 @@
                                             <div class="catagory-wrapper">
                                                 <!-- single property -->
                                                 <div class="pd-property-inner">
-                                                    <span class="color-white value">@Model.Weight گرم</span>
+                                                    <span class="color-white value">@Model?.ProductDetail?.Weight
+                                                        گرم</span>
                                                 </div>
                                                 <!-- single property End -->
                                                 <!-- single property End -->
@@ -202,7 +227,8 @@
                                     </div>
                                     <!-- single -->
                                 </div>
-                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                    aria-labelledby="nav-contact-tab">
                                     <div class="rn-pd-sm-property-wrapper">
                                         <h6 class="pd-property-title">
                                             جنس
@@ -210,7 +236,8 @@
                                         <div class="property-wrapper">
                                             <!-- single property -->
                                             <div class="pd-property-inner">
-                                                <span class="color-white value">@Model.Material.Name</span>
+                                                <span
+                                                    class="color-white value">@Model?.ProductDetail?.Material?.Name</span>
                                             </div>
                                             <!-- single property End -->
                                         </div>
@@ -221,13 +248,15 @@
                                         </h6>
                                         <div class="property-wrapper">
                                             @{
-                                                string[] parts = @Model.Features.Split('#').Skip(1).ToArray();
-                                                foreach (string part in parts)
+                                                if (Model.ProductDetail.Features != null)
                                                 {
-                                                    <div class="pd-property-inner">
-                                                        <span class="color-white value">@part</span>
-
-                                                    </div>
+                                                    string[] parts = @Model.ProductDetail.Features.Split('#').Skip(1).ToArray();
+                                                    foreach (string part in parts)
+                                                    {
+                                                        <div class="pd-property-inner">
+                                                            <span class="color-white value">@part</span>
+                                                        </div>
+                                                    }
                                                 }
                                             }
                                         </div>
@@ -242,10 +271,17 @@
                                 </div>
                             </div>
                             <!-- <a class="btn btn-primary-alta mt--30" href="#">ثبت پیشنهاد</a> -->
-                            <a href="https://api.whatsapp.com/send?phone=09032387023" target="_blank" class="btn btn-whatsapp-alta mt--30">ثبت سفارش از طریث واتساپ<img style="height: 47px;width: 47px;" src="~/images/logo/whatsapp.png" /></a>
-                            <a href="@Model.DigikalLink" target="_blank" class="btn btn-digikala-alta mt--10">ثبت سفارس از طریق دیجیکالا<img style="height: 47px;width: 47px;" src="~/images/logo/dig.png" /></a>
-                            <a href="@Model.BasalamLink" target="_blank" class="btn btn-basalam-alta mt--10">ثبت سفارش از طریق با سلام<img style="height: 47px;width: 47px;" src="~/images/logo/r.png" /></a>
-                            
+                            <a href="https://api.whatsapp.com/send?phone=09032387023" target="_blank"
+                                class="btn btn-whatsapp-alta mt--30">ثبت سفارش از طریث واتساپ<img
+                                    style="height: 47px;width: 47px;" src="~/images/logo/whatsapp.png" /></a>
+                            <a href="@Model.ProductDetail.DigikalLink" target="_blank"
+                                class="btn btn-digikala-alta mt--10">ثبت سفارس
+                                از طریق دیجیکالا<img style="height: 47px;width: 47px;"
+                                    src="~/images/logo/dig.png" /></a>
+                            <a href="@Model.ProductDetail.BasalamLink" target="_blank"
+                                class="btn btn-basalam-alta mt--10">ثبت سفارش
+                                از طریق با سلام<img style="height: 47px;width: 47px;" src="~/images/logo/r.png" /></a>
+
                         </div>
                     </div>
                 </div>
@@ -254,3 +290,85 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- New items Start -->
+<div class="rn-new-items rn-section-gapTop">
+    <div class="container">
+        <div class="row mb--30 align-items-center">
+            <div class="col-12">
+                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">موارد مرتبط
+                </h3>
+            </div>
+        </div>
+        <div class="row g-5">
+
+            <!-- start single product -->
+            @foreach (var item in Model?.SimilarProducts)
+            {
+                <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
+                class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="product-style-one no-overlay">
+                        <div class="card-thumbnail">
+                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
+                                <img src="~/Images/ProductImages/@item.Image" alt="NFT_portfolio">
+                            </a>
+                        </div>
+                        <div class="product-share-wrapper">
+                            <div class="profile-share">
+                                <a href="author.html" class="avatar" data-tooltip="جان لی"><img
+                                    src="assets/images/client/client-1.png" alt="Nft_Profile"></a>
+                                <a href="author.html" class="avatar" data-tooltip="جان دویی"><img
+                                    src="assets/images/client/client-2.png" alt="Nft_Profile"></a>
+                                <a href="author.html" class="avatar" data-tooltip="نیوشا"><img
+                                    src="assets/images/client/client-3.png" alt="Nft_Profile"></a>
+                                <a class="more-author-text" href="#">9+ درخواست</a>
+                            </div>
+                            <div class="share-btn share-btn-activation dropdown">
+                                <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
+                                    class="sc-bdnxRM sc-hKFxyN hOiKLt">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+                                        fill="currentColor"></path>
+                                    </svg>
+                                </button>
+
+                                <div class="share-btn-setting dropdown-menu dropdown-menu-end">
+                                    <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
+                                    data-bs-target="#shareModal">
+                                        اشتراک گذاری
+                                    </button>
+                                    <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
+                                    data-bs-target="#reportModal">
+                                        گزارش
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a href="product-details.html"><span class="product-name">@item.Name</span></a>
+                        <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
+                        <div class="bid-react-area">
+                            <div class="last-bid">0.244wETH</div>
+                            <div class="react-area">
+                                <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
+                                class="sc-bdnxRM sc-hKFxyN kBvkOu">
+                                    <path
+                                    d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
+                                    stroke="currentColor" stroke-width="2"></path>
+                                </svg>
+                                <span class="number">322</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- end single product -->
+
+        </div>
+    </div>
+</div>
+<!-- New items End -->
