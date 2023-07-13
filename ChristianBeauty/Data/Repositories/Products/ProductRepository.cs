@@ -214,7 +214,19 @@ namespace ChristianBeauty.Data.Repositories.Products
 
         public async Task<List<Product>> GetRandomProductsAsync(int number)
         {
-            return await Context.Products.OrderBy(r => Guid.NewGuid()).Take(number).ToListAsync();
+            return await Context.Products
+                .OrderBy(r => Guid.NewGuid())
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Take(number)
+                .ToListAsync();
         }
     }
 }

@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="breadcrumb-list">
-                    <li class="item"><a href="index.html">خانه</a></li>
+                    <li class="item"><a asp-controller="Home" asp-action="Index">خانه</a></li>
                     <li class="separator"><i class="feather-chevron-left"></i></li>
                     <li class="item current">جزئیات وبلاگ</li>
                 </ul>
@@ -27,130 +27,89 @@
             <div class="col-xl-8 col-lg-8">
                 <div class="rn-blog-listen">
                     <div class="blog-content-top">
-                        <h2 class="title">@Model.Tittle</h2>
-                       
-                        <span class="date">@Utilites.PersianDateConverter(Model.CreateDate)</span>
+                        <h2 class="title">@Model.Blog.Tittle</h2>
+
+                        <span class="date">@Utilites.PersianDateConverter(Model.Blog.CreateDate)</span>
                     </div>
                     <div class="bd-thumbnail">
                         <div class="large-img mb--30">
-                            <img class="w-100" src="~/Images/ProductImages/@Model.Image" alt="Blog Images">
+                            <img class="w-100" src="~/Images/ProductImages/@Model.Blog.Image" alt="Blog Images">
                         </div>
                     </div>
                     <div class="news-details">
 
                         <p>
-                            @Model.Description
+                            @Model.Blog.Description
                         </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- comment form area Start -->
-                    <!-- Start Contact Form Area  -->
-                    <div class="rn-comment-form pt--60">
-                        <div class="inner">
-                            <div class="section-title">
-                                <span class="subtitle">نظری داردی؟</span>
-                                <h2 class="title">پاسخ دهید</h2>
-                            </div>
-                            <form class="mt--40" action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="نام"></div>
-                                        <div class="rnform-group"><input type="email" placeholder="ایمیل"></div>
-                                        <div class="rnform-group"><input type="text" placeholder="وبسایت"></div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="نظر"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="blog-btn">
-                                            <a class="btn btn-primary-alta btn-large w-100" href="#"><span>ارسال پیام</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Contact Form Area  -->
-                    <!-- comment form area End -->
-                    <div class="row g-5 pt--60">
-                        <div class="col-lg-12">
-                            <h3 class="title">نوشته های اخیر</h3>
-                        </div>
-                        <!-- start single blog -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                            <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="blog-details.html">توسعه</a>
-                                            </div>
-                                            <div class="meta">
-                                                <span><i class="feather-clock"></i> 2 ساعت نطالعه</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="blog-details.html">خدمات برای طراحی ارائه می شود<i class="feather-arrow-up-left"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end single blog -->
-                        <!-- start single blog -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                            <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="blog-details.html">طراحی</a>
-                                            </div>
-                                            <div class="meta">
-                                                <span><i class="feather-clock"></i> 5 دقیقه مطالعه</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="blog-details.html">ویژگی مهم تر برای طراح<i class="feather-arrow-up-left"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end single blog -->
-                        <!-- start single blog -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                            <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="blog-details.html">
-                                            <img src="assets/images/blog/blog-04.jpg" alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="blog-details.html">مارکتینگ</a>
-                                            </div>
-                                            <div class="meta">
-                                                <span><i class="feather-clock"></i> 10 دقیقه مطالعه</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="blog-details.html">کلاس های هدف و انگیزه نامعتبر.<i class="feather-arrow-up-left"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end single blog -->
                     </div>
                 </div>
             </div>
+            <!-- comment form area Start -->
+            <!-- Start Contact Form Area  -->
+            <div class="rn-comment-form pt--60">
+                <div class="inner">
+                    <div class="section-title">
+                        <span class="subtitle">نظری داردی؟</span>
+                        <h2 class="title">پاسخ دهید</h2>
+                    </div>
+                    <form class="mt--40" action="#">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <div class="rnform-group"><input type="text" placeholder="نام"></div>
+                                <div class="rnform-group"><input type="email" placeholder="ایمیل"></div>
+                                <div class="rnform-group"><input type="text" placeholder="وبسایت"></div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <div class="rnform-group">
+                                    <textarea placeholder="نظر"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="blog-btn">
+                                    <a class="btn btn-primary-alta btn-large w-100" href="#"><span>ارسال پیام</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Contact Form Area  -->
+            <!-- comment form area End -->
+            <div class="row g-5 pt--60">
+                <div class="col-lg-12">
+                    <h3 class="title">نوشته های اخیر</h3>
+                </div>
+                <!-- start single blog -->
+                @foreach (var item in Model.SimilarBlogs)
+                {
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a asp-controller="blog" asp-action="Detail" asp-route-id="@item.Id">
+                                        <img src="~/Images/ProductImages/@item.Image" alt="Blog Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="blog-details.html">کریستین بیوتی</a>
+                                        </div>
+                                        <div class="meta">
+                                            <span><i class="feather-clock"></i>
+                                                @item.ReadingTime دقیقه مطالعه</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="title"><a href="blog-details.html">@item.Tittle<i
+                                                class="feather-arrow-up-left"></i></a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <!-- end single blog -->
+
+            </div>
+        </div>
+    </div>

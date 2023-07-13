@@ -26,19 +26,20 @@ namespace ChristianBeauty.Data.Repositories.Categories
                 .Include(c => c.Subcategories)
                 .ToListAsync();
         }
+
         public async Task<GetCategoryViewModel> GetCategoryAndSubNameAsync(int id)
         {
             var subCategory = await Context.Categories.SingleOrDefaultAsync(x => x.Id == id);
-         
-            var father =  await Context.Categories.SingleOrDefaultAsync(x => x.Id == subCategory.ParentCategoryId);
+
+            var father = await Context.Categories.SingleOrDefaultAsync(
+                x => x.Id == subCategory.ParentCategoryId
+            );
             GetCategoryViewModel category = new GetCategoryViewModel
             {
                 CategoryName = father.Name,
                 SubcategoryName = subCategory.Name
             };
             return category;
-
-
         }
 
         public async Task<IEnumerable<Category>> GetAllParentCategoriesAsync()
@@ -65,7 +66,5 @@ namespace ChristianBeauty.Data.Repositories.Categories
             var category = await Context.Categories.SingleOrDefaultAsync(x => x.Id == id);
             return category.ParentCategoryId.Value;
         }
-
-      
     }
 }

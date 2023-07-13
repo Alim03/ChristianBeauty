@@ -1,4 +1,5 @@
-﻿<header class="rn-header haeder-default header--sticky">
+﻿@model List<ChristianBeauty.ViewModels.Categories.GetAllCategoryViewModel>
+<header class="rn-header haeder-default header--sticky">
     <div class="container">
         <div class="header-inner">
             <div class="header-left">
@@ -13,20 +14,26 @@
                         <!-- Start Mainmanu Nav -->
                         <ul class="mainmenu">
                             <li class=" has-menu-child-item">
-                                <a href="index.html">صفحه اصلی<i class="feather-home p-3"></i></a>
+                                <a asp-controller="Home" asp-action="Index">
+                                    صفحه اصلی<i class="feather-home p-3"></i></a>
                             </li>
                             <li class="has-droupdown has-menu-child-item">
-                                <a href="/product/index">محصولات <i class="feather-package"></i></a>
+                                <a asp-controller="Product" asp-action="Index">محصولات <i
+                                        class="feather-package"></i></a>
                                 <ul class="submenu">
-                                    <li><a href="index.html"> برس ها <i data-feather="list"></i></a></li>
-                                    <li><a href="index-four.html"> ناخن ها <i data-feather="list"></i></a></li>
-                                    <li><a href="index-five.html"> کلیپس ها <i data-feather="list"></i></a></li>
-                                    <li><a href="index-six.html"> آینه ها<i data-feather="list"></i></a></li>
-                                    <li><a href="index-seven.html"> شونه<i data-feather="list"></i></a></li>
+                                    @foreach (var item in Model)
+                                    {
+                                        <li>
+                                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id">
+                                                @item.Name <i data-feather="list"></i></a>
+                                        </li>
+                                    }
+
 
                                 </ul>
                             </li>
-                            <li><a href="contact.html">بلاگ</a></li>
+                            <li> <a asp-controller="Blog" asp-action="Index">
+                                    بلاگ</a></li>
                             <li><a href="contact.html">درباره ما</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
@@ -46,10 +53,11 @@
                     <div class="icon-box search-mobile-icon">
                         <button><i class="feather-search"></i></button>
                     </div>
-                    <form id="header-search-1" action="#" method="GET" class="large-mobile-blog-search">
+                    <form id="header-search-1" asp-action="Search" asp-controller="Product" method="GET"
+                        class="large-mobile-blog-search">
                         <div class="rn-search-mobile form-group">
                             <button type="submit" class="search-button"><i class="feather-search"></i></button>
-                            <input type="text" placeholder="جستجو ...">
+                            <input type="text" placeholder="جستجو ..." name="q">
                         </div>
                     </form>
                 </div>
@@ -89,3 +97,51 @@
         </div>
     </div>
 </header>
+
+
+<div class="popup-mobile-menu">
+    <div class="inner">
+        <div class="header-top">
+            <div class="logo logo-custom-css">
+                <a class="logo-light" href="index.html"><img src="~/images/logo/logo-white.png" alt="nft-logo"></a>
+                <a class="logo-dark" href="index.html"><img src="~/images/logo/logo-dark.png" alt="nft-logo"></a>
+            </div>
+            <div class="close-menu">
+                <button class="close-button">
+                    <i class="feather-x"></i>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <!-- Start Mainmanu Nav -->
+            <ul class="mainmenu">
+                <li>
+                    <a asp-controller="Home" asp-action="Index">صفحه اصلی</a>
+                </li>
+                <li>
+                    <a asp-controller="Product" asp-action="Index">محصولات</a>
+                </li>
+                <li class="has-droupdown">
+                    <a class="nav-link its_new" href="#">دسته بندی</a>
+                    <ul class="submenu">
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <a asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id">
+                                    @item.Name <i class="feather-fast-forward"></i></a>
+                            </li>
+                        }
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a asp-controller="Blog" asp-action="Index">بلاگ</a>
+                </li>
+                @* <li class="has-droupdown has-menu-child-item"></li> *@
+                <li><a href="contact.html">تماس</a></li>
+            </ul>
+            <!-- End Mainmanu Nav -->
+        </nav>
+    </div>
+</div>

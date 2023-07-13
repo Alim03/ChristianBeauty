@@ -22,14 +22,14 @@ namespace ChristianBeauty.Controllers
             _blogsRepository = blogsRepository;
             _mapper = mapper;
         }
+
         public async Task<IActionResult> Index(int page = 1)
         {
             List<Blog> blogs;
             int totalCount;
-       
-                blogs = await _blogsRepository.GetPaginatedBlogssAsync(page, PAGESIZE);
-                totalCount = await _blogsRepository.CountBlogsAsync();
-            
+
+            blogs = await _blogsRepository.GetPaginatedBlogssAsync(page, PAGESIZE);
+            totalCount = await _blogsRepository.CountBlogsAsync();
 
             PaginationMetadata paginationMetadata = new PaginationMetadata
             {
@@ -49,10 +49,13 @@ namespace ChristianBeauty.Controllers
         public async Task<IActionResult> Detail(int id)
         {
             var blog = await _blogsRepository.GetAsync(id);
-            var result = _mapper.Map<BlogDetailViewModel>(blog);
-            return View(result);
+            var similarBlogs = await _blogsRepository.GetRandomBlogAsync(3, id);
+            var blogDetailViewModel = new BlogDetailViewModel
+            {
+                Blog = blog,
+                SimilarBlogs = similarBlogs
+            };
+            return View(blogDetailViewModel);
         }
-
-
     }
 }

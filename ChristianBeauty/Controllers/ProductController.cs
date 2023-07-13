@@ -49,8 +49,6 @@ namespace ChristianBeauty.Controllers
                 id
             );
             var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(similarProduct);
-            // var category = await _categoryRepository.GetCategoryAndSubNameAsync(product.CategoryId);
-            // var material = await _materialRepository.GetAsync(product.MaterialId);
             var productViewModel = _mapper.Map<GetProductViewModel>(product);
             var productDetailViewModel = new ProductDetailViewModel
             {
