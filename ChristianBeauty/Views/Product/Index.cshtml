@@ -26,11 +26,11 @@
         border-radius: 5px;
     }
 
-    /* Current page item */
-    .pagination-item.current {
-        background-color: #00a3ff;
-        font-weight: bold;
-    }
+        /* Current page item */
+        .pagination-item.current {
+            background-color: #00a3ff;
+            font-weight: bold;
+        }
 
     /* Pagination link */
     .pagination-link {
@@ -38,10 +38,10 @@
         text-decoration: none;
     }
 
-    /* Pagination link hover */
-    .pagination-link:hover {
-        color: #00a3ff;
-    }
+        /* Pagination link hover */
+        .pagination-link:hover {
+            color: #00a3ff;
+        }
 </style>
 <div class="rn-breadcrumb-inner ptb--30">
     <div class="container">
@@ -64,14 +64,16 @@
     <div class="container">
         <div class="row mb--50 align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">بررسی محصولات
+                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    بررسی محصولات
                 </h3>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
                 <div class="view-more-btn text-end text-sm-start" data-sal-delay="150" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <button class="discover-filter-button discover-filter-activation btn btn-primary">فیلتر<i
-                            class="feather-filter"></i></button>
+                     data-sal-duration="800">
+                    <button class="discover-filter-button discover-filter-activation btn btn-primary">
+                        فیلتر<i class="feather-filter"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -84,17 +86,17 @@
 
 
                 @* <div class="form-group">
-                    <label for="categoryId">Category:</label>
-                    <select id="categoryId" name="categoryId" class="form-control" onchange="window.location.href =
-                    '@Url.Action("FilterByCategory", "Products")?categoryId=' + this.value;">
-                    <option value="">All</option>
-                    @foreach (var category in ViewBag.Categories as SelectList)
-                    {
-                    <option value="@category.Value" @(Model.Count > 0 && category.Value == Model[0].Category.Id.ToString() ?
-                    "selected" : "")>@category.Text</option>
-                    }
-                    </select>
-                    </div> *@
+                <label for="categoryId">Category:</label>
+                <select id="categoryId" name="categoryId" class="form-control" onchange="window.location.href =
+                '@Url.Action("FilterByCategory", "Products")?categoryId=' + this.value;">
+                <option value="">All</option>
+                @foreach (var category in ViewBag.Categories as SelectList)
+                {
+                <option value="@category.Value" @(Model.Count > 0 && category.Value == Model[0].Category.Id.ToString() ?
+                "selected" : "")>@category.Text</option>
+                }
+                </select>
+                </div> *@
 
                 @{
                     var query = "";
@@ -191,7 +193,7 @@
             {
                 <!-- start single product -->
                 <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="150"
-                data-sal-duration="800">
+                     data-sal-duration="800">
                     <div class="product-style-one no-overlay with-placeBid">
                         <div class="card-thumbnail">
                             <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
@@ -209,31 +211,34 @@
                         </div>
                         <div class="product-share-wrapper">
                             <div class="profile-share">
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-                                    src="~/images/client/client-4.png" alt="Nft_Profile"></a>
+                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
+                                    <img src="~/images/client/client-2.png" alt="Nft_Profile">
+                                </a>
+                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
+                                    <img src="~/images/client/client-3.png" alt="Nft_Profile">
+                                </a>
+                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
+                                    <img src="~/images/client/client-4.png" alt="Nft_Profile">
+                                </a>
                                 <a class="more-author-text" href="#">9+ درخواست</a>
                             </div>
                             <div class="share-btn share-btn-activation dropdown">
                                 <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                    class="sc-bdnxRM sc-hKFxyN hOiKLt">
+                                         class="sc-bdnxRM sc-hKFxyN hOiKLt">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                        fill="currentColor"></path>
+                                              d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+                                              fill="currentColor"></path>
                                     </svg>
                                 </button>
 
                                 <div class="share-btn-setting dropdown-menu dropdown-menu-end">
                                     <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                    data-bs-target="#shareModal">
+                                            data-bs-target="#shareModal">
                                         اشتراک گذاری
                                     </button>
                                     <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
-                                    data-bs-target="#reportModal">
+                                            data-bs-target="#reportModal">
                                         گزارش
                                     </button>
                                 </div>
@@ -246,10 +251,9 @@
                             <div class="last-bid">0.244wETH</div>
                             <div class="react-area">
                                 <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                    <path
-                                    d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                    stroke="currentColor" stroke-width="2"></path>
+                                     class="sc-bdnxRM sc-hKFxyN kBvkOu">
+                                    <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
+                                          stroke="currentColor" stroke-width="2"></path>
                                 </svg>
                                 <span class="number">322</span>
                             </div>
@@ -257,7 +261,6 @@
                     </div>
                 </div>
                 <!-- end single product -->
-
             }
         </div>
 
@@ -286,34 +289,34 @@
 
 
                 @* @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
-                    {
-                    if (i >= 1 && i <= Model.Metadata.TotalPages)
-                    {
-                    <li class="pagination-item @(i == Model.Metadata.CurrentPage ? "current" : "")">
-                    @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-                    {
-                    <a class="pagination-link" href="?page=@i&categoryId=@Context.Request.Query["categoryId"]">@i</a>
+                {
+                if (i >= 1 && i <= Model.Metadata.TotalPages)
+                {
+                <li class="pagination-item @(i == Model.Metadata.CurrentPage ? "current" : "")">
+                @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
+                {
+                <a class="pagination-link" href="?page=@i&categoryId=@Context.Request.Query["categoryId"]">@i</a>
 
-                    }
-                    else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-                    {
-                    <a class="pagination-link" href="?page=@i&q=@Context.Request.Query["q"]">@i</a>
-                    }
-                    else if
-                    (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
-                    !string.IsNullOrEmpty(Context.Request.Query["q"]))
-                    {
-                    <a class="pagination-link"
-                    href="?page=@i&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">@i</a>
-                    }
-                    else
-                    {
-                    <a class="pagination-link" href="?page=@i">@i</a>
-                    }
+                }
+                else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
+                {
+                <a class="pagination-link" href="?page=@i&q=@Context.Request.Query["q"]">@i</a>
+                }
+                else if
+                (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
+                !string.IsNullOrEmpty(Context.Request.Query["q"]))
+                {
+                <a class="pagination-link"
+                href="?page=@i&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">@i</a>
+                }
+                else
+                {
+                <a class="pagination-link" href="?page=@i">@i</a>
+                }
 
-                    </li>
-                    }
-                    } *@
+                </li>
+                }
+                } *@
 
                 @if (Model.Metadata.HasNextPage)
                 {
@@ -327,153 +330,149 @@
 
 
         @* <div class="default-exp-wrapper default-exp-expand">
-            <div class="inner">
-            <div class="filter-select-option">
-            <label class="filter-leble">لایک ها</label>
-            <select>
-            <option data-display="بیشترین لایک">بیشترین لایک</option>
-            <option value="1">کمترین لایک</option>
-            </select>
-            </div>
+        <div class="inner">
+        <div class="filter-select-option">
+        <label class="filter-leble">لایک ها</label>
+        <select>
+        <option data-display="بیشترین لایک">بیشترین لایک</option>
+        <option value="1">کمترین لایک</option>
+        </select>
+        </div>
 
-            <div class="filter-select-option">
-            <label class="filter-leble">دسته</label>
-            <select>
-            <option data-display="دسته">دسته</option>
-            <option value="1">هنر</option>
-            <option value="1">عکس</option>
-            <option value="2">متافوره ها</option>
-            <option value="4">سیب زمینی</option>
-            <option value="4">عکس‌ها</option>
-            </select>
-            </div>
+        <div class="filter-select-option">
+        <label class="filter-leble">دسته</label>
+        <select>
+        <option data-display="دسته">دسته</option>
+        <option value="1">هنر</option>
+        <option value="1">عکس</option>
+        <option value="2">متافوره ها</option>
+        <option value="4">سیب زمینی</option>
+        <option value="4">عکس‌ها</option>
+        </select>
+        </div>
 
-            <div class="filter-select-option">
-            <label class="filter-leble">مجموعه ها</label>
-            <select>
-            <option data-display="مجموعه ها">مجموعه ها</option>
-            <option value="1">گل های تازه</option>
-            <option value="2">کلوب ویدئو</option>
-            <option value="4">لیمو استودیو</option>
-            </select>
-            </div>
+        <div class="filter-select-option">
+        <label class="filter-leble">مجموعه ها</label>
+        <select>
+        <option data-display="مجموعه ها">مجموعه ها</option>
+        <option value="1">گل های تازه</option>
+        <option value="2">کلوب ویدئو</option>
+        <option value="4">لیمو استودیو</option>
+        </select>
+        </div>
 
-            <div class="filter-select-option">
-            <label class="filter-leble">نوع فروش</label>
-            <select>
-            <option data-display="نوع فروش">نوع فروش</option>
-            <option value="1">قیمت ثابت</option>
-            <option value="2">حراج به موقع</option>
-            <option value="4">برای فروش نیست</option>
-            <option value="4">برای پیشنهادات باز کنید</option>
-            </select>
-            </div>
+        <div class="filter-select-option">
+        <label class="filter-leble">نوع فروش</label>
+        <select>
+        <option data-display="نوع فروش">نوع فروش</option>
+        <option value="1">قیمت ثابت</option>
+        <option value="2">حراج به موقع</option>
+        <option value="4">برای فروش نیست</option>
+        <option value="4">برای پیشنهادات باز کنید</option>
+        </select>
+        </div>
 
-            <div class="filter-select-option">
-            <label class="filter-leble">بازه قیمت</label>
-            <div class="price_filter s-filter clear">
-            <form action="#" method="GET">
-            <div id="slider-range"></div>
-            <div class="slider__range--output">
-            <div class="price__output--wrap">
-            <div class="price--output">
-            <span>قیمت :</span><input type="text" id="amount" readonly>
-            </div>
-            <div class="price--filter">
-            <a class="btn btn-primary btn-small" href="#">فیلتر</a>
-            </div>
-            </div>
-            </div>
-            </form>
-            </div>
-            </div>
-            </div>
-            </div> *@
+        <div class="filter-select-option">
+        <label class="filter-leble">بازه قیمت</label>
+        <div class="price_filter s-filter clear">
+        <form action="#" method="GET">
+        <div id="slider-range"></div>
+        <div class="slider__range--output">
+        <div class="price__output--wrap">
+        <div class="price--output">
+        <span>قیمت :</span><input type="text" id="amount" readonly>
+        </div>
+        <div class="price--filter">
+        <a class="btn btn-primary btn-small" href="#">فیلتر</a>
+        </div>
+        </div>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div> *@
 
 
         @* <div class="row g-5">
-            <!-- start single product -->
-            @{
-            foreach (var item in Model)
-            {
-            <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800"
-            class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
-            <div class="product-style-one no-overlay">
-            <div class="card-thumbnail">
-            <a href="product-details.html">
-            <img src="~/images/ProductImages/@item.Gallery.First().ImageName"
-            alt="NFT_portfolio"></a>
-            </div>
-            <div class="product-share-wrapper">
-            <div class="profile-share">
-            </div>
-            <div class="share-btn share-btn-activation dropdown">
-            <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-            <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-            class="sc-bdnxRM sc-hKFxyN hOiKLt">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5
-            3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7
-            0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5
-            11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-            fill="currentColor"></path>
-            </svg>
-            </button>
+        <!-- start single product -->
+        @{
+        foreach (var item in Model)
+        {
+        <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800"
+        class="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="product-style-one no-overlay">
+        <div class="card-thumbnail">
+        <a href="product-details.html">
+        <img src="~/images/ProductImages/@item.Gallery.First().ImageName"
+        alt="NFT_portfolio"></a>
+        </div>
+        <div class="product-share-wrapper">
+        <div class="profile-share">
+        </div>
+        <div class="share-btn share-btn-activation dropdown">
+        <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
+        class="sc-bdnxRM sc-hKFxyN hOiKLt">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5
+        3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7
+        0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5
+        11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+        fill="currentColor"></path>
+        </svg>
+        </button>
 
-            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-            <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-            data-bs-target="#shareModal">
-            اشتراک گذاری
-            </button>
-            <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
-            data-bs-target="#reportModal">
-            گزارش
-            </button>
-            </div>
+        <div class="share-btn-setting dropdown-menu dropdown-menu-end">
+        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
+        data-bs-target="#shareModal">
+        اشتراک گذاری
+        </button>
+        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
+        data-bs-target="#reportModal">
+        گزارش
+        </button>
+        </div>
 
-            </div>
-            </div>
-            <a href="product-details.html"><span class="product-name">@item.Name</span></a>
-            <span class="latest-bid">بالاترین پیشنهاد 5/11</span>
-            <div class="bid-react-area">
-            <div class="last-bid">0.892wETH</div>
-            <div class="react-area">
-            <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-            class="sc-bdnxRM sc-hKFxyN kBvkOu">
-            <path
-            d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207
-            1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482
-            2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-            stroke="currentColor" stroke-width="2"></path>
-            </svg>
-            <span class="number">420</span>
-            </div>
-            </div>
-            </div>
-            </div>
+        </div>
+        </div>
+        <a href="product-details.html"><span class="product-name">@item.Name</span></a>
+        <span class="latest-bid">بالاترین پیشنهاد 5/11</span>
+        <div class="bid-react-area">
+        <div class="last-bid">0.892wETH</div>
+        <div class="react-area">
+        <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
+        class="sc-bdnxRM sc-hKFxyN kBvkOu">
+        <path
+        d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207
+        1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482
+        2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
+        stroke="currentColor" stroke-width="2"></path>
+        </svg>
+        <span class="number">420</span>
+        </div>
+        </div>
+        </div>
+        </div>
 
-            }
-            }
-            <!-- end single product -->
-            </div> *@
+        }
+        }
+        <!-- end single product -->
+        </div> *@
     </div>
 </div>
 
 
 
 <script>
-    function removeParameter(url, parameter)
-    {
+    function removeParameter(url, parameter) {
         var urlParts = url.split('?');
-        if (urlParts.length >= 2)
-        {
+        if (urlParts.length >= 2) {
             var prefix = encodeURIComponent(parameter) + '=';
             var parameters = urlParts[1].split(/[&;]/g);
 
-            for (var i = parameters.length; i-- > 0;)
-            {
-                if (parameters[i].lastIndexOf(prefix, 0) !== -1)
-                {
+            for (var i = parameters.length; i-- > 0;) {
+                if (parameters[i].lastIndexOf(prefix, 0) !== -1) {
                     parameters.splice(i, 1);
                 }
             }
@@ -484,8 +483,7 @@
         return url;
     }
 
-    function onFilterChange(filterName, filterValue)
-    {
+    function onFilterChange(filterName, filterValue) {
         var baseUrl = '@Url.Action("Index", "Product")';
         var url = removeParameter(window.location.href, filterName);
         url = removeParameter(url, 'page');
@@ -495,19 +493,15 @@
     }
 
 
-    function getURLParameter(name)
-    {
+    function getURLParameter(name) {
         var params = new URLSearchParams(window.location.search);
         console.log(params.get(name));
         return params.get(name);
     }
 
-    function selectDropdownOption(dropdown, parameterValue)
-    {
-        for (let i = 0; i < dropdown.options.length; i++)
-        {
-            if (dropdown.options[i].value === parameterValue)
-            {
+    function selectDropdownOption(dropdown, parameterValue) {
+        for (let i = 0; i < dropdown.options.length; i++) {
+            if (dropdown.options[i].value === parameterValue) {
                 dropdown.options[i].selected = true;
                 break;
             }
@@ -523,28 +517,23 @@
     const dropdownSubCategory = document.getElementById('subCategory');
 
 
-    if (categoryParameterValue != null)
-    {
+    if (categoryParameterValue != null) {
         selectDropdownOption(dropdownCategory, categoryParameterValue);
 
         dropdownSubCategory.disabled = false;
         loadSubCategories(categoryParameterValue);
     }
-    else
-    {
+    else {
         dropdownSubCategory.disabled = true;
         clearSubCategories();
     }
-    if (materialParameterValue != null)
-    {
+    if (materialParameterValue != null) {
         selectDropdownOption(dropdownMaterial, materialParameterValue);
     }
 
 
-    document.addEventListener('DOMContentLoaded', function ()
-    {
-        if (subCategoryParameterValue != null)
-        {
+    document.addEventListener('DOMContentLoaded', function () {
+        if (subCategoryParameterValue != null) {
             selectDropdownOption(dropdownSubCategory, subCategoryParameterValue);
         }
     })    // Add event listener to the Category select
@@ -552,32 +541,27 @@
 
 
     // Function to load Sub Categories from the backend
-    function loadSubCategories(categoryId)
-    {
+    function loadSubCategories(categoryId) {
         // Make an asynchronous request to the backend API
         // Replace 'backend/api/subcategories?categoryId=' with the actual endpoint
         fetch(`/Product/GetSubCategories?categoryId=${categoryId}`)
             .then(response => response.json())
-            .then(data =>
-            {
+            .then(data => {
                 // Populate the Sub Category select with the fetched data
                 populateSubCategories(data);
             })
-            .catch(error =>
-            {
+            .catch(error => {
                 console.error('Error:', error);
             });
     }
 
     // Function to populate the Sub Category select with options
-    function populateSubCategories(data)
-    {
+    function populateSubCategories(data) {
         // Clear existing options
         clearSubCategories();
 
         // Populate with new options
-        data.forEach(subCategory =>
-        {
+        data.forEach(subCategory => {
             const option = document.createElement('option');
             option.value = subCategory.id;
             option.textContent = subCategory.name;
@@ -586,8 +570,7 @@
     }
 
     // Function to clear the Sub Category select
-    function clearSubCategories()
-    {
+    function clearSubCategories() {
         dropdownSubCategory.innerHTML = '<option value="">زیر دسته</option>';
-    } 
+    }
 </script>

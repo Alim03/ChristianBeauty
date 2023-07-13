@@ -1,0 +1,52 @@
+﻿@using System.Text.RegularExpressions;
+@using ChristianBeauty.Utilities
+@model List<ChristianBeauty.ViewModels.Blogs.BlogsViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Index Blogs</h1>
+</div>
+
+
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tittle</th>
+                <th scope="col">Description</th>
+                <th scope="col">ReadingTime</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="playlist">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>   
+                    <td>
+                        @item.Tittle
+                    </td>
+                    <td>
+                         @Utilites.SplitString(item.Description, 10)
+                    </td>
+                    <td>
+                        @item.ReadingTime
+                    </td>
+                    <td>
+                        @item.CreateDate
+                    </td>
+                    <td>    
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
