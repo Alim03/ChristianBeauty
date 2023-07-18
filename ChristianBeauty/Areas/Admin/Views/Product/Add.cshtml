@@ -47,6 +47,16 @@
                                 <div class="col-lg-12">
                                     <div class="row">
                                         <div class="col-6 form-group">
+                                            <label asp-for="IsTopSeller"></label>
+                                            <input asp-for="IsTopSeller" type="checkbox" />
+                                            <span asp-validation-for="IsTopSeller" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
                                             <label asp-for="IsEnable"></label>
                                             <input asp-for="IsEnable" type="checkbox" checked />
                                             <span asp-validation-for="IsEnable" class="text-danger"></span>

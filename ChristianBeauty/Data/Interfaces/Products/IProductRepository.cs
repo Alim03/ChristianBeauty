@@ -31,6 +31,8 @@ namespace ChristianBeauty.Data.Interfaces.Products
             int excludedProductId
         );
         Task<List<Product>> GetRandomProductsAsync(int number);
+        Task<List<Product>> GetTopSellerProductsByLimit(int limit);
+
         Task<Product> GetTestAsync(int id);
     }
 }

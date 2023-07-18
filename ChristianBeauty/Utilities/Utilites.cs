@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace ChristianBeauty.Utilities
 {
@@ -17,12 +18,19 @@ namespace ChristianBeauty.Utilities
         public static string PersianDateConverter(DateTime date)
         {
 
-            var calendar = new PersianCalendar();
-            var persianDate = new DateTime(calendar.GetYear(date), calendar.GetMonth(date), calendar.GetDayOfMonth(date));
-            var result = persianDate.ToString("yyyy MMM ddd", CultureInfo.GetCultureInfo("fa-Ir"));
-            return result;
+            PersianCalendar persianCalendar = new PersianCalendar();
+            int year = persianCalendar.GetYear(date);
+            int month = persianCalendar.GetMonth(date);
+            int day = persianCalendar.GetDayOfMonth(date);
+            return $"{year}/{month.ToString("D2")}/{day.ToString("D2")}";
 
         }
 
+        public static bool IsValidMobileNumber(this string input)
+        {
+            const string pattern = @"^09[0|1|2|3][0-9]{8}$";
+            Regex reg = new Regex(pattern);
+            return reg.IsMatch(input);
+        }
     }
 }

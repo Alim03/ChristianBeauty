@@ -1,0 +1,21 @@
+﻿@model List<ChristianBeauty.ViewModels.Categories.GetAllCategoryViewModel>
+
+<div class="category-area pt--70">
+    <div class="container">
+        <div class="row g-5">
+            <!-- start single category -->
+            @foreach (var item in Model)
+{
+            <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
+             <a class="category-style-one" asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Id">
+                    <i class="feather-shopping-bag"></i>
+                    <span class="category-label">@item.Name</span>
+                </a>
+            </div>
+}
+  
+        </div>
+    </div>
+</div>
+
+

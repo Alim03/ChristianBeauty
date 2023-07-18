@@ -4,8 +4,8 @@
         <div class="header-inner">
             <div class="header-left">
                 <div class="logo-thumbnail logo-custom-css">
-                    <a class="logo-light" href="index.html"><img src="~/Images/logo/logo-white.png" alt="nft-logo"></a>
-                    <a class="logo-dark" href="index.html">
+                    <a class="logo-light" asp-controller="Home" asp-action="Index"><img src="~/Images/logo/logo-white.png" alt="nft-logo"></a>
+                    <a class="logo-dark" asp-controller="Home" asp-action="Index">
                         <img src="~/Images/logo/logo-dark.png" alt="nft-logo">
                     </a>
                 </div>
@@ -15,11 +15,12 @@
                         <ul class="mainmenu">
                             <li class=" has-menu-child-item">
                                 <a asp-controller="Home" asp-action="Index">
-                                    صفحه اصلی<i class="feather-home p-3"></i></a>
+                                    صفحه اصلی <i class="feather-home"></i>
+                                </a>
                             </li>
                             <li class="has-droupdown has-menu-child-item">
-                                <a asp-controller="Product" asp-action="Index">محصولات <i
-                                        class="feather-package"></i></a>
+                                <a asp-controller="Product" asp-action="Index">محصولات <i class="feather-package" style="padding-left: 10px !important;"></i>
+                                </a>
                                 <ul class="submenu">
                                     @foreach (var item in Model)
                                     {
@@ -28,13 +29,15 @@
                                                 @item.Name <i data-feather="list"></i></a>
                                         </li>
                                     }
-
-
                                 </ul>
                             </li>
-                            <li> <a asp-controller="Blog" asp-action="Index">
+                            <li> <a asp-controller="Blog" asp-action="index">
                                     بلاگ</a></li>
-                            <li><a href="contact.html">درباره ما</a></li>
+                            <li>
+                                <a asp-controller="home" asp-action="AboutUs">
+                                    درباره ما
+                                    </a>
+                                </li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>

@@ -7024,7 +7024,7 @@ Background Image
 }
 
 .bg_image--22 {
-  background-image: url(../images/bg/bg-image-22.jpg);
+  background-image: url(../images/bg/bg-image-222.jpg);
 }
 
 .bg_image--23 {
@@ -12151,7 +12151,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .mainmenu-nav .mainmenu li a {
   font-weight: 500;
-  padding: 28px 12px;
+  padding: 28px 3px;
   font-size: 16px;
   display: block;
   color: var(--color-body);
@@ -16162,7 +16162,7 @@ figcaption {
   max-height: 85px;
 }
 .single-odometer.banner h3 {
-  font-size: 36px;
+  font-size: 27px;
 }
 .single-odometer.banner h3.counter {
   margin-bottom: 10px;

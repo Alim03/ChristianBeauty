@@ -42,20 +42,27 @@ namespace ChristianBeauty.Controllers
         [HttpGet]
         public async Task<IActionResult> Detail(int id)
         {
-            var product = await _productRepository.GetProductWithImagesEagerLoadAsync(id);
-            var similarProduct = await _productRepository.GetProductsByCategoryWithLimitAsync(
-                product.CategoryId,
-                3,
-                id
-            );
-            var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(similarProduct);
-            var productViewModel = _mapper.Map<GetProductViewModel>(product);
-            var productDetailViewModel = new ProductDetailViewModel
+            if (id != null || id != 0)
             {
-                ProductDetail = productViewModel,
-                SimilarProducts = similarProductViewModel
-            };
-            return View(productDetailViewModel);
+
+                var product = await _productRepository.GetProductWithImagesEagerLoadAsync(id);
+                var similarProduct = await _productRepository.GetProductsByCategoryWithLimitAsync(
+                    product.CategoryId,
+                    3,
+                    id
+                );
+                var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(similarProduct);
+                var productViewModel = _mapper.Map<GetProductViewModel>(product);
+                var productDetailViewModel = new ProductDetailViewModel
+                {
+                    ProductDetail = productViewModel,
+                    SimilarProducts = similarProductViewModel
+                };
+                return View(productDetailViewModel);
+            }
+
+            else
+                return View();
         }
 
         public async Task<IActionResult> Index(

@@ -17,6 +17,8 @@ using AspNetCoreHero.ToastNotification;
 using AspNetCoreHero.ToastNotification.Extensions;
 using ChristianBeauty.Data.Interfaces.Blogs;
 using ChristianBeauty.Data.Repositories.Blogs;
+using ChristianBeauty.Data.Interfaces.LoyaltyClubUser;
+using ChristianBeauty.Data.Repositories.LoyaltyClubUser;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +56,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBlogsRepository, BlogsRepositry>();
+builder.Services.AddScoped<ILoyaltyClubUserRepository, LoyaltyClubUserRepository>();
 
 builder.Services
     .AddAuthentication(options =>
@@ -79,7 +82,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseStatusCodePagesWithReExecute("/error/{0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

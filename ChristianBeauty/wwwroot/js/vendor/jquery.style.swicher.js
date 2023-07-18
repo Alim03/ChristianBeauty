@@ -270,11 +270,15 @@
     $(function() {
 
         function setStyleLocalStorage(mode) {
-            var styleMode = parseInt($('meta[name="theme-style-mode"]').attr('content'));
-            var styleLocalStorageKey = styleMode == 1 ? 'client_dark_mode_style_local_storage' : 'client_light_mode_style_local_storage';
-            localStorage.setItem(styleLocalStorageKey, mode);
+            if (localStorage.getItem("client_dark_mode_style_local_storage") == null || localStorage.getItem("client_dark_mode_style_local_storage") == undefined) {
+                var styleMode = document.querySelector('meta[name="theme-style-mode"]').content;
+            }
+            else {
+                var styleMode = localStorage.getItem("client_dark_mode_style_local_storage");
+            }
+            localStorage.setItem("client_dark_mode_style_local_storage", mode);
             $('body').removeClass('active-dark-mode active-light-mode');
-            if (localStorage.getItem(styleLocalStorageKey) == '1') {
+            if (localStorage.getItem("client_dark_mode_style_local_storage") == '1') {
                 $('body').addClass('active-dark-mode');
             } else {
                 $('body').addClass('active-light-mode');

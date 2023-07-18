@@ -274,14 +274,20 @@
                             <a href="https://api.whatsapp.com/send?phone=09032387023" target="_blank"
                                 class="btn btn-whatsapp-alta mt--30">ثبت سفارش از طریث واتساپ<img
                                     style="height: 47px;width: 47px;" src="~/images/logo/whatsapp.png" /></a>
-                            <a href="@Model.ProductDetail.DigikalLink" target="_blank"
+                            @if (@Model.ProductDetail.DigikalLink != null)
+                            {
+                                 <a href="@Model.ProductDetail.DigikalLink" target="_blank"
                                 class="btn btn-digikala-alta mt--10">ثبت سفارس
                                 از طریق دیجیکالا<img style="height: 47px;width: 47px;"
                                     src="~/images/logo/dig.png" /></a>
+                            }
+                            @if (@Model.ProductDetail.BasalamLink != null)
+                            {
+                           
                             <a href="@Model.ProductDetail.BasalamLink" target="_blank"
                                 class="btn btn-basalam-alta mt--10">ثبت سفارش
                                 از طریق با سلام<img style="height: 47px;width: 47px;" src="~/images/logo/r.png" /></a>
-
+                            }
                         </div>
                     </div>
                 </div>

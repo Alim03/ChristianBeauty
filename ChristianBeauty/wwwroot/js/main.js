@@ -697,7 +697,13 @@
 
         
         darkLight: function () {
-            var styleMode = document.querySelector('meta[name="theme-style-mode"]').content;
+            if (localStorage.getItem("client_dark_mode_style_local_storage") == null || localStorage.getItem("client_dark_mode_style_local_storage") == undefined) {
+                var styleMode = document.querySelector('meta[name="theme-style-mode"]').content;
+            }
+            else
+            {
+                var styleMode = localStorage.getItem("client_dark_mode_style_local_storage");
+            }
             var cookieKey = styleMode == 1 ? 'client_dark_mode_style_cookie' : 'client_light_mode_style_cookie';
             if (Cookies.get(cookieKey) == 'dark') {
                 $('body').removeClass('active-light-mode');

@@ -98,6 +98,26 @@ namespace ChristianBeauty.Migrations
                     b.ToTable("Galleries");
                 });
 
+            modelBuilder.Entity("ChristianBeauty.Models.LoyaltyClubUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LoyaltyClubUser");
+                });
+
             modelBuilder.Entity("ChristianBeauty.Models.Material", b =>
                 {
                     b.Property<int>("Id")
@@ -152,6 +172,9 @@ namespace ChristianBeauty.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsFinished")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsTopSeller")
                         .HasColumnType("bit");
 
                     b.Property<int>("MaterialId")

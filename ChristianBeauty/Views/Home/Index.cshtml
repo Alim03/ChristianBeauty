@@ -1,865 +1,97 @@
-﻿@model List<ChristianBeauty.ViewModels.Products.ProductListViewModel>
-<style>
-    /* Pagination container */
-    .pagination-container {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+﻿
+@Html.Partial("PartialViews/Footer/_Slider")
 
-    /* Pagination list */
-    .pagination-list {
-        list-style: none;
-        display: flex;
-        gap: 10px;
-    }
+@await Component.InvokeAsync("Category")
 
-    /* Pagination list item */
-    .pagination-item {
-        background-color: #242435;
-        color: #ffffff;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
 
-    /* Current page item */
-    .pagination-item.current {
-        background-color: #00a3ff;
-        font-weight: bold;
-    }
+@await Component.InvokeAsync("TopSeller")
 
-    /* Pagination link */
-    .pagination-link {
-        color: #ffffff;
-        text-decoration: none;
-    }
 
-    /* Pagination link hover */
-    .pagination-link:hover {
-        color: #00a3ff;
-    }
-</style>
 
-<!-- ENd Header Area -->
-<!-- start banner area -->
-<div class="banner-style-4 rn-section-gapTop">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 order-2 order-lg-1 mt_md--40 mt_sm--40">
-                <div class="sldier-content">
-                    <span class="title-badge" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"> کیریستین
-                        بیوتی</span>
-                    <h2 class="title" data-sal="slide-up" data-sal-delay="200" data-sal-duration="800">جادوی زیبایی در
-                        دستان شماست</h2>
-                    <p class="banner-disc-one" data-sal="slide-up" data-sal-delay="250" data-sal-duration="800">
-                        با استفاده از ترکیب بی‌نظیری از تحقیق و توسعه،همچنین کیفیت وطراحی مناسب
-                        <br>
-                        تجربه به یادمانی از لوازم آرایشی و بهداشتی را تجربه خواهید کرد
-                    </p>
-                    <div class="button-group">
-                        <a class="btn btn-large btn-primary" data-sal="slide-up" data-sal-delay="300"
-                            data-sal-duration="800" href="/product/index">مشاهده محصولات</a>
-                        <a class="btn btn-large btn-primary-alta" data-sal="slide-up" data-sal-delay="300"
-                            data-sal-duration="800" href="create.html">درباره ما</a>
-                    </div>
-                </div>
+<div class="row g-5 mt--100">
+    <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="single-odometer banner one">
+            <div class="icon">
+                <img src="~/images/icons/shape-9.png" alt="Shape">
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 order-1 order-lg-2">
-                <div class="slider slick-activation-04">
-                    <div class="slider-thumbnail slide  thumbnail-overlay">
-                        <a href="product-details.html"><img src="~/images/products/Untitled.png"
-                                alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5>G37</h5>
-                            <span>برس مو</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail slide thumbnail-overlay">
-                        <a href="product-details.html"><img src="~/images/products/Untitled2.png"
-                                alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5><a href="product-details.html">G107</a></h5>
-                            <span>برس مو</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail slide thumbnail-overlay">
-                        <a href="product-details.html"><img src="~/images/products/Untitled4.png"
-                                alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5><a href="product-details.html">G30 </a></h5>
-                            <span>برس مو</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail slide thumbnail-overlay">
-                        <a href="product-details.html"><img src="~/images/products/Untitled5.png"
-                                alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5>G8</h5>
-                            <span>برس مو</span>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="counter">
+                تنوع محصولات
+            </h3>
+            <p class="disc mt-4">
+                تنوع بی‌نظیر محصولات کریستین بیوتی ، شما را به یک سفر هیجان انگیز در دنیای گزینه‌های متنوع و استثنایی می‌برد.
+            </p>
+        </div>
+    </div>
+    <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="single-odometer banner two">
+            <div class="icon">
+                <img src="~/images/icons/shape-1.png" alt="Shape">
             </div>
+            <h3 class="counter">
+                خرید راحت
+            </h3>
+
+            <p class="disc mt-4">
+                تجربه خریدی آسان و بی دغدغه توسط روش های متعدد ثبت سفارش فراهم شده در وبسایت
+                .
+            </p>
+        </div>
+    </div>
+    <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="single-odometer banner three">
+            <div class="icon">
+                <img src="~/images/icons/shape-5.png" alt="Shape">
+            </div>
+            <h3 class="counter">
+                سفارش عمده
+            </h3>
+            <p class="disc mt-4"> با ثبت سفارش بصورت عمده ، بهترین محصولات را با قیمت‌های مناسب و امکاناتی بی‌نظیر برای شما تضمین می‌کنیم.</p>
+        </div>
+    </div>
+    <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+        <div class="single-odometer banner four">
+            <div class="icon">
+                <img src="~/images/icons/shape-7.png" alt="Shape">
+            </div>
+            <h3 class="counter">
+                خرید بدون واسطه
+            </h3>
+            <p class="disc mt-4">   بدون هیچ میانجی و واسطه‌ای، تجربه‌ی خریدی مستقیم و بی‌واسطه را در وبسایت ما تجربه کنید.</p>
         </div>
     </div>
 </div>
-<!-- end banner area -->
-<!-- Explore Style Carousel -->
-<div class="rn-live-bidding-area rn-section-gapTop">
+
+@await Component.InvokeAsync("RandomSeller")
+
+
+<div class="nu-subscribe-area rn-section-gapTop" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
     <div class="container">
-        <div class="row mb--50">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h3 class="title mb--0 live-bidding-title" data-sal-delay="150" data-sal="slide-up"
-                        data-sal-duration="800">مناقصه زنده</h3>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-12">
-                <div
-                    class="banner-one-slick slick-activation-03 slick-arrow-style-one rn-slick-dot-style slick-gutter-15">
-                    <!-- start single product -->
-                    @foreach (var item in Model)
-                    {
-                        <div class="single-slide-product">
-                            <div class="product-style-one">
-                                <div class="card-thumbnail">
-                                    <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
-                                        <img src="~/Images/ProductImages/@item.Image" alt="img">
-                                    </a>
-                                    <div class="countdown" data-date="2022-11-09">
-                                        <div class="countdown-container days">
-                                            <span class="countdown-value">87</span>
-                                            <span class="countdown-heading">روز</span>
-                                        </div>
-                                        <div class="countdown-container hours">
-                                            <span class="countdown-value">23</span>
-                                            <span class="countdown-heading">ساعت</span>
-                                        </div>
-                                        <div class="countdown-container minutes">
-                                            <span class="countdown-value">38</span>
-                                            <span class="countdown-heading">دقیقه</span>
-                                        </div>
-                                        <div class="countdown-container seconds">
-                                            <span class="countdown-value">27</span>
-                                            <span class="countdown-heading">ثانیه</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-share-wrapper">
-                                    <div class="profile-share">
-                                        <a href="author.html" class="avatar" data-tooltip="مارک جوردن"><img
-                                                src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                                        <a href="author.html" class="avatar" data-tooltip="مارک"><img
-                                                src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-                                        <a href="author.html" class="avatar" data-tooltip="جوردن"><img
-                                                src="~/images/client/client-5.png" alt="Nft_Profile"></a>
-                                        <a class="more-author-text" href="#">20+ درخواست</a>
-                                    </div>
-                                    <div class="share-btn share-btn-activation dropdown">
-                                        <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-                                                class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-                                        </button>
+                <div class="subscribe-wrapper_1 text-center">
+                    <h3 class="title mb--10">به باشگاه مشتریان ما بپیوندید</h3>
+                    <p class="subtitle">پیوستن به باشگاه مشتریان برند کریستین بیوتی، یک فرصت بی‌نظیر است که به شما اجازه می‌دهد با این برند ارتباط برقرار کنید و از مزایای ویژه‌ای برخوردار شوید.</p>
+                    <div class="subscribe-input-wrapper">
+                        <div class="input-group">
+                            <input id="telNumber" type="tel" class="form-control bg-color--2" placeholder="شماره تلفن شما">
+                            <div class="input-group-append">
+                                <button onclick="SendToBack()" class="btn btn-primary-alta btn-outline-secondary" type="button">عضویت</button>
 
-                                        <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                            <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-                                                data-bs-target="#shareModal">
-                                                اشتراک گذاری
-                                            </button>
-                                            <button type="button" class="btn-setting-text report-text"
-                                                data-bs-toggle="modal" data-bs-target="#reportModal">
-                                                گزارش
-                                            </button>
-                                        </div>
 
-                                    </div>
-
-                                </div>
-                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
-                                    <span class="product-name">@item.Name</span>
-                                </a>
-                                <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
-                                <div class="bid-react-area">
-                                    <div class="last-bid">0.244wETH</div>
-                                    <div class="react-area">
-                                        <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-                                            class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                            <path
-                                                d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                                stroke="currentColor" stroke-width="2"></path>
-                                        </svg>
-                                        <span class="number">322</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    }
-
-                    <!-- end single product -->
-
+                        <h6 class="mt-3" id="SuccessMessageShow" style="color:#00ff89">
+                        </h6>
+                        <h6 class="mt-3" id="ErrorMessageShow" style="color:#d92323">
+                        </h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Explore Style Carousel End-->
-<!-- Start product area -->
-<div class="rn-product-area rn-section-gapTop">
-    <div class="container">
-        <div class="row mb--30 align-items-center">
-            <div class="col-12">
-                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">بررسی محصولات
-                </h3>
-            </div>
-        </div>
 
 
-        @*
-        <div class="row g-5 mt_dec--30">
-
-        @foreach (var item in Model.Products)
-        {
-        <!-- start single product -->
-        <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="150"
-        data-sal-duration="800">
-        <div class="product-style-one no-overlay with-placeBid">
-        <div class="card-thumbnail">
-        <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">
-
-        @if (item?.Gallery != null && item.Gallery.Count > 0)
-        {
-        <img src="~/Images/ProductImages/@item.Gallery[0].ImageName" alt="NFT_portfolio">
-        }
-        else
-        {
-        <img src="" alt="NFT_portfolio">
-        }
-        </a>
-        <a href="product-details.html" class="btn btn-primary">ثبت پیشنهاد</a>
-        </div>
-        <div class="product-share-wrapper">
-        <div class="profile-share">
-        <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-        src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-        <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-        src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-        <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی"><img
-        src="~/images/client/client-4.png" alt="Nft_Profile"></a>
-        <a class="more-author-text" href="#">9+ درخواست</a>
-        </div>
-        <div class="share-btn share-btn-activation dropdown">
-        <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <svg viewBox="0 0 14 4" fill="none" width="16" height="16"
-        class="sc-bdnxRM sc-hKFxyN hOiKLt">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-        d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5
-        3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7
-        0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5
-        11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-        fill="currentColor"></path>
-        </svg>
-        </button>
-
-        <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal"
-        data-bs-target="#shareModal">
-        اشتراک گذاری
-        </button>
-        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal"
-        data-bs-target="#reportModal">
-        گزارش
-        </button>
-        </div>
-
-        </div>
-        </div>
-        <a href="product-details.html"><span class="product-name">@item.Name</span></a>
-        <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
-        <div class="bid-react-area">
-        <div class="last-bid">0.244wETH</div>
-        <div class="react-area">
-        <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
-        class="sc-bdnxRM sc-hKFxyN kBvkOu">
-        <path
-        d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207
-        1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482
-        2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-        stroke="currentColor" stroke-width="2"></path>
-        </svg>
-        <span class="number">322</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        <!-- end single product -->
-
-        }
-        </div>
-
-
-        <div class="pagination-container">
-        <ul class="pagination-list">
-        @if (Model.Metadata.HasPreviousPage)
-        {
-        <li class="pagination-item">
-
-        @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage - 1)&categoryId=@Context.Request.Query["categoryId"]">قبلی</a>
-
-        }
-        else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage - 1)&q=@Context.Request.Query["q"]">قبلی</a>
-
-        }
-        else if
-        (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
-        !string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage -
-        1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">قبلی</a>
-
-        }
-        else
-        {
-        <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage - 1)">قبلی</a>
-
-        }
-
-
-
-        </li>
-        }
-
-        @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
-        {
-        if (i >= 1 && i <= Model.Metadata.TotalPages)
-        {
-        <li class="pagination-item @(i == Model.Metadata.CurrentPage ? "current" : "")">
-        @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-        {
-        <a class="pagination-link" href="?page=@i&categoryId=@Context.Request.Query["categoryId"]">@i</a>
-
-        }
-        else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link" href="?page=@i&q=@Context.Request.Query["q"]">@i</a>
-        }
-        else if
-        (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
-        !string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link"
-        href="?page=@i&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">@i</a>
-        }
-        else
-        {
-        <a class="pagination-link" href="?page=@i">@i</a>
-        }
-
-        </li>
-        }
-        }
-
-        @if (Model.Metadata.HasNextPage)
-        {
-        <li class="pagination-item">
-
-
-
-        @if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage + 1)&categoryId=@Context.Request.Query["categoryId"]">بعدی</a>
-
-        }
-        else if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage + 1)&q=@Context.Request.Query["q"]">بعدی</a>
-
-        }
-        else if
-        (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]) &&
-        !string.IsNullOrEmpty(Context.Request.Query["q"]))
-        {
-        <a class="pagination-link"
-        href="?page=@(Model.Metadata.CurrentPage +
-        1)&categoryId=@Context.Request.Query["categoryId"]&q=@Context.Request.Query["q"]">بعدی</a>
-
-        }
-        else
-        {
-        <a class="pagination-link" href="?page=@(Model.Metadata.CurrentPage + 1)">بعدی</a>
-
-        }
-
-
-
-        </li>
-        }
-        </ul>
-        </div>
-        *@
-
-
-
-    </div>
-</div>
-<!-- end product area -->
-<!-- top top-seller start -->
-<div class="rn-top-top-seller-area nice-selector-transparent rn-section-gapTop">
-    <div class="container">
-        <div class="row  mb--30">
-            <div class="col-12 justify-sm-center d-flex">
-                <h3 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">بیشترین فروش در</h3>
-                <select>
-                    <option data-display="1 روز"> 1 روز</option>
-                    <option value="1">7 روز</option>
-                    <option value="2">15 روز</option>
-                    <option value="4">30 روز</option>
-                </select>
-            </div>
-        </div>
-        <div class="row justify-sm-center g-5 top-seller-list-wrapper">
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="author.html"><img src="~/images/client/client-12.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">مجید</h6>
-                            </a>
-                            <span class="count-number">
-                                2500 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="author.html"><img src="~/images/client/client-2.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">آقای پارکلی</h6>
-                            </a>
-                            <span class="count-number">
-                                23000 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="author.html"><img src="~/images/client/client-3.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">اکبری</h6>
-                            </a>
-                            <span class="count-number">
-                                21000 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="author.html"><img src="~/images/client/client-4.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">برد پیت</h6>
-                            </a>
-                            <span class="count-number">
-                                2000 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="author.html"><img src="~/images/client/client-5.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">دیو شپل</h6>
-                            </a>
-                            <span class="count-number">
-                                200 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="author.html"><img src="~/images/client/client-6.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">ترلان پروانه</h6>
-                            </a>
-                            <span class="count-number">
-                                2000 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="author.html"><img src="~/images/client/client-7.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">تام کروز</h6>
-                            </a>
-                            <span class="count-number">
-                                2500 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="author.html"><img src="~/images/client/client-8.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">یاس</h6>
-                            </a>
-                            <span class="count-number">
-                                2500 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="author.html"><img src="~/images/client/client-9.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">شکیب</h6>
-                            </a>
-                            <span class="count-number">
-                                2500 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="author.html"><img src="~/images/client/client-10.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="author.html">
-                                <h6 class="name">مجید</h6>
-                            </a>
-                            <span class="count-number">
-                                2500 هزارتومان
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-        </div>
-    </div>
-</div>
-<!-- top top-seller end -->
-<!-- start service area -->
-<div class="rn-service-area rn-section-gapTop">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mb--50">
-                <h3 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">NFT های خود را ایجاد
-                    و بفروشید</h3>
-            </div>
-        </div>
-        <div class="row g-5">
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                    class="rn-service-one color-shape-7">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="~/images/icons/shape-7.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">مرحله -01</div>
-                        <div class="content">
-                            <h4 class="title"><a href="#">کیف پول خود را تنظیم کنید</a></h4>
-                            <p class="description">
-                                ویژگی ها و اجزای قدرتمند، که نورون را متمایز می کند،
-                                به راحتی قابل تنظیم و مقیاس پذیر است.
-                            </p>
-                            <a class="read-more-button" href="#"><i class="feather-arrow-left"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="#"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800"
-                    class="rn-service-one color-shape-1">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="~/images/icons/shape-1.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">مرحله -02</div>
-                        <div class="content">
-                            <h4 class="title"><a href="#">مجموعه خود را ایجاد کنید</a></h4>
-                            <p class="description">
-                                مجموعه ای عالی از قالب های زیبای وب سایت برای نیاز شما.
-                                بهترین قالب مناسب را انتخاب کنید.
-                            </p>
-                            <a class="read-more-button" href="#"><i class="feather-arrow-left"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="#"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800"
-                    class="rn-service-one color-shape-5">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="~/images/icons/shape-5.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">مرحله-03</div>
-                        <div class="content">
-                            <h4 class="title"><a href="#">NFT خود را اضافه کنید</a></h4>
-                            <p class="description">
-                                ما قالب را کاملاً ریسپانسیو کرده ایم، بنابراین عالی به نظر می رسد
-                                همه دستگاه ها: دسکتاپ، تبلت و.
-                            </p>
-                            <a class="read-more-button" href="#"><i class="feather-arrow-left"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="#"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="300" data-sal-duration="800"
-                    class="rn-service-one color-shape-6">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="~/images/icons/shape-6.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">مرحله-04</div>
-                        <div class="content">
-                            <h4 class="title"><a href="#">NFT خود را بفروشید</a></h4>
-                            <p class="description">
-                                همانطور که خودم را در میان علف های بلند کنار نهر می اندازم
-                                در نزدیکی NFT های زمین قرار بگیرید.
-                            </p>
-                            <a class="read-more-button" href="#"><i class="feather-arrow-left"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="#"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-        </div>
-    </div>
-</div>
-<!-- End service area -->
-<!-- collection area Start -->
-<div class="rn-collection-area rn-section-gapTop">
-    <div class="container">
-        <div class="row mb--50 align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">مجموعه برتر
-                </h3>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
-                <div class="view-more-btn text-end text-sm-start" data-sal-delay="150" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <a class="btn-transparent" href="#">نمایش همه<i data-feather="arrow-left"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-5">
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800"
-                class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="product-details.html" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="~/images/collection/collection-lg-01.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="~/images/collection/collection-sm-01.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-02.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-03.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="~/images/client/client-15.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">تد باتدی</h6>
-                            <span class="items">27 مورد</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800"
-                class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="product-details.html" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="~/images/collection/collection-lg-03.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="~/images/collection/collection-sm-04.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-05.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-06.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="~/images/client/client-12.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">سگ الماس</h6>
-                            <span class="items">20 مورد</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800"
-                class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="product-details.html" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="~/images/collection/collection-lg-02.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="~/images/collection/collection-sm-07.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-08.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-09.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="~/images/client/client-13.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">مورگان11</h6>
-                            <span class="items">15 مورد</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="350" data-sal-duration="800"
-                class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="product-details.html" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="~/images/collection/collection-lg-04.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="~/images/collection/collection-sm-10.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-11.jpg" alt="Nft_Profile">
-                            <img src="~/images/collection/collection-sm-12.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="~/images/client/client-14.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">پرتقال</h6>
-                            <span class="items">10 مورد</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-        </div>
-    </div>
-</div>
-<!-- collection area End -->
-<!-- Modal -->
 <div class="rn-popup-modal share-modal-wrapper modal fade" id="shareModal" tabindex="-1" aria-hidden="true">
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -885,8 +117,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"><span class="icon"><i data-feather="instagram"></i></span><span
-                                class="text">اینستاگرام</span> </a>
+                        <a href="#">
+                            <span class="icon"><i data-feather="instagram"></i></span><span class="text">اینستاگرام</span>
+                        </a>
                     </li>
                     <li>
                         <a href="#">
@@ -898,7 +131,6 @@
         </div>
     </div>
 </div>
-<!-- Modal -->
 <div class="rn-popup-modal report-modal-wrapper modal fade" id="reportModal" tabindex="-1" aria-hidden="true">
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -924,3 +156,36 @@
         </div>
     </div>
 </div>
+
+<script>
+    function SendToBack() {
+        var tel = document.getElementById("telNumber").value
+        var successMessage = document.getElementById("SuccessMessageShow")
+        var errorMessage = document.getElementById("ErrorMessageShow")
+
+        if ((tel == null || tel == undefined || tel == "") || (tel.length < 11)) {
+            return errorMessage.innerHTML = "شماره تلفن خود را  به صورت صحیح وارد کنید"
+        }
+
+        fetch(`Home/LoyaltyClub/${tel}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.isSuccessfull) {
+                    successMessage.innerHTML = "عملیات موفقیت آمیز بود."
+                    setTimeout(function () {
+                        //your code to be executed after 1 second
+                        successMessage.innerHTML = "";
+                    }, 2000);
+                }
+                else {
+                    return errorMessage.innerHTML = "عملیات با خطا مواجه شد"
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+
+
+    }
+</script>

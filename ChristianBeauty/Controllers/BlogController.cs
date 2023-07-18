@@ -56,6 +56,7 @@ namespace ChristianBeauty.Controllers
                 SimilarBlogs = similarBlogs
             };
             return View(blogDetailViewModel);
+            return View(blogDetailViewModel);
         }
     }
 }

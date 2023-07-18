@@ -60,7 +60,7 @@ namespace ChristianBeauty.Data.Repositories.Products
         public async Task<Product> GetProductWithImagesEagerLoadAsync(int id)
         {
             return await Context.Products
-                .Include(c => c.Gallery)
+                .Include(c => c.Gallery).Include(c=>c.Material)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
@@ -226,6 +226,22 @@ namespace ChristianBeauty.Data.Repositories.Products
                         }
                 )
                 .Take(number)
+                .ToListAsync();
+        }
+        public async Task<List<Product>> GetTopSellerProductsByLimit(int limit)
+        {
+            return await Context.Products
+                .Where(x => x.IsTopSeller == true)
+                .Select(
+                    p =>
+                        new Product
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                        }
+                )
+                .Take(limit)
                 .ToListAsync();
         }
     }

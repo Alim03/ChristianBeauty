@@ -14,6 +14,8 @@ namespace ChristianBeauty.ViewModels.Products
         public string Name { get; set; }
         public bool IsFinished { get; set; }
         public bool IsEnable { get; set; }
+        public bool IsTopSeller { get; set; }
+
 
         [MaxLength(64)]
         public string ProductCode { get; set; }
