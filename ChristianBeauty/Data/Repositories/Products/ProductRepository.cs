@@ -60,7 +60,8 @@ namespace ChristianBeauty.Data.Repositories.Products
         public async Task<Product> GetProductWithImagesEagerLoadAsync(int id)
         {
             return await Context.Products
-                .Include(c => c.Gallery).Include(c=>c.Material)
+                .Include(c => c.Gallery)
+                .Include(c => c.Material)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
@@ -118,7 +119,8 @@ namespace ChristianBeauty.Data.Repositories.Products
             int pageNumber,
             int pageSize,
             int? categoryId,
-            int? materialId
+            int? materialId,
+            int? subcategory
         )
         {
             int skip = (pageNumber - 1) * pageSize;
@@ -137,6 +139,11 @@ namespace ChristianBeauty.Data.Repositories.Products
             if (materialId != null)
             {
                 query = query.Where(x => x.MaterialId == materialId.Value);
+            }
+
+            if (subcategory != null)
+            {
+                query = query.Where(x => x.CategoryId == subcategory.Value);
             }
 
             return await query
@@ -165,7 +172,11 @@ namespace ChristianBeauty.Data.Repositories.Products
             return await Context.Products.Where(x => x.Name.Contains(query)).CountAsync();
         }
 
-        public async Task<int> GetTotalCountProductsByFilterAsync(int? categoryId, int? materialId)
+        public async Task<int> GetTotalCountProductsByFilterAsync(
+            int? categoryId,
+            int? materialId,
+            int? subcategory
+        )
         {
             IQueryable<Product> query = Context.Products;
 
@@ -181,6 +192,10 @@ namespace ChristianBeauty.Data.Repositories.Products
             if (materialId != null)
             {
                 query = query.Where(x => x.MaterialId == materialId.Value);
+            }
+            if (subcategory != null)
+            {
+                query = query.Where(x => x.CategoryId == subcategory.Value);
             }
             return await query.CountAsync();
         }
@@ -228,6 +243,7 @@ namespace ChristianBeauty.Data.Repositories.Products
                 .Take(number)
                 .ToListAsync();
         }
+
         public async Task<List<Product>> GetTopSellerProductsByLimit(int limit)
         {
             return await Context.Products

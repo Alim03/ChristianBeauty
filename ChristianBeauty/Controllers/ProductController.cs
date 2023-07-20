@@ -44,14 +44,15 @@ namespace ChristianBeauty.Controllers
         {
             if (id != null || id != 0)
             {
-
                 var product = await _productRepository.GetProductWithImagesEagerLoadAsync(id);
                 var similarProduct = await _productRepository.GetProductsByCategoryWithLimitAsync(
                     product.CategoryId,
                     3,
                     id
                 );
-                var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(similarProduct);
+                var similarProductViewModel = _mapper.Map<List<ProductListViewModel>>(
+                    similarProduct
+                );
                 var productViewModel = _mapper.Map<GetProductViewModel>(product);
                 var productDetailViewModel = new ProductDetailViewModel
                 {
@@ -60,7 +61,6 @@ namespace ChristianBeauty.Controllers
                 };
                 return View(productDetailViewModel);
             }
-
             else
                 return View();
         }
@@ -68,7 +68,8 @@ namespace ChristianBeauty.Controllers
         public async Task<IActionResult> Index(
             int page = 1,
             int? categoryId = null,
-            int? material = null
+            int? material = null,
+            int? subcategory = null
         )
         {
             List<Product> products;
@@ -79,11 +80,13 @@ namespace ChristianBeauty.Controllers
                     page,
                     PAGESIZE,
                     categoryId,
-                    material
+                    material,
+                    subcategory
                 );
                 totalCount = await _productRepository.GetTotalCountProductsByFilterAsync(
                     categoryId,
-                    material
+                    material,
+                    subcategory
                 );
             }
             else

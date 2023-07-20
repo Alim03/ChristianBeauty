@@ -24,7 +24,6 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         private protected ICategoryRepository _categoryRepository;
         private protected IGalleryRepository _galleryRepository;
 
-
         private protected IMapper _mapper;
 
         public ProductController(
@@ -33,7 +32,6 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             ICategoryRepository categoryRepository,
             IMapper mapper,
             IGalleryRepository galleryRepository
-
         )
         {
             _repository = repository;
@@ -41,7 +39,6 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             _categoryRepository = categoryRepository;
             _mapper = mapper;
             _galleryRepository = galleryRepository;
-
         }
 
         public IActionResult Index()
@@ -86,10 +83,14 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 }
                 await _repository.AddAsync(product);
                 await _repository.SaveAsync();
-                
+
                 foreach (var gallery in viewModel.Gallery)
                 {
-                    Gallery galllery = new Gallery { ImageName = await FileHandler.ImageUploadAsync(gallery), ProductId = product.Id };
+                    Gallery galllery = new Gallery
+                    {
+                        ImageName = await FileHandler.ImageUploadAsync(gallery),
+                        ProductId = product.Id
+                    };
                     await _galleryRepository.AddAsync(galllery);
                     await _galleryRepository.SaveAsync();
                 }
@@ -161,7 +162,11 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(EditProductViewModel viewModel, IFormFileCollection Gallery)
+        public async Task<IActionResult> Edit(
+            EditProductViewModel viewModel,
+            IFormFileCollection Gallery,
+            List<int> ChangedImagesIds
+        )
         {
             var material = await _materialRepository.GetAllAsync();
             var materialsSelectListItem = SelectListHelper.ConvertMaterialToSelectListItems(
@@ -189,21 +194,27 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 _repository.Update(product);
                 await _repository.SaveAsync();
             }
-            var gallleries = await _galleryRepository.GetProductImagesByIdAsync(viewModel.Id);
-            foreach (var item in gallleries)
+            if (Gallery.Count > 0)
             {
-                _galleryRepository.Remove(item);
-                await _galleryRepository.SaveAsync();
-                FileHandler.DeleteImage(item.ImageName);
-
-
+                foreach (var id in ChangedImagesIds)
+                {
+                    var image = await _galleryRepository.GetImageByIdAsync(id);
+                    _galleryRepository.Remove(image);
+                    await _galleryRepository.SaveAsync();
+                    FileHandler.DeleteImage(image.ImageName);
+                }
+                foreach (var item in Gallery)
+                {
+                    Gallery galllery = new Gallery
+                    {
+                        ImageName = await FileHandler.ImageUploadAsync(item),
+                        ProductId = product.Id
+                    };
+                    await _galleryRepository.AddAsync(galllery);
+                    await _galleryRepository.SaveAsync();
+                }
             }
-            foreach (var item in Gallery)
-            {
-                Gallery galllery = new Gallery { ImageName = await FileHandler.ImageUploadAsync(item), ProductId = product.Id };
-                await _galleryRepository.AddAsync(galllery);
-                await _galleryRepository.SaveAsync();
-            }
+
             return RedirectToAction("Index");
         }
 

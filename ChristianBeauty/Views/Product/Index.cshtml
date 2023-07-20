@@ -56,6 +56,12 @@
                     {
                         query += $"&material={Context.Request.Query["material"]}";
                     }
+                    if (!string.IsNullOrEmpty(Context.Request.Query["subcategory"]))
+                    {
+                        query += $"&subcategory={Context.Request.Query["subcategory"]}";
+                    }
+
+                    
 
                 }
 
