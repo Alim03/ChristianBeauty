@@ -22,7 +22,7 @@ namespace ChristianBeauty.Controllers
         private protected IProductRepository _productRepository;
         private protected ICategoryRepository _categoryRepository;
         private protected IMaterialRepository _materialRepository;
-        private const int PAGESIZE = 1;
+        private const int PAGESIZE = 9;
 
         private readonly IMapper _mapper;
 

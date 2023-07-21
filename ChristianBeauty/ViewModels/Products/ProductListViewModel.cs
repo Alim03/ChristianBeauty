@@ -1,3 +1,4 @@
+using ChristianBeauty.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace ChristianBeauty.ViewModels.Products
         public int? Size { get; set; }
         public decimal? Weight { get; set; }
         public string Image { get; set; }
+        public Category Category { get; set; }
     }
 }

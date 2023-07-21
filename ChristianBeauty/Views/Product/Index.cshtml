@@ -157,20 +157,9 @@
                                     <img src="" alt="NFT_portfolio">
                                 }
                             </a>
-                            <a href="product-details.html" class="btn btn-primary">ثبت پیشنهاد</a>
                         </div>
                         <div class="product-share-wrapper">
                             <div class="profile-share">
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
-                                    <img src="~/images/client/client-2.png" alt="Nft_Profile">
-                                </a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
-                                    <img src="~/images/client/client-3.png" alt="Nft_Profile">
-                                </a>
-                                <a href="author.html" class="avatar" data-tooltip="صاحب : آقای جان لی">
-                                    <img src="~/images/client/client-4.png" alt="Nft_Profile">
-                                </a>
-                                <a class="more-author-text" href="#">9+ درخواست</a>
                             </div>
                             <div class="share-btn share-btn-activation dropdown">
                                 <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -196,9 +185,8 @@
                             </div>
                         </div>
                         <a href="product-details.html"><span class="product-name">@item.Name</span></a>
-                        <span class="latest-bid">بالاترین پیشنهاد 1/20</span>
                         <div class="bid-react-area">
-                            <div class="last-bid">0.244wETH</div>
+                            <div class="last-bid">@item.Category.Name</div>
                             <div class="react-area">
                                 <svg viewBox="0 0 17 16" fill="none" width="16" height="16"
                                     class="sc-bdnxRM sc-hKFxyN kBvkOu">

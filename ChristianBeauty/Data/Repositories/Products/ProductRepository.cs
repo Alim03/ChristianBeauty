@@ -74,14 +74,15 @@ namespace ChristianBeauty.Data.Repositories.Products
         {
             int skip = (pageNumber - 1) * pageSize;
             List<Product> products = await Context.Products
-                .Include(p => p.Gallery)
+                .Include(p => p.Gallery).Include(x=>x.Category)
                 .Select(
                     p =>
                         new Product
                         {
                             Id = p.Id,
                             Name = p.Name,
-                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList(),
+                            Category = p.Category,
                         }
                 )
                 .Skip(skip)
@@ -147,14 +148,15 @@ namespace ChristianBeauty.Data.Repositories.Products
             }
 
             return await query
-                .Include(p => p.Gallery)
+                .Include(p => p.Gallery).Include(p => p.Category)
                 .Select(
                     p =>
                         new Product
                         {
                             Id = p.Id,
                             Name = p.Name,
-                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList(),
+                            Category = p.Category,
                         }
                 )
                 .Skip(skip)
@@ -206,7 +208,7 @@ namespace ChristianBeauty.Data.Repositories.Products
             int excludedProductId
         )
         {
-            var products = await Context.Products
+            var products = await Context.Products.Include(x=>x.Category)
                 .Where(
                     x =>
                         (x.CategoryId == categoryId || x.Category.ParentCategoryId == categoryId)
@@ -218,7 +220,8 @@ namespace ChristianBeauty.Data.Repositories.Products
                         {
                             Id = p.Id,
                             Name = p.Name,
-                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList(),
+                            Category = p.Category
                         }
                 )
                 .Take(limit)
@@ -229,7 +232,7 @@ namespace ChristianBeauty.Data.Repositories.Products
 
         public async Task<List<Product>> GetRandomProductsAsync(int number)
         {
-            return await Context.Products
+            return await Context.Products.Include(x=>x.Category)
                 .OrderBy(r => Guid.NewGuid())
                 .Select(
                     p =>
@@ -237,7 +240,8 @@ namespace ChristianBeauty.Data.Repositories.Products
                         {
                             Id = p.Id,
                             Name = p.Name,
-                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList(),
+                            Category = p.Category,
                         }
                 )
                 .Take(number)
@@ -247,6 +251,7 @@ namespace ChristianBeauty.Data.Repositories.Products
         public async Task<List<Product>> GetTopSellerProductsByLimit(int limit)
         {
             return await Context.Products
+                .Include(x=>x.Category)
                 .Where(x => x.IsTopSeller == true)
                 .Select(
                     p =>
@@ -254,7 +259,8 @@ namespace ChristianBeauty.Data.Repositories.Products
                         {
                             Id = p.Id,
                             Name = p.Name,
-                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList()
+                            Gallery = p.Gallery.OrderBy(g => g.Id).Take(1).ToList(),
+                            Category = p.Category,
                         }
                 )
                 .Take(limit)
