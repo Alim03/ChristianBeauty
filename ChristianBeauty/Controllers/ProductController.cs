@@ -69,24 +69,27 @@ namespace ChristianBeauty.Controllers
             int page = 1,
             int? categoryId = null,
             int? material = null,
-            int? subcategory = null
+            int? subcategory = null,
+            int? has_selling_stock=null
         )
         {
             List<Product> products;
             int totalCount;
-            if (categoryId != null || material != null)
+            if (categoryId != null || material != null|| has_selling_stock!=null)
             {
                 products = await _productRepository.GetPaginatedProductsByFilterAsync(
                     page,
                     PAGESIZE,
                     categoryId,
                     material,
-                    subcategory
+                    subcategory,
+                    has_selling_stock
                 );
                 totalCount = await _productRepository.GetTotalCountProductsByFilterAsync(
                     categoryId,
                     material,
-                    subcategory
+                    subcategory,
+                    has_selling_stock
                 );
             }
             else

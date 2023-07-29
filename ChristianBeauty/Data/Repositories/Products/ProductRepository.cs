@@ -121,7 +121,8 @@ namespace ChristianBeauty.Data.Repositories.Products
             int pageSize,
             int? categoryId,
             int? materialId,
-            int? subcategory
+            int? subcategory,
+            int? has_selling_stock
         )
         {
             int skip = (pageNumber - 1) * pageSize;
@@ -145,6 +146,22 @@ namespace ChristianBeauty.Data.Repositories.Products
             if (subcategory != null)
             {
                 query = query.Where(x => x.CategoryId == subcategory.Value);
+            }
+            if (has_selling_stock != null)
+            {
+                if (has_selling_stock.Value == 1)
+                {
+                    query = query.Where(x => x.IsFinished != null);
+                }
+                if (has_selling_stock.Value==2)
+                {
+                    query = query.Where(x => x.IsFinished == false);
+                }
+                if (has_selling_stock.Value == 3)
+                {
+                    query = query.Where(x => x.IsFinished == true);
+                }
+
             }
 
             return await query
@@ -177,7 +194,8 @@ namespace ChristianBeauty.Data.Repositories.Products
         public async Task<int> GetTotalCountProductsByFilterAsync(
             int? categoryId,
             int? materialId,
-            int? subcategory
+            int? subcategory,
+            int? has_selling_stock
         )
         {
             IQueryable<Product> query = Context.Products;
@@ -198,6 +216,22 @@ namespace ChristianBeauty.Data.Repositories.Products
             if (subcategory != null)
             {
                 query = query.Where(x => x.CategoryId == subcategory.Value);
+            }
+            if (has_selling_stock != null)
+            {
+                if (has_selling_stock.Value == 1)
+                {
+                    query = query.Where(x => x.IsFinished != null);
+                }
+                if (has_selling_stock.Value == 2)
+                {
+                    query = query.Where(x => x.IsFinished == true);
+                }
+                if (has_selling_stock.Value == 3)
+                {
+                    query = query.Where(x => x.IsFinished == false);
+                }
+
             }
             return await query.CountAsync();
         }

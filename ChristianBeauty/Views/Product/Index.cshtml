@@ -60,10 +60,14 @@
                     {
                         query += $"&subcategory={Context.Request.Query["subcategory"]}";
                     }
-
+                    if (!string.IsNullOrEmpty(Context.Request.Query["has_selling_stock"]))
+                    {
+                        query += $"&has_selling_stock={Context.Request.Query["has_selling_stock"]}";
+                    }
                     
 
                 }
+
 
                 <div class="filter-select-option">
                     <label class="filter-leble">دسته</label>
@@ -104,38 +108,18 @@
                     </select>
                 </div>
 
-                <div class="filter-select-option">
-                    <label class="filter-leble">نوع فروش</label>
-                    <select>
-                        <option data-display="نوع فروش">نوع فروش</option>
-                        <option value="1">قیمت ثابت</option>
-                        <option value="2">حراج به موقع</option>
-                        <option value="4">برای فروش نیست</option>
-                        <option value="4">برای پیشنهادات باز کنید</option>
+               <div class="filter-select-option">
+                    <label class="filter-leble">وضعیت</label>
+                    <select id="has-selling-stock" name="has_selling_stock" onchange="onFilterChange('has_selling_stock', this.value);">
+                        <option value="1" selected data-display="همه">همه</option>
+                        <option value="2" data-display="موجود">موجود</option>
+                        <option value="3" data-display="ناموجود">ناموجود</option>
                     </select>
                 </div>
+                <div class="filter-select-option"></div>
 
-                <div class="filter-select-option">
-                    <label class="filter-leble">بازه قیمت</label>
-                    <div class="price_filter s-filter clear">
-                        <form action="#" method="GET">
-                            <div id="slider-range"></div>
-                            <div class="slider__range--output">
-                                <div class="price__output--wrap">
-                                    <div class="price--output">
-                                        <span>قیمت :</span><input type="text" id="amount" readonly>
-                                    </div>
-                                    <div class="price--filter">
-                                        <a class="btn btn-primary btn-small" href="#">فیلتر</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
-
 
         <div class="row g-5 mt_dec--30">
 
@@ -300,6 +284,8 @@
     var subCategoryParameterValue = getURLParameter("subcategory");
     const dropdownSubCategory = document.getElementById('subCategory');
 
+    var hasSellingStockParameterValue = getURLParameter("has_selling_stock");
+    const dropdownHasSellingStock = document.getElementById('has-selling-stock');
 
     if (categoryParameterValue != null)
     {
@@ -316,6 +302,11 @@
     if (materialParameterValue != null)
     {
         selectDropdownOption(dropdownMaterial, materialParameterValue);
+    }
+
+
+    if (hasSellingStockParameterValue != null) {
+        selectDropdownOption(dropdownHasSellingStock, hasSellingStockParameterValue);
     }
 
 

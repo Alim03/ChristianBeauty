@@ -21,14 +21,16 @@ namespace ChristianBeauty.Data.Interfaces.Products
         Task<int> GetTotalCountProductsByFilterAsync(
             int? categoryId,
             int? materialId,
-            int? subcategory
+            int? subcategory,
+            int? has_selling_stock
         );
         Task<List<Product>> GetPaginatedProductsByFilterAsync(
             int pageNumber,
             int pageSize,
             int? categoryId,
             int? materialId,
-            int? subcategory
+            int? subcategory,
+            int? has_selling_stock
         );
         Task<List<Product>> GetProductsByCategoryWithLimitAsync(
             int categoryId,

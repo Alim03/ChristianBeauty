@@ -19454,13 +19454,14 @@ button .small-image {
 /*--------------------------
     Swicher Styles
 ----------------------------*/
-.active-dark-mode .my_switcher ul li .setColor.dark {
-    display: none;
-}
 
 .active-light-mode .my_switcher ul li .setColor.light {
     display: none;
 }
+.active-dark-mode .my_switcher ul li .setColor.dark {
+    display: none;
+}
+
 
 .active-light-mode .my_switcher ul li a.dark img {
     display: block;
