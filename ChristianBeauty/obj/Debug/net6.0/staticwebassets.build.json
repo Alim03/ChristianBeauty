@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jLWU0ZNL0JaYTOmJmw08y0Yqk2mpenMbnTjuL19+aFU=",
+  "Hash": "KMnsf/QDZA2+fTE0Y7Uluw4u4jTXCJB4SlRmLg5Fm4o=",
   "Source": "ChristianBeauty",
   "BasePath": "_content/ChristianBeauty",
   "Mode": "Default",
@@ -952,23 +952,6 @@
       "OriginalItemSpec": "wwwroot\\fonts\\styles-fa-num\\iran-yekan.css"
     },
     {
-      "Identity": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\1.png",
-      "SourceId": "ChristianBeauty",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\",
-      "BasePath": "_content/ChristianBeauty",
-      "RelativePath": "Images/1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\1.png"
-    },
-    {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\ajax-loader.gif",
       "SourceId": "ChristianBeauty",
       "SourceType": "Discovered",
@@ -1035,6 +1018,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\bg\\flat-lay-chat-bubbles-with-telephone-receiver.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\bg\\noise.gif",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/bg/noise.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\bg\\noise.gif"
     },
     {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\wwwroot\\Images\\favicon.png",
