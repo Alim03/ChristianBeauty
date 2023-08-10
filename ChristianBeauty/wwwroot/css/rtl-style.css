@@ -22026,7 +22026,7 @@ p.subtitle {
 }
 @media only screen and (max-width: 479px) {
     .subscribe-wrapper_1 .subscribe-input-wrapper .input-group .input-group-append button {
-        margin-right: -107px;
+        margin:auto;
     }
 }
 .subscribe-wrapper_1 .subscribe-input-wrapper [data-black-overlay]:before {

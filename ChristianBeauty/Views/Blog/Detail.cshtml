@@ -39,10 +39,46 @@
                     <div class="news-details">
 
                         <p>
-                            @Model.Blog.Description
+                            @Html.Raw(Model.Blog.Description.Replace(Environment.NewLine, "<br/>"))
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 mt_md--40 mt_sm--40">
+                <aside class="rwt-sidebar">
+
+                    <div class="rbt-single-widget widget_categories">
+                        <h3 class="title">پست های اخیر</h3>
+                        <div class="inner">
+                            <ul class="category-list ">
+                                @foreach (var item in Model.SimilarBlogs)
+                                {
+                                    <li>
+                                        <a asp-controller="blog" asp-action="Detail" asp-route-id="@item.Id">
+                                            <span class="left-content">@item.Tittle</span><span class="count-text"></span>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="rbt-single-widget widget_tag_cloud mt--40">
+                        <h3 class="title">برچسب‌ها</h3>
+                        <div class="inner mt--20">
+                            <div class="tagcloud">
+                                @{
+                                    string[] parts = @Model.Blog.Labels.Split('#').Skip(1).ToArray();
+                                    foreach (string part in parts)
+                                    {
+                                        <a href="#">@part</a>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
             <!-- comment form area Start -->
             <!-- Start Contact Form Area  -->

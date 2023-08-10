@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "Add Page";
 }
-
+<!-- Normalize CSS -->
+<!-- Cropper CSS -->
 <div class="text-center">
     <h1 class="display-4">Add Blog</h1>
 </div>
@@ -30,10 +31,16 @@
                             <label for="Description">متن اصلی:</label>
                             <textarea asp-for="Description" id="Description" class="form-control" placeholder="متن اصلی"></textarea>
                             <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>    
+                        <div class="form-group">
+                            <label for="Description"> برچسب ها:</label>
+                            <textarea asp-for="Labels" id="Description" class="form-control" placeholder=" برچسب ها"></textarea>
+                            <span asp-validation-for="Labels" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label for="Image">تصویر:</label>
-                            <input asp-for="Image" id="Image" type="file" class="form-control" placeholder="تصویر" />
+                            <input asp-for="Image" type="file" id="file-input" class="form-control item-img" placeholder="width=1248,height=882" />
+                            <label for="Image">width=1248,height=882</label>
                             <span asp-validation-for="Image" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -45,3 +52,10 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+

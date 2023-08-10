@@ -42,6 +42,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 ReadingTime = model.ReadingTime,
                 Image = await FileHandler.ImageUploadAsync(model.Image),
                 CreateDate = DateTime.Now,
+                Labels = model.Labels
             };
             await _repository.AddAsync(blog);
             await _repository.SaveAsync();
@@ -57,14 +58,14 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             {
                 return RedirectToAction("Index");
             }
-            var viewModel = new EditBlogViewModel() { Description = blog.Description, Tittle = blog.Tittle, Image = blog.Image , ReadingTime = blog.ReadingTime };
+            var viewModel = new EditBlogViewModel() { Labels =blog.Labels, Description = blog.Description, Tittle = blog.Tittle, Image = blog.Image , ReadingTime = blog.ReadingTime };
             return View(viewModel);
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(EditBlogViewModel viewModel)
         {
-            var blog = new Blog() { Id = viewModel.Id,Tittle = viewModel.Tittle, Description = viewModel.Description,ReadingTime = viewModel.ReadingTime, Image = await FileHandler.ImageUploadAsync(viewModel.ImageFile) };
+            var blog = new Blog() { Id = viewModel.Id,Labels = viewModel.Labels,Tittle = viewModel.Tittle, Description = viewModel.Description,ReadingTime = viewModel.ReadingTime, Image = await FileHandler.ImageUploadAsync(viewModel.ImageFile) };
             _repository.Update(blog);
             await _repository.SaveAsync();
             return RedirectToAction("Index");

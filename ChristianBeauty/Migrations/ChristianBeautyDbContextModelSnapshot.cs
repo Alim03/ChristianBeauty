@@ -41,6 +41,10 @@ namespace ChristianBeauty.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Labels")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ReadingTime")
                         .HasColumnType("int");
 

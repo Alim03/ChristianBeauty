@@ -15,7 +15,7 @@ namespace ChristianBeauty.Controllers
     {
         private protected IBlogsRepository _blogsRepository;
         private readonly IMapper _mapper;
-        private const int PAGESIZE = 1;
+        private const int PAGESIZE = 9;
 
         public BlogController(IBlogsRepository blogsRepository, IMapper mapper)
         {
@@ -55,7 +55,6 @@ namespace ChristianBeauty.Controllers
                 Blog = blog,
                 SimilarBlogs = similarBlogs
             };
-            return View(blogDetailViewModel);
             return View(blogDetailViewModel);
         }
     }
