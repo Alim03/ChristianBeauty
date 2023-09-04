@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ChristianBeauty.Models;
+using ChristianBeauty.ViewModels.Products;
 
 namespace ChristianBeauty.Data.Interfaces.Products
 {
@@ -17,6 +18,7 @@ namespace ChristianBeauty.Data.Interfaces.Products
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize);
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize, string query);
         Task<int> GetTotalCountProductsAsync();
+        Task<ProductCountViewModel> GetCountProductsAsync();
         Task<int> GetTotalCountProductsAsync(string query);
         Task<int> GetTotalCountProductsByFilterAsync(
             int? categoryId,

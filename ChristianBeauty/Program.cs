@@ -23,7 +23,7 @@ using ChristianBeauty.Data.Repositories.LoyaltyClubUser;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 // builder.Services.AddDbContext<ChristianBeautyDbContext>(
 //     options =>
@@ -57,7 +57,6 @@ builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBlogsRepository, BlogsRepositry>();
 builder.Services.AddScoped<ILoyaltyClubUserRepository, LoyaltyClubUserRepository>();
-
 builder.Services
     .AddAuthentication(options =>
     {
@@ -69,7 +68,7 @@ builder.Services
     {
         options.LoginPath = "/User/Login";
         options.LogoutPath = "/SignOut";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(6000);
         options.SlidingExpiration = true;
     });
 

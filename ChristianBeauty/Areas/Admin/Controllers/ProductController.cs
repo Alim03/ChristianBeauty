@@ -41,9 +41,9 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             _galleryRepository = galleryRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = _repository.GetAllRowsSelectedFields();
+            var products = await _repository.GetAllProductWithImagesEagerLoadAsync();
             var viewmodel = _mapper.Map<List<ProductViewModel>>(products);
             return View(viewmodel);
         }
@@ -214,7 +214,6 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                     await _galleryRepository.SaveAsync();
                 }
             }
-
             return RedirectToAction("Index");
         }
 
