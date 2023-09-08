@@ -2,56 +2,117 @@
 @{
     ViewData["Title"] = "Add Page";
 }
-<!-- Normalize CSS -->
-<!-- Cropper CSS -->
-<div class="text-center">
-    <h1 class="display-4">Add Blog</h1>
-</div>
 
-<div id="content-page" class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">اضافه کردن بلاگ</h4>
+<<div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
+    <div class="container">
+        <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+            <h3><i data-feather="list"></i> ایجاد مجموعه</h3>
+            <a asp-action="index" asp-controller="Blog" class="btn btn-primary-alta btn-large">بازگشت</a>
+        </div>
+        <div class="row g-5 ">
+            <form asp-controller="Blog" asp-action="add" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">
+                <div class="col-lg-3 offset-1 ml_md--0 ml_sm--0 " id="image-upload-container">
+                    <div class="collection-single-wized banner">
+                        <label class="title">تصویر بلاگ</label>
+                        <div class="create-collection-input feature-image">
+                            <div class="logo-c-image feature">
+
+                                <img id="rbtinput17" src="https://maxphone.rs/themes/shop/noimage.jpg" alt="Profile-NFT">
+                                <label for="nipa17" title="No File Choosen">
+                                    <span class="text-center color-white"><i class="feather-edit"></i></span>
+                                </label>
+                            </div>
+                            <div class="button-area">
+                                <div class="brows-file-wrapper">
+                                    <input onchange="updateImage(this)" asp-for="Image" id="nipa17" type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <form asp-controller="Blog" asp-action="Add" enctype="multipart/form-data" method="post">
-                        <div class="form-group">
-                            <label for="Tittle">تیتر:</label>
-                            <input asp-for="Tittle" id="Tittle" type="text" class="form-control" placeholder="تیتر" />
-                            <span asp-validation-for="Tittle" class="text-danger"></span>
+
+                <div class="col-lg-7">
+                    <div class="create-collection-form-wrapper">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="name" class="title required">تیتر بلاگ:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Tittle" type="text" />
+                                        <span asp-validation-for="Tittle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">مدت زمان مطالعه:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="ReadingTime" />
+                                        <span asp-validation-for="ReadingTime" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">برچسب ها(با # جدا سازی شود):</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Labels" />
+                                        <span asp-validation-for="Labels" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            <div class="col-lg-12">
+                                <div class="collection-single-wized">
+                                    <label for="description" class="title">متن بلاگ :</label>
+                                    <div class="create-collection-input">
+                                        <textarea asp-for="Description" id="description" class="text-area"></textarea>
+                                        <span asp-validation-for="Description" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="button-wrapper">
+                                    <!-- <a href="#" class="btn btn-primary btn-large mr--30" data-bs-toggle="modal" data-bs-target="#collectionModal">Preview</a> -->
+                                    <button type="reset" class="btn btn-primary-alta  btn-large" style="margin-left: 10px;">
+                                        انصراف
+                                    </button>
+                                    <button type="submit" class="btn btn-success btn-large">ثبت</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="Tittle">مدت زمان خواندن:</label>
-                            <input asp-for="ReadingTime" id="ReadingTime" type="text" class="form-control" placeholder="مدت زمان مطالعه" />
-                            <span asp-validation-for="ReadingTime" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="Description">متن اصلی:</label>
-                            <textarea asp-for="Description" id="Description" class="form-control" placeholder="متن اصلی"></textarea>
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>    
-                        <div class="form-group">
-                            <label for="Description"> برچسب ها:</label>
-                            <textarea asp-for="Labels" id="Description" class="form-control" placeholder=" برچسب ها"></textarea>
-                            <span asp-validation-for="Labels" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="Image">تصویر:</label>
-                            <input asp-for="Image" type="file" id="file-input" class="form-control item-img" placeholder="width=1248,height=882" />
-                            <label for="Image">width=1248,height=882</label>
-                            <span asp-validation-for="Image" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">ثبت</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+<script>
+    function updateImage(input) {
+        var hiddenInput = document.createElement("input");
+        var formEdit = document.getElementById("formEdit")
+        hiddenInput.setAttribute("type", "hidden");
+
+        hiddenInput.setAttribute("name", "ChangedImagesIds");
+        hiddenInput.setAttribute("value", input.tabIndex);
+        formEdit.appendChild(hiddenInput);
+        var file = input.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var image = input.previousElementSibling;
+                if (image && image.tagName === "IMG") {
+                    image.src = e.target.result;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+
+
+
+
 
 
 

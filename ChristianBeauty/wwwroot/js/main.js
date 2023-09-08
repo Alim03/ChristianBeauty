@@ -30,6 +30,7 @@
             imJs.filterClickButton();
             imJs.unloadImage2();
             imJs.unloadImage9();
+            imJs.unloadImage17();
             imJs.unloadImage10();
             imJs.unloadImage();
             imJs.unloadImage3();
@@ -664,6 +665,23 @@
                 rbtPreview(this);
             });
         },
+        unloadImage17: function name() {
+            $("#rbtinput17").click(function (e) {
+                $("#nipa17").click();
+            });
+
+            function rbtPreview() {
+                const [file2] = nipa17.files
+                if (file2) {
+                    rbtinput17.src = URL.createObjectURL(file2)
+                }
+            }
+            $("#nipa17").change(function () {
+                rbtPreview(this);
+            });
+        },
+
+
 
         unloadImage2: function name() {
             $("#rbtinput_1").click(function (e) {

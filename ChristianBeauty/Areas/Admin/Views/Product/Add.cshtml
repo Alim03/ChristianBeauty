@@ -6,9 +6,9 @@
 
 <<div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
     <div class="container">
-        <div class="table-title-area d-flex">
-            <i data-feather="plus"></i>
-            <h3> ایجاد محصول</h3>
+        <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+            <h3><i data-feather="list"></i> ایجاد محصول </h3>
+            <a asp-action="index" asp-controller="product" class="btn btn-primary-alta btn-large">بازگشت</a>
         </div>
         <div class="row g-5 ">
             <form asp-controller="product" asp-action="add" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">

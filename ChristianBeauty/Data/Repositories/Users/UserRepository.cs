@@ -14,12 +14,12 @@ namespace ChristianBeauty.Data.Repositories.Users
 
         public User? GetUserByUsername(string username)
         {
-            return Context.Users.SingleOrDefault(x => x.Username == username);
+            return Context.Users.SingleOrDefault(x => x.UserName == username);
         }
 
         public bool ChekUserIsAdminByUserName(string username)
         {
-            var user = Context.Users.SingleOrDefault(x => x.Username == username);
+            var user = Context.Users.SingleOrDefault(x => x.UserName == username);
             var f = user;
             if (user?.UserRoleId == 1) //id 1 is admin
             {

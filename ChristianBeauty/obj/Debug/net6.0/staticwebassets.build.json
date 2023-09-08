@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3Krspndi614VluwP+MQUXpqrf1k7ppbdoJJGr/aho00=",
+  "Hash": "RoXUkTQPa9dHZyBKK7/RjMFkBtzS9Lsougr5/qWDBO4=",
   "Source": "ChristianBeauty",
   "BasePath": "_content/ChristianBeauty",
   "Mode": "Default",
@@ -1785,6 +1785,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\1_20230702222742195.jpg"
     },
     {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\1111_20230908124031854.jpg",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/ProductImages/1111_20230908124031854.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\1111_20230908124031854.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\112152183_20230718203608000.jpg",
       "SourceId": "ChristianBeauty",
       "SourceType": "Discovered",
@@ -2125,6 +2142,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\2_20230623202731373.jpg"
     },
     {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123650909.jpg",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/ProductImages/20mag-still-processing-1-superJumbo-1200x806_20230908123650909.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123650909.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123731964.jpg",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/ProductImages/20mag-still-processing-1-superJumbo-1200x806_20230908123731964.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123731964.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\23_20230802163603137.jpg",
       "SourceId": "ChristianBeauty",
       "SourceType": "Discovered",
@@ -2208,6 +2259,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\419a6f1e-99aa-49f9-96ca-cdc750b679d3_20230623210219462.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\50-PCS-Mouth-Masks-Non-woven-Disposable-Earloop-Face-Mask-Filters-Bacteria-Breathable-Beauty-Medical-face_20230908125218847.webp",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/ProductImages/50-PCS-Mouth-Masks-Non-woven-Disposable-Earloop-Face-Mask-Filters-Bacteria-Breathable-Beauty-Medical-face_20230908125218847.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\50-PCS-Mouth-Masks-Non-woven-Disposable-Earloop-Face-Mask-Filters-Bacteria-Breathable-Beauty-Medical-face_20230908125218847.webp"
     },
     {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\578685_20230718204235953.jpg",
@@ -2361,6 +2429,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\dig_20230725121613664.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\e840e5b8-2c52-4122-919a-4b2be74a820d_20230908121307147.jfif",
+      "SourceId": "ChristianBeauty",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\",
+      "BasePath": "_content/ChristianBeauty",
+      "RelativePath": "Images/ProductImages/e840e5b8-2c52-4122-919a-4b2be74a820d_20230908121307147.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProductImages\\e840e5b8-2c52-4122-919a-4b2be74a820d_20230908121307147.jfif"
     },
     {
       "Identity": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\ezgif-2-450b83e5a3_20230720112451862.png",

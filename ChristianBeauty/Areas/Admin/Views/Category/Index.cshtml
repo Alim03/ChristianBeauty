@@ -1,4 +1,133 @@
 ﻿@model List<ChristianBeauty.ViewModels.Categories.CategoryViewModel>
+@using ChristianBeauty.Utilities;
+@{
+    int row = 0;
+}
+
+<style>
+    td {
+        text-align: center !important;
+        padding-left: 10px !important;
+    }
+    tr{
+        border-bottom: 1px solid #e1e1e1 !important;
+    }
+
+    th span {
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+
+    th {
+        text-align: center !important;
+    }
+
+    .tdRow {
+        border-left: 1px solid #d5d1d1 !important;
+    }
+
+    a :hover {
+        color: #00a3ff !important;
+    }
+
+</style>
+<div class="rn-upcoming-area rn-section-gap pt--50" style="padding-right: 320px !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+                    <h3><i data-feather="list"></i> لیست دسته بندی ها</h3>
+                    <a asp-action="Add" asp-controller="category" class="btn btn-primary-alta btn-large"> ایجاد دسته بندی<i style="top:0px!important;margin-left:0px!important;" data-feather="plus"></i></a>
+                </div>
+
+                <!-- End Table Title -->
+                <!-- table area Start -->
+                <div class="box-table table-responsive">
+                    <table class="table upcoming-projects">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>ردیف</span>
+                                </th>
+                                <th>
+                                    <span>نام دسته بندی</span>
+                                </th>
+                                <th>
+                                    <span>زیر مجموعه</span>
+                                <th>
+                                    <span>عملیات</span>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="ranking">
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <tr class="color-light">
+                                        <td class="tdRow"><span style="color:#00a3ff">@row</span></td>
+                                        <td><span>@item.Name</span></td>
+                                        <td>
+                                            @{
+                                                if (item.Subcategories.Any())
+                                                {
+                                                    <ul>
+                                                        @foreach (var subcategory in item.Subcategories)
+                                                        {
+                                                            <li>
+                                                                @subcategory.Name
+                                                                <a asp-action="Edit" style="color: #1b8d82 !important;" asp-route-id="@subcategory.Id" asp-route-parentId="@item.Id"><i data-feather="edit"></i></a>
+                                                                |
+                                                                <a asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@subcategory.Id"><i data-feather="delete"></i></a>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                }
+                                                else
+                                                {
+                                                <span>بدون زیر مجموعه</span>
+                                                }
+                                            }
+                                        </td>
+                                        <td>
+                                            <a asp-action="AddSubCategory" style="color: #3f58cf !important;" asp-route-parentCategoryId="@item.Id"><i data-feather="plus"></i></a>
+                                            |
+                                            <a asp-controller="Category" asp-action="Edit" style="color: #1b8d82 !important;" asp-route-id="@item.Id"><i data-feather="edit"></i></a>
+                                            |
+                                            <a asp-controller="Category" asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@item.Id"><i data-feather="delete"></i></a>
+                                        </td>
+
+                                    </tr>
+                                    row++;
+
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table End -->
+                <div class="row">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
+                        <nav class="pagination-wrapper" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">قبلی</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*@model List<ChristianBeauty.ViewModels.Categories.CategoryViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -56,4 +185,4 @@
         </tbody>
     </table>
 
-</div>
+</div>*@

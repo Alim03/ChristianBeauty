@@ -26,9 +26,11 @@
 
 <body  class=" home-sticky-pin sidebar-header scrollspy-example position-relative" data-bs-spy="scroll" data-bs-target="#navbar-example2"
       data-bs-offset="0" tabindex="0">
-    @Html.Partial("PartialViews/Menu/_Menu")
+   @*@Html.Partial("PartialViews/Menu/_Menu")*@
+    @await Component.InvokeAsync("Menu")
+
     @RenderBody()
-    @Html.Partial("PartialViews/Footer/_Footer");
+    @Html.Partial("PartialViews/Footer/_Footer")
     <div class="mouse-cursor cursor-outer"></div>
     <div class="mouse-cursor cursor-inner"></div>
     <div class="rn-progress-parent">

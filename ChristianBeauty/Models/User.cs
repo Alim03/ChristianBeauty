@@ -11,7 +11,8 @@ namespace ChristianBeauty.Models
         public int Id { get; set; }
 
         [MaxLength(64)]
-        public string Username { get; set; }
+        public string UserName { get; set; }
+        public string Name { get; set; }
 
         [MaxLength(128)]
         public string Password { get; set; }

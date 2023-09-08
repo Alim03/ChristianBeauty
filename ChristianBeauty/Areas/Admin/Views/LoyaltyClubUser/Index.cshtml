@@ -1,0 +1,98 @@
+﻿@model List<ChristianBeauty.ViewModels.LoyaltyClub.LoyaltyClubListViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using ChristianBeauty.Utilities;
+@{
+    int row = 0;
+}
+
+<style>
+    td {
+        text-align: center !important;
+        padding-left: 10px !important;
+    }
+
+    tr {
+        border-bottom: 1px solid #e1e1e1 !important;
+    }
+
+    th span {
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+
+    th {
+        text-align: center !important;
+    }
+
+    .tdRow {
+        border-left: 1px solid #d5d1d1 !important;
+    }
+
+    a :hover {
+        color: #00a3ff !important;
+    }
+
+</style>
+<div class="rn-upcoming-area rn-section-gap pt--50" style="padding-right: 320px !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+                    <h3><i data-feather="list"></i> لیست  باشگاه مشتریان</h3>
+                </div>
+                <div class="box-table table-responsive">
+                    <table class="table upcoming-projects">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>ردیف</span>
+                                </th>
+                                <th>
+                                    <span>شماره موبایل</span>
+                                </th>
+                                <th>
+                                    <span>تاریخ ثبت</span>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="ranking">
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <tr class="color-light">
+                                        <td class="tdRow"><span style="color:#00a3ff">@row</span></td>
+                                        <td><span>@item.MobileNumber</span></td>
+                                        <td><span>@Utilites.PersianDateConverter(item.Date)</span></td>
+                                    </tr>
+                                    row++;
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <br />
+                <!-- table End -->
+                <div class="row">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
+                        <nav class="pagination-wrapper" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">قبلی</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

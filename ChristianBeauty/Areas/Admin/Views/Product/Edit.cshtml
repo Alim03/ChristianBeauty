@@ -39,9 +39,9 @@
 
 <div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
     <div class="container">
-        <div class="table-title-area d-flex">
-            <i data-feather="edit"></i>
-            <h3> ویرایش محصول</h3>
+        <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+            <h3><i data-feather="list"></i> ویرایش محصول </h3>
+            <a asp-action="edit" asp-controller="product" class="btn btn-primary-alta btn-large">بازگشت</a>
         </div>
         <div class="row g-5 ">
             <form asp-controller="product" asp-action="Edit" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">
@@ -64,42 +64,12 @@
                                     </div>
                                     <div class="button-area">
                                         <div class="brows-file-wrapper">
-                                            <!-- actual upload which is hidden -->
                                             <input onchange="updateImage(this)" name="gallery" tabindex="@image.Id" id="nipa_@index" type="file">
-                                            <!-- our custom upload button -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             index++;
-
-
-
-
-
-
-
-@*
-                            <div class="collection-single-wized banner">
-                                <label class="title required">تصویر لوگو</label>
-                                <div class="create-collection-input logo-image">
-                                    <div class="logo-c-image logo">
-                                        <input name="createinputfile" id="createinputfile" style="display:none" type="file" class="inputfile" />
-                                        <img id="createfileImage" src="/Images/ProductImages/@image.ImageName" alt="Profile-NFT">
-                                        <label for="createinputfile" title="فایلی انتخاب نشده است">
-                                            <span class="text-center color-white"><i class="feather-edit"></i></span>
-                                        </label>
-                                    </div>
-                                    <div class="button-area">
-                                        <div class="brows-file-wrapper">
-                                            <!-- actual upload which is hidden -->
-                                            <input name="gallery" id="fatima" type="file">
-                                            <!-- our custom upload button -->
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>*@
                         }
                     }
 

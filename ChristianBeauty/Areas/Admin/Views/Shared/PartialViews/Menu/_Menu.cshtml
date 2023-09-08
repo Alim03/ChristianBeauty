@@ -1,9 +1,10 @@
-﻿<div class="d-none d-lg-block">
+﻿@model ChristianBeauty.ViewModels.Users.UserViewModel
+<div class="d-none d-lg-block">
     <div class="header-area left-header-style d-flex">
         <div class="logo-area logo-custom-css">
             <a class="logo-light" asp-action="Index" asp-controller="Home"  style=" text-align: center;"><img style="width:100% !important; max-width:none !important;" src="~/images/logo/admin-logo.png" alt="nft-logo"></a>
             <a class="logo-dark" asp-action="Index" asp-controller="Home" style=" text-align: center;"><img style="width:100% !important;max-width:none !important;" width="100%" src="~/images/logo/admin-logo.png" alt="nft-logo"></a>
-            <a class="nav-link" style="text-decoration: none;
+            <a class="nav-link" style="text-decoration: none;   
     color: #878383;
     FONT-WEIGHT: BOLD;
     PADDING-RIGHT: 26px;
@@ -16,13 +17,15 @@
                 <ul class="mainmenu list-group">
                     <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Home"> <i data-feather="home"></i>صفحه اصلی</a></li>
                     <li class="nav-item"><a class="nav-link " asp-action="Index" asp-controller="Product"> <i data-feather="package"></i>محصولات</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-action="Blogs" asp-controller="Home"> <i data-feather="trending-up"></i>بلاگ</a></li>
-                    <li class="nav-item"><a class="nav-link " asp-action="CustomerService" asp-controller="Home"> <i data-feather="user"></i>باشگاه مشتریان</a></li>
+                    <li class="nav-item"><a class="nav-link " asp-action="Index" asp-controller="Category"> <i data-feather="plus"></i>دسته بندی محصولات</a></li>
+                    <li class="nav-item"><a class="nav-link " asp-action="Index" asp-controller="Material"> <i data-feather="more-horizontal"></i>جنس محصول</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Blog"> <i data-feather="bell"></i>بلاگ</a></li>
+                    <li class="nav-item"><a class="nav-link " asp-action="Index" asp-controller="LoyaltyClubUser"> <i data-feather="user"></i>باشگاه مشتریان</a></li>
                 </ul>
             </nav>
             <div class="help-center-area mainmenu-nav mt--30">
                 <ul class="mainmenu">
-                    <li class="nav-item"><a class="nav-link" href="#"> <i data-feather="settings"></i>تنظیمات</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-action="EditProfile" asp-controller="Home"> <i data-feather="settings"></i>تنظیمات</a></li>
                     <li class="nav-item"><a class="nav-link" asp-action="SignOut" asp-controller="Home"> <i data-feather="log-out"></i> خروج</a></li>
                 </ul>
             </div>
@@ -32,7 +35,7 @@
                 <img src="~/images/icons/727399.png" alt="Nft_marketplaces">
             </div>
             <div class="au-content">
-                <p class="name">آرین رحمانی</p>
+                <p class="name">@Model.Name</p>
                 <p class="blc">کاربر ادمین</></p>
             </div>
         </div>
