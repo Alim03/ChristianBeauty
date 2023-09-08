@@ -1,235 +1,243 @@
 ﻿@model ChristianBeauty.ViewModels.Products.AddProductViewModel
 @{
     ViewData["Title"] = "Home Page";
+    var index = 1;
 }
 
-<div class="text-center">
-    <h1>Add Product</h1>
-</div>
+<<div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
+    <div class="container">
+        <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+            <h3><i data-feather="list"></i> ایجاد محصول </h3>
+            <a asp-action="index" asp-controller="product" class="btn btn-primary-alta btn-large">بازگشت</a>
+        </div>
+        <div class="row g-5 ">
+            <form asp-controller="product" asp-action="add" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">
+                <div class="col-lg-3 offset-1 ml_md--0 ml_sm--0 " id="image-upload-container">
 
+                    <div class="collection-single-wized banner">
 
+                        <label class="title">تصویر محصول @index</label>
+                        <div class="create-collection-input feature-image">
+                            <div class="logo-c-image feature">
 
-<div id="content-page" class="content-page">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="iq-card">
-                    <div class="iq-card-header d-flex justify-content-between">
-                        <div class="iq-header-title">
-                            <h4 class="card-title">اضافه کردن محصول</h4>
+                                <img id="rbtinput_@index" src="https://maxphone.rs/themes/shop/noimage.jpg" alt="Profile-NFT">
+                                <label for="nipa_@index" title="No File Choosen">
+                                    <span class="text-center color-white"><i class="feather-edit"></i></span>
+                                </label>
+                            </div>
+                            <div class="button-area">
+                                <div class="brows-file-wrapper">
+                                    <input onchange="updateImage(this)" name="gallery" id="nipa_@index" type="file">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="iq-card-body">
-                        <form asp-action="Add" enctype="multipart/form-data" method="post">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="Name" type="text" placeholder="نام محصول"
-                                                class="form-control" />
-
-                                            <span asp-validation-for="Name" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label asp-for="IsFinished"></label>
-                                            <input asp-for="IsFinished" type="checkbox" />
-                                            <span asp-validation-for="IsFinished" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label asp-for="IsTopSeller"></label>
-                                            <input asp-for="IsTopSeller" type="checkbox" />
-                                            <span asp-validation-for="IsTopSeller" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label asp-for="IsEnable"></label>
-                                            <input asp-for="IsEnable" type="checkbox" checked />
-                                            <span asp-validation-for="IsEnable" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="ProductCode" placeholder="کد محصول" class="form-control" />
-                                            <span asp-validation-for="ProductCode" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="Description" placeholder="توضیحات" class="form-control" />
-                                            <span asp-validation-for="Description" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="Size" placeholder="سایز" class="form-control" />
-                                            <span asp-validation-for="Size" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="Weight" placeholder="وزن" class="form-control" />
-                                            <span asp-validation-for="Weight" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="Features" placeholder="ویژگی ها" class="form-control" />
-                                            <span asp-validation-for="Features" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="OtherDetails" placeholder="جزییات" class="form-control" />
-                                            <span asp-validation-for="OtherDetails" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="DigikalLink" placeholder="لینک دیجیکالا"
-                                                class="form-control" />
-                                            <span asp-validation-for="DigikalLink" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <input asp-for="BasalamLink" placeholder="لینک باسلام"
-                                                class="form-control" />
-                                            <span asp-validation-for="BasalamLink" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label>Materials</label>
-                                            <select class="form-control" asp-for="SelectedMaterialId"
-                                                asp-items=@Model.Materials>
-                                                <option value="">-- Select --</option>
-
-
-                                            </select>
-                                            <span asp-validation-for="SelectedMaterialId" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label>Category</label>
-                                            <select class="form-control" asp-for="SelectedCategoryId"
-                                                asp-items=@Model.Categories>
-                                                <option value="">-- Select --</option>
-
-
-                                            </select>
-                                            <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label>Sub Category</label>
-                                            <select class="form-control" asp-for="SelectedSubCategoryId" disabled>
-                                                <option value="">-- Select --</option>
-
-
-                                            </select>
-                                            <span asp-validation-for="SelectedSubCategoryId" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-6 form-group">
-                                            <label asp-for="Gallery" class="control-label">Images</label>
-                                            <div id="image-upload-container">
-                                                <input type="file" name="Gallery" class="form-control" />
-                                            </div>
-                                            <button type="button" onclick="addImageInput()"
-                                                class="btn btn-primary mt-2">Add Image</button>
-                                            <span asp-validation-for="Gallery" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="row">
-                                <div class="col-12 form-group ">
-                                    <button type="submit" class="btn btn-primary">ثبت</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
+                    <button type="button" onclick="addImageInput()"
+                            class="btn btn-primary mb-5">
+                        <i data-feather="plus"></i>
+                        اضافه کردن عکس
+                    </button>
                 </div>
-            </div>
+
+                <div class="col-lg-7">
+                    <div class="create-collection-form-wrapper">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="name" class="title required">نام محصول:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Name" type="text" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">کد محصول:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="ProductCode" />
+                                        <span asp-validation-for="ProductCode" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">ویژگی های محصول(با # جدا سازی شود):</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Features" />
+                                        <span asp-validation-for="Features" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">لینک دیجی کالا:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="DigikalLink" />
+                                        <span asp-validation-for="DigikalLink" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">لینک باسلام:</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="BasalamLink" />
+                                        <span asp-validation-for="BasalamLink" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title"> سایز محصول (سانتی متر):</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Size" />
+                                        <span asp-validation-for="Size" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="collection-single-wized">
+                                    <label for="url" class="title">وزن محصول (گرم):</label>
+                                    <div class="create-collection-input">
+                                        <input asp-for="Weight" />
+                                        <span asp-validation-for="Weight" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="nuron-information mb--30">
+                                    <label for="url" class="title">وضعیت موجودی:</label>
+                                    <div class="single-notice-setting" style="padding: 16px !important;">
+                                        <div class="input">
+                                            <input asp-for="IsFinished" type="checkbox" id="IsFinished" name="IsFinished" class="theme-switch__input">
+                                            <label for="IsFinished" class="theme-switch__label">
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="nuron-information mb--30">
+                                    <label for="url" class="title">لیست پر فروش :</label>
+                                    <div class="single-notice-setting" style="padding: 16px !important;">
+                                        <div class="input">
+                                            <input asp-for="IsTopSeller" type="checkbox" id="IsTopSeller" name="IsTopSeller" class="theme-switch__input">
+                                            <label for="IsTopSeller" class="theme-switch__label">
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="collection-single-wized">
+                                    <label class="title mt-3">جنس محصول:</label>
+                                    <div class="create-collection-input">
+                                        <select class="nice-select" asp-for="SelectedMaterialId" asp-items=@Model.Materials>
+                                            <option value="">-- Select --</option>
+
+                                        </select>
+                                        <span asp-validation-for="SelectedMaterialId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="collection-single-wized">
+                                    <label class="title mt-3">  دسته بندی:</label>
+                                    <div class="create-collection-input">
+                                        <select onchange="getComboA(this)" class="nice-select" id="SelectedCategoryId" asp-for="SelectedCategoryId" asp-items=@Model.Categories>
+                                            <option value="">-- Select --</option>
+
+                                        </select>
+                                        <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="collection-single-wized">
+                                    <label class="title mt-3">:زیر مجموعه</label>
+                                    <div id="divSelect" class="create-collection-input">
+                                        <select class="nice-select" id="SelectedSubCategoryId" asp-for="SelectedSubCategoryId" asp-items=@Model.SubCategories>
+                                            @if (Model.SubCategories == null || Model.SubCategories.Count <= 0)
+                                            {
+                                                <option>بدون زیر مجموعه </option>
+                                            }
+                                        </select>
+                                        <span asp-validation-for="SelectedSubCategoryId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="collection-single-wized">
+                                    <label for="description" class="title">توضیحات</label>
+                                    <div class="create-collection-input">
+                                        <textarea asp-for="Description" id="description" class="text-area"></textarea>
+                                        <span asp-validation-for="Description" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="button-wrapper">
+                                    <!-- <a href="#" class="btn btn-primary btn-large mr--30" data-bs-toggle="modal" data-bs-target="#collectionModal">Preview</a> -->
+                                    <button type="reset" class="btn btn-primary-alta  btn-large" style="margin-left: 10px;">
+                                        انصراف
+                                    </button>
+                                    <button type="submit" class="btn btn-success btn-large">ثبت</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-
 <script>
-
-    function addImageInput()
-    {
+    var inde = @index + 0;
+    function addImageInput() {
+        if (inde > 2)
+        {
+            return alert('بیشتر از 3 عکس نمی شود اضافه کرد')
+        }
         var container = document.getElementById('image-upload-container');
-        var input = document.createElement('input');
-        input.type = 'file';
-        input.name = 'Gallery';
-        input.className = 'form-control mt-2';
+        var input = document.createElement('div');
+        inde++;
+        input.classList.add("collection-single-wized");
+        input.classList.add("banner");
+        input.setAttribute('id', 'div-' + inde); // Concatenate 'inde' variable properly
+        input.innerHTML = `
+                <label onclick="deleteImageInput(${inde})"  class="lableForAdd" for="title" title="No File Choosen">
+                                        <span class="text-center color-white">حذف<i class="feather-x"></i></span>
+                                </label>
+                        <label class="title"> تصویر محصول ${inde}</label>
+                    <div class="create-collection-input feature-image">
+                        <div class="logo-c-image feature">
+                                <img id="rbtinput_${inde}" src="https://maxphone.rs/themes/shop/noimage.jpg" alt="Profile-NFT">
+                                    <label for="nipa_${inde}" title="No File Choosen">
+                                    <span class="text-center color-white" ><i class="feather-edit"></i></span>
+                                        </label>
+                                        </div>
+                                        <div class="button-area">
+                                            <div class="brows-file-wrapper">
+                                                        <input onchange="updateImage(this)" name="gallery"  id="nipa_${inde}" type="file">
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                `;
         container.appendChild(input);
+        const newScript = document.createElement("script");
+        newScript.src = "/js/main.js";
+        const existingScript = document.querySelector("script[src='/js/main.js']");
+        existingScript.parentNode.replaceChild(newScript, existingScript);
+    }
+    function deleteImageInput(element) {
+        document.getElementById('div-' + element).remove();
+        inde--;
     }
 
     // Get references to the elements
@@ -237,49 +245,68 @@
     const subCategorySelect = document.getElementById('SelectedSubCategoryId');
 
     // Add event listener to the Category select
-    categorySelect.addEventListener('change', function ()
-    {
+    categorySelect.addEventListener('change', function () {
         const categoryId = categorySelect.value;
 
         // Enable or disable Sub Category select based on the selected Category
-        if (categoryId)
-        {
+        if (categoryId) {
             subCategorySelect.disabled = false;
             loadSubCategories(categoryId);
-        } else
-        {
+        } else {
             subCategorySelect.disabled = true;
             clearSubCategories();
         }
     });
 
+
+    function getComboA(selectObject) {
+        var categoryId = selectObject.value;
+        const subCategoryDropdown = document.getElementById('divSelect');
+        subCategoryDropdown.innerHTML = ''
+
+        if (categoryId !== '') {
+            // Make an AJAX request to the server to get the Sub Categories based on the selected Category
+            // Replace the placeholder URL with your actual endpoint
+            fetch(`/Admin/Product/GetSubCategories?categoryId=${categoryId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const sel = document.createElement('select');
+                    sel.setAttribute('class', 'nice-select')
+                    sel.setAttribute('id', 'SelectedSubCategoryId')
+                    subCategoryDropdown.appendChild(sel);
+                    data.forEach(subCategory => {
+                        const option = document.createElement('option');
+                        option.value = subCategory.id;
+                        option.textContent = subCategory.name;
+                        sel.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    }
+
     // Function to load Sub Categories from the backend
-    function loadSubCategories(categoryId)
-    {
+    function loadSubCategories(categoryId) {
         // Make an asynchronous request to the backend API
         // Replace 'backend/api/subcategories?categoryId=' with the actual endpoint
         fetch(`GetSubCategories?categoryId=${categoryId}`)
             .then(response => response.json())
-            .then(data =>
-            {
+            .then(data => {
                 // Populate the Sub Category select with the fetched data
                 populateSubCategories(data);
             })
-            .catch(error =>
-            {
+            .catch(error => {
                 console.error('Error:', error);
             });
     }
 
     // Function to populate the Sub Category select with options
-    function populateSubCategories(data)
-    {
+    function populateSubCategories(data) {
         // Clear existing options
         clearSubCategories();
 
         // Populate with new options
-        data.forEach(subCategory =>
-        {
+        data.forEach(subCategory => {
             const option = document.createElement('option');
             option.value = subCategory.id;
             option.textContent = subCategory.name;
@@ -288,8 +315,33 @@
     }
 
     // Function to clear the Sub Category select
-    function clearSubCategories()
-    {
+    function clearSubCategories() {
         subCategorySelect.innerHTML = '<option value="">-- Select --</option>';
+    }
+
+
+
+
+
+
+    function updateImage(input) {
+        var hiddenInput = document.createElement("input");
+        var formEdit = document.getElementById("formEdit")
+        hiddenInput.setAttribute("type", "hidden");
+
+        hiddenInput.setAttribute("name", "ChangedImagesIds");
+        hiddenInput.setAttribute("value", input.tabIndex);
+        formEdit.appendChild(hiddenInput);
+        var file = input.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var image = input.previousElementSibling;
+                if (image && image.tagName === "IMG") {
+                    image.src = e.target.result;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
     }
 </script>

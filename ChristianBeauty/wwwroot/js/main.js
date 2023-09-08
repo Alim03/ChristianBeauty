@@ -29,6 +29,9 @@
             imJs.searchClick();
             imJs.filterClickButton();
             imJs.unloadImage2();
+            imJs.unloadImage9();
+            imJs.unloadImage17();
+            imJs.unloadImage10();
             imJs.unloadImage();
             imJs.unloadImage3();
             imJs.darkLight();
@@ -662,22 +665,74 @@
                 rbtPreview(this);
             });
         },
-
-        unloadImage2: function name() {
-            $("#rbtinput2").click(function (e) {
-                $("#nipa").click();
+        unloadImage17: function name() {
+            $("#rbtinput17").click(function (e) {
+                $("#nipa17").click();
             });
 
             function rbtPreview() {
-                const [file2] = nipa.files
+                const [file2] = nipa17.files
                 if (file2) {
-                    rbtinput2.src = URL.createObjectURL(file2)
+                    rbtinput17.src = URL.createObjectURL(file2)
                 }
             }
-            $("#nipa").change(function () {
+            $("#nipa17").change(function () {
                 rbtPreview(this);
             });
         },
+
+
+
+        unloadImage2: function name() {
+            $("#rbtinput_1").click(function (e) {
+                $("#nipa_1").click();
+            });
+
+            function rbtPreview() {
+                const [file2] = nipa_1.files
+                if (file2) {
+                    rbtinput_1.src = URL.createObjectURL(file2)
+                }
+            }
+            $("#nipa_1").change(function () {
+                rbtPreview(this);
+            });
+        },
+
+        unloadImage9: function name() {
+            $("#rbtinput_2").click(function (e) {
+                $("#nipa_2").click();
+            });
+
+            function rbtPreview() {
+                const [file2] = nipa_2.files
+                if (file2) {
+                    rbtinput_2.src = URL.createObjectURL(file2)
+                }
+            }
+            $("#nipa_2").change(function () {
+                rbtPreview(this);
+            });
+        },
+
+        unloadImage10: function name() {
+            $("#rbtinput_3").click(function (e) {
+                $("#nipa_3").click();
+            });
+
+            function rbtPreview() {
+                const [file2] = nipa_3.files
+                if (file2) {
+                    rbtinput_3.src = URL.createObjectURL(file2)
+                }
+            }
+            $("#nipa_3").change(function () {
+                rbtPreview(this);
+            });
+        },
+
+
+
 
 
         unloadImage3: function name() {

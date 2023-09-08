@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iFKEp4E1ucvXU/BSPUjbf2jemkwghXUjdWUw3+3IABoPHeXNsWRETCEgFFHcT9idrtuae8Cs9VZfbmI10Vf0pQ==",
+  "dgSpecHash": "D0KmLsfditkqX1v+05DRe2bJxBF6KtBHmeczDgXUcKkh5HVWm8eGsHNioigt/BaLk4MbikhqKUsb7hBMw/CUdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ariyan\\Desktop\\cb\\ChristianBeauty\\ChristianBeauty.csproj",
+  "projectFilePath": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\ChristianBeauty.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ariyan\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

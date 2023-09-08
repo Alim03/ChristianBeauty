@@ -47,6 +47,8 @@ public class HomeController : Controller
         return View();
     }
 
+ 
+
     [HttpGet("Home/LoyaltyClub/{mobile}")]
     public async Task<IActionResult> LoyaltyClub(string mobile)
     {

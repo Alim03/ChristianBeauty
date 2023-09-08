@@ -6,6 +6,7 @@ using ChristianBeauty.Utilities;
 using ChristianBeauty.ViewModels.Blogs;
 using ChristianBeauty.ViewModels.Categories;
 using ChristianBeauty.ViewModels.Marterials;
+using ChristianBeauty.ViewModels.Products;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
 
@@ -63,9 +64,14 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(EditBlogViewModel viewModel)
+        public async Task<IActionResult> Edit(UpdateBlogViewModel viewModel)
         {
-            var blog = new Blog() { Id = viewModel.Id,Labels = viewModel.Labels,Tittle = viewModel.Tittle, Description = viewModel.Description,ReadingTime = viewModel.ReadingTime, Image = await FileHandler.ImageUploadAsync(viewModel.ImageFile) };
+            var blog = await _repository.GetAsync(viewModel.Id);
+            blog.Description = viewModel.Description;
+            blog.ReadingTime = viewModel.ReadingTime;
+            blog.Tittle = viewModel.Tittle;
+            blog.Labels = viewModel.Labels;
+            blog.Image = viewModel.ImageFile == null ? blog.Image : await FileHandler.ImageUploadAsync(viewModel.ImageFile);
             _repository.Update(blog);
             await _repository.SaveAsync();
             return RedirectToAction("Index");

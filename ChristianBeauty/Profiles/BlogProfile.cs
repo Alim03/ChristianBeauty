@@ -12,6 +12,7 @@ namespace ChristianBeauty.Profiles
             CreateMap<Blog, BlogsViewModel>().ReverseMap();
             CreateMap<Blog, AddBlogViewModel>().ReverseMap();
             CreateMap<Blog, BlogDetailViewModel>().ReverseMap();
+            CreateMap<Blog, UpdateBlogViewModel>().ReverseMap();
         }
     }
 }

@@ -1,42 +1,196 @@
 ﻿@model List<ChristianBeauty.ViewModels.Products.ProductViewModel>
-
+@using ChristianBeauty.Utilities;
 @{
-    ViewData["Title"] = "Home Page";
+    int row = 0;
 }
 
-<div class="text-center">
-    <h1>Index Product</h1>
-</div>
+<style>
+    td {
+        text-align: center !important;
+        padding-left: 10px !important;
+    }
 
+    th span {
+        font-size: 15px !important;
+        text-align: center !important;
+    }
 
-<div class="container">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Code</th>
-                <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody id="playlist">
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th scope="row">@item.Id</th>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.ProductCode
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    th {
+        text-align: center !important;
+    }
 
+    .tdRow {
+        border-left: 1px solid #d5d1d1 !important;
+    }
+
+    a :hover {
+        color: #00a3ff !important;
+    }
+
+</style>
+<div class="rn-upcoming-area rn-section-gap pt--50" style="padding-right: 320px !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- start Table Title -->
+                <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
+                    <h3><i data-feather="list"></i> لیست محصولات</h3>
+
+                    <a asp-action="Add" asp-controller="Product" class="btn btn-primary-alta btn-large"> ایجاد محصول<i style="top:0px!important;margin-left:0px!important;" data-feather="plus"></i></a>
+                </div>
+
+                <!-- End Table Title -->
+                <!-- table area Start -->
+                <div class="box-table table-responsive">
+                    <table class="table upcoming-projects">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>ردیف</span>
+                                </th>
+                                <th>
+                                    <span>عکس محصول</span>
+                                </th>
+                                <th>
+                                    <span>نام محصول</span>
+                                </th>
+                                <th>
+                                    <span>وضعیت محصول</span>
+                                </th>
+                                <th>
+                                    <span>تاریخ ثبت محصول</span>
+                                </th>
+                                <th>
+                                    <span>وضعیت موجودی محصول</span>
+                                </th>
+                                <th>
+                                    <span>در لیست محصولات پرطرفدار</span>
+                                </th>
+                                <th>
+                                    <span>عملیات</span>
+                                </th>
+                                @*                                <th>
+                                <span>لینک دیجی کالا</span>
+                                </th>
+                                <th>
+                                <span>لینک با سلام</span>
+                                </th>
+                                <td>
+                                @{
+                                if (item.DigikalLink == null)
+                                {
+                                <span>ندارد</span>
+                                }
+                                else
+                                {
+                                <span>دارد</span>
+
+                                }
+                                }
+                                </td>
+                                <td>
+                                @{
+                                if(item.BasalamLink == null)
+                                {
+                                <span>ندارد</span>
+                                }
+                                else
+                                {
+                                <span>دارد</span>
+
+                                }
+                                }
+
+                                </td>
+                                *@
+                            </tr>
+                        </thead>
+
+                        <tbody class="ranking">
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <tr class="color-light">
+                                        <td class="tdRow"><span style="color:#00a3ff">@row</span></td>
+                                        <td>
+                                            <div class="product-wrapper d-flex align-items-center" style="padding-right: 18px !important;">
+                                                <a href="product-details.html" class="thumbnail">
+                                                    <img src="~/Images/ProductImages/@item.Gallery.First().ImageName" alt="Nft_Profile">
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td><span>@item.Name</span></td>
+                                        <td>
+                                            @{
+                                                if (item.IsEnable == false)
+                                                {
+                                                    <span><i class="feather-x" style="font-size:25px;"></i></span>
+                                                }
+                                                else
+                                                {
+                                                    <span><i data-feather="check"></i></span>
+
+                                                }
+                                            }
+                                        </td>
+                                        <td><span>@Utilites.PersianDateConverter(@item.CreatedDate)</span></td>
+                                        <td>
+                                            @{
+                                                if (item.IsFinished == true)
+                                                {
+                                                    <span><i class="feather-x" style="font-size:25px;"></i></span>
+                                                }
+                                                else
+                                                {
+                                                    <span><i data-feather="check"></i></span>
+
+                                                }
+                                            }
+                                        </td>
+                                        <td>
+                                            @{
+                                                if (item.IsTopSeller == true)
+                                                {
+                                                    <span><i data-feather="check"></i></span>
+                                                }
+                                                else
+                                                {
+                                                    <span><i class="feather-x" style="font-size:25px;"></i></span>
+
+                                                }
+                                            }
+                                        </td>
+                                        <td>
+
+                                            <a asp-controller="Product" asp-action="Edit" style="color: #1b8d82 !important;" asp-route-id="@item.Id"><i data-feather="edit"></i></a>
+                                            |
+                                            <a asp-controller="Product" asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@item.Id"><i data-feather="delete"></i></a>
+                                        </td>
+
+                                    </tr>
+                                    row++;
+
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table End -->
+                <div class="row">
+                    <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
+                        <nav class="pagination-wrapper" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">قبلی</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -76,7 +76,7 @@
     --gradient-one: linear-gradient(to right bottom, #2899d8, #00a3ff);
     --color-heading: #ffffff;
     --color-body: #acacac;
-    --color-dark:#1d1d1d;
+    --color-dark: #1d1d1d;
     --color-light-heading: #181c32;
     --color-light-body: #65676b;
     --color-border-white: #00000024;
@@ -115,7 +115,6 @@
     --s-extra-bold: 800;
     --s-black: 900;
     --transition: 0.3s;
-
     --font-size-b1: 14px;
     --font-size-b2: 18px;
     --font-size-b3: 22px;
@@ -128,6 +127,17 @@
     --h4: 26px;
     --h5: 22px;
     --h6: 20px;
+    --chart-w: 200px;
+    --chart-h: 200px;
+    --chart-stroke-width: 35px;
+    --chart-radio: 45px;
+    --chart-circumference: (6.28 * --chart-radio);
+    --chart-hole-color: transparent;
+   --chart-bgc-success: #00b09a;
+     --chart-stroke-success: rgba(#a8e4dd, .9);
+   --chart-stroke-back-success: rgba(#33c0ae, .9);
+    --percentage: 0;
+   --percentage-to-show: ((100---percentage)*--chart-circumference)/100;
 }
 
 * {
@@ -12579,30 +12589,30 @@ span.rn-badge-card::before {
 ---------------------------*/
 .rn-nft-mid-wrapper {
     padding-right: 320px;
-    padding-left: 420px;
+    /*padding-left: 420px;*/
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .rn-nft-mid-wrapper {
         padding-right: 320px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .rn-nft-mid-wrapper {
         padding-right: 320px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .rn-nft-mid-wrapper {
         padding-right: 30px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (max-width: 767px) {
     .rn-nft-mid-wrapper {
         padding-right: 15px;
-        padding-left: 15px;
+        /*padding-left: 15px;*/
     }
 }
 
@@ -17625,31 +17635,31 @@ button .small-image {
 ---------------------------------*/
 .footer-for-left-sticky-header {
     padding-right: 320px;
-    padding-left: 420px;
+    /*padding-left: 420px;*/
     margin-top: 50px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .footer-for-left-sticky-header {
         padding-right: 320px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .footer-for-left-sticky-header {
         padding-right: 320px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-for-left-sticky-header {
         padding-right: 30px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (max-width: 767px) {
     .footer-for-left-sticky-header {
         padding-right: 30px;
-        padding-left: 30px;
+        /*padding-left: 30px;*/
     }
 }
 @media only screen and (max-width: 575px) {
@@ -24185,4 +24195,34 @@ body.active-light-mode {
         margin-right: 8.33333333%; margin-left: unset;
     }
 }
+
+
+
+.lableForAdd {
+    display: flex;
+    cursor: pointer !important;
+    height: 35px !important;
+    width: 58px !important;
+    border-radius: 11% !important;
+    background: #ff4b4b !important;
+    align-items: center !important;
+    justify-content: center !important;
+    top: 2px !important;
+    float: left;
+    left: -10px !important;
+    border: 1px solid var(--color-border) !important;
+    transition: var(--transition) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

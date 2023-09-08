@@ -4,38 +4,51 @@
     Layout = "_LoginLayout";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page with Background Image Example</title>
+    <link rel="stylesheet" href="./style.css">
 
-<form asp-controller="User" asp-action="Login" enctype="multipart/form-data" method="post" class="vh-100"
-    style="background-color: #508bfc;">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-                        <h3 class="mb-5">Sign in</h3>
-                        <div class="form-outline mb-4">
-                            <input asp-for="Username" id="typeEmailX-2" class="form-control form-control-lg"
-                                placeholder="Username" />
-
-                            <span asp-validation-for="Username" class="text-danger"></span>
-
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <input asp-for="Password" type="password" id="typePasswordX-2"
-                                class="form-control form-control-lg" placeholder="Password" />
-
-                            <span asp-validation-for="Password" class="text-danger"></span>
-
-                        </div>
-
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+</head>
 
 
 
-                    </div>
-                </div>
-            </div>
+<body>
+
+
+
+    <!-- partial:index.partial.html -->
+    <div id="bg"></div>
+
+    <form asp-controller="User" asp-action="Login" enctype="multipart/form-data" method="post">
+        <div class="form-field">
+            <input asp-for="Username" id="typeEmailX-2" class="form-control form-control-lg"
+                   placeholder="Username" />
+
+            <span asp-validation-for="Username" class="text-danger"></span>
         </div>
-    </div>
-</form>
+
+        <div class="form-field">
+            <input asp-for="Password" type="password" id="typePasswordX-2"
+                   class="form-control form-control-lg" placeholder="Password" />
+
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-field">
+            <button class="btn" style=" text-decoration:none;font-family: 'azarmehr-font' !important;font-size:15px" type="submit">ورود<i data-feather="login"></i></button>
+            <a class="btn" asp-action="Index" style="text-decoration:none;background-color:#1180ab;font-family: 'azarmehr-font' !important;font-size:15px" asp-controller="Home"> <i data-feather="home"></i>بازگشت به صفحه اصلی</a>
+        </div>
+
+        <p style="    text-align: center !important;
+    font-family: 'azarmehr-font' !important;
+    font-size: 18px;
+    color: #ffff;
+    margin-top: 53px;">ChristainBeauty.net</p>
+    </form>
+    <!-- partial -->
+
+</body>
+</html>

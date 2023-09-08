@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ChristianBeauty.Data.Context;
 using ChristianBeauty.Data.Interfaces.Products;
 using ChristianBeauty.Models;
+using ChristianBeauty.ViewModels.Products;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChristianBeauty.Data.Repositories.Products
@@ -299,6 +300,21 @@ namespace ChristianBeauty.Data.Repositories.Products
                 )
                 .Take(limit)
                 .ToListAsync();
+        }
+
+        public async Task<ProductCountViewModel> GetCountProductsAsync()
+        {
+            var totoal = await Context.Products.CountAsync();
+            var enable = await Context.Products.CountAsync(x=>x.IsEnable == true);
+            var disabled = await Context.Products.CountAsync(x=>x.IsEnable == false);
+            ProductCountViewModel productCountViewModel = new ProductCountViewModel
+            {
+                DisabledProduct = disabled,
+                EnabledProduct = enable,
+                Total = totoal
+            };
+            return productCountViewModel;
+
         }
     }
 }
