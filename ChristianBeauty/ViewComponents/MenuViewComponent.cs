@@ -20,7 +20,7 @@ namespace ChristianBeauty.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var user = await _userRepository.GetAsync(1);
+            var user = await _userRepository.GetAsync(2);
             UserViewModel userViewModel = new UserViewModel { Name = user.Name };
             return View("Menu", userViewModel);
         }

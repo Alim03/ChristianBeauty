@@ -39,7 +39,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> EditProfile(string Name,string Password)
         {
-            var user = await _userRepository.GetAsync(1);
+            var user = await _userRepository.GetAsync(2);
              user.Name = Name == null ? user.Name : Name;
              user.Password = Password == null ? user.Password : Password;
             _userRepository.Update(user);
