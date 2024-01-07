@@ -51,7 +51,9 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 }
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.NameIdentifier, user.UserName.ToString())
+                    new Claim(ClaimTypes.NameIdentifier, user.UserName.ToString()),
+                    new Claim(ClaimTypes.GivenName, user.Name.ToString()),
+                    new Claim(ClaimTypes.Surname, user.Id.ToString())
                 };
 
                 var identity = new ClaimsIdentity(

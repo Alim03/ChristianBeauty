@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using ChristianBeauty.Data.Interfaces.Categories;
@@ -39,7 +40,9 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> EditProfile(string Name,string Password)
         {
-            var user = await _userRepository.GetAsync(2);
+            var id = HttpContext.User.FindFirstValue(ClaimTypes.Surname);
+
+            var user = await _userRepository.GetAsync(Convert.ToInt32(id));
              user.Name = Name == null ? user.Name : Name;
              user.Password = Password == null ? user.Password : Password;
             _userRepository.Update(user);
