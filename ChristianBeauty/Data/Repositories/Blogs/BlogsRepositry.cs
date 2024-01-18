@@ -22,8 +22,8 @@ namespace ChristianBeauty.Data.Repositories.Blogs
         )
         {
             int skip = (pageNumber - 1) * pageSize;
-            List<Blog> products = await Context.Blogs.Skip(skip).Take(pageSize).ToListAsync();
-            return products;
+            List<Blog> blogs = await Context.Blogs.Skip(skip).Take(pageSize).ToListAsync();
+            return blogs;
         }
 
         public async Task<int> CountBlogsAsync()
@@ -34,8 +34,8 @@ namespace ChristianBeauty.Data.Repositories.Blogs
         public async Task<List<Blog>> GetPaginatedBlogssAsync(int pageNumber, int pageSize)
         {
             int skip = (pageNumber - 1) * pageSize;
-            List<Blog> products = await Context.Blogs.Skip(skip).Take(pageSize).ToListAsync();
-            return products;
+            List<Blog> blogs = await Context.Blogs.Skip(skip).Take(pageSize).ToListAsync();
+            return blogs;
         }
 
         public async Task<List<Blog>> GetRandomBlogAsync(int number)

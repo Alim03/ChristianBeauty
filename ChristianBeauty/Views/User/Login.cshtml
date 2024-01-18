@@ -22,33 +22,34 @@
     <!-- partial:index.partial.html -->
     <div id="bg"></div>
 
-    <form asp-controller="User" asp-action="Login" enctype="multipart/form-data" method="post">
+    <form  asp-controller="User" asp-action="Login" enctype="multipart/form-data" method="post">
         <div class="form-field">
-            <input asp-for="Username" id="typeEmailX-2" class="form-control form-control-lg"
-                   placeholder="Username" />
-
-            <span asp-validation-for="Username" class="text-danger"></span>
+            <input asp-for="Username" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Username" />
         </div>
-
-        <div class="form-field">
-            <input asp-for="Password" type="password" id="typePasswordX-2"
-                   class="form-control form-control-lg" placeholder="Password" />
-
-            <span asp-validation-for="Password" class="text-danger"></span>
+        <div dir="rtl">
+            <span style="color:red;font-weight:700;font-family:'azarmehr-font'" asp-validation-for="Username" class="text-danger"></span>
         </div>
-
         <div class="form-field">
-            <button class="btn" style=" text-decoration:none;font-family: 'azarmehr-font' !important;font-size:15px" type="submit">ورود<i data-feather="login"></i></button>
+            <input asp-for="Password" type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password" />
+        </div>
+        <div dir="rtl">
+            <span style="color:red;font-weight:700;font-family:'azarmehr-font'" asp-validation-for="Password" class="text-danger validation-error"></span>
+        </div>
+        <div class="form-field">
+            <button class="btn" style="text-decoration:none;font-family: 'azarmehr-font' !important;font-size:15px" type="submit">ورود<i data-feather="login"></i></button>
             <a class="btn" asp-action="Index" style="text-decoration:none;background-color:#1180ab;font-family: 'azarmehr-font' !important;font-size:15px" asp-controller="Home"> <i data-feather="home"></i>بازگشت به صفحه اصلی</a>
         </div>
 
-        <p style="    text-align: center !important;
-    font-family: 'azarmehr-font' !important;
-    font-size: 18px;
-    color: #ffff;
-    margin-top: 53px;">ChristainBeauty.net</p>
+        <p style="text-align: center !important; font-family: 'azarmehr-font' !important; font-size: 18px; color: #ffff; margin-top: 53px;">ChristainBeauty.net</p>
     </form>
+
     <!-- partial -->
 
 </body>
 </html>
+
+<script>
+
+
+
+</script>

@@ -74,10 +74,17 @@
                             @{
                                 foreach (var item in Model)
                                 {
+                                    string cleanedDescription = System.Text.RegularExpressions.Regex.Replace(item.Description.ToString(), "<.*?>", string.Empty);
+                                    string chunks = @Utilites.SplitString(cleanedDescription, 10);
+
                                     <tr class="color-light">
                                         <td class="tdRow"><span style="color:#00a3ff">@row</span></td>
                                         <td><span>@item.Tittle</span></td>
-                                        <td><span> @Utilites.SplitString(item.Description, 10)</span></td>
+                                        <td>
+                                            <span>
+                                                @chunks
+                                            </span>
+                                        </td>
                                         <td><span>   @item.ReadingTime</span></td>
                                         <td>
                                             @Utilites.PersianDateConverter(@item.CreateDate)

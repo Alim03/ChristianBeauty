@@ -198,15 +198,15 @@
                      <li class="page-item"><a class="page-link" href="?page=@(Model.Metadata.CurrentPage - 1)@query">قبلی</a></li>
                 }
 
-                @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
-                {
-                    if (i >= 1 && i <= Model.Metadata.TotalPages)
-                    {
-                        <li class="page-item @(i == Model.Metadata.CurrentPage ? "active" : "")">
-                            <a class="page-link" href="?page=@i@query">@i</a>
-                        </li>
-                    }
-                }
+                        @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
+                        {
+                            if (i >= 1 && i <= Model.Metadata.TotalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link @(i == Model.Metadata.CurrentPage ? "active" : "")" href="?page=@i@query">@i</a>
+                                </li>
+                            }
+                        }
 
                 @if (Model.Metadata.HasNextPage)
                 {

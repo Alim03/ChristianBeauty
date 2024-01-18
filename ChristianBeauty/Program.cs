@@ -19,6 +19,8 @@ using ChristianBeauty.Data.Interfaces.Blogs;
 using ChristianBeauty.Data.Repositories.Blogs;
 using ChristianBeauty.Data.Interfaces.LoyaltyClubUser;
 using ChristianBeauty.Data.Repositories.LoyaltyClubUser;
+using ChristianBeauty.Data.Interfaces.Banners;
+using ChristianBeauty.Data.Repositories.Banners;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -57,6 +59,7 @@ builder.Services.AddScoped<IGalleryRepository, GalleryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBlogsRepository, BlogsRepositry>();
 builder.Services.AddScoped<ILoyaltyClubUserRepository, LoyaltyClubUserRepository>();
+builder.Services.AddScoped<IBannerRepositroy, BannerRepostory>();
 builder.Services
     .AddAuthentication(options =>
     {
@@ -68,7 +71,7 @@ builder.Services
     {
         options.LoginPath = "/User/Login";
         options.LogoutPath = "/SignOut";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(6000);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(420000);
         options.SlidingExpiration = true;
     });
 

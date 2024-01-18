@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Threading.Tasks;
 using ChristianBeauty.Data.Context;
@@ -50,14 +51,6 @@ namespace ChristianBeauty.Data.Repositories.Products
             }
         }
 
-        public async Task<Product> GetTestAsync(int id)
-        {
-            return await Context.Products
-                .Include(p => p.Category)
-                .ThenInclude(c => c.Subcategories)
-                .FirstOrDefaultAsync(p => p.Id == id);
-        }
-
         public async Task<Product> GetProductWithImagesEagerLoadAsync(int id)
         {
             return await Context.Products
@@ -66,9 +59,76 @@ namespace ChristianBeauty.Data.Repositories.Products
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<List<Product>> GetAllProductWithImagesEagerLoadAsync()
+        public async Task<List<Product>> GetAllProductWithImagesEagerLoadAsync(int pageNumber,
+            int pageSize
+         )
         {
-            return await Context.Products.Include(c => c.Gallery).ToListAsync();
+            int skip = (pageNumber - 1) * pageSize;
+            return await Context.Products.Include(c => c.Gallery).Include(p => p.Category).Skip(skip)
+                .Take(pageSize).ToListAsync();
+        }
+        public async Task<List<Product>> GetAllProductWithImagesEagerByFilterLoadAsync(int pageNumber, string? searchKey, int pageSize, int? categoryId,
+            int? materialId,
+            int? subcategory,
+            int? has_selling_stock,
+            bool? HasConfiguredAsBanner)
+        {
+            IQueryable<Product> query = Context.Products;
+
+            if (categoryId != null)
+            {
+                query = query.Where(
+                    x =>
+                        x.CategoryId == categoryId.Value
+                        || x.Category.ParentCategoryId == categoryId.Value
+                );
+            }
+
+            if(searchKey !=null)
+            {
+                query = query.Where(x => x.Name.Contains(searchKey));
+            }
+
+            if (materialId != null)
+            {
+                query = query.Where(x => x.MaterialId == materialId.Value);
+            }
+
+            if (subcategory != null)
+            {
+                query = query.Where(x => x.CategoryId == subcategory.Value);
+            }
+            if (has_selling_stock != null)
+            {
+                if (has_selling_stock.Value == 1)
+                {
+                    query = query.Where(x => x.IsFinished != null);
+                }
+                if (has_selling_stock.Value == 2)
+                {
+                    query = query.Where(x => x.IsFinished == false);
+                }
+                if (has_selling_stock.Value == 3)
+                {
+                    query = query.Where(x => x.IsFinished == true);
+                }
+
+            }
+
+
+            if (HasConfiguredAsBanner != null)
+            {
+                if (HasConfiguredAsBanner.Value == true)
+                {
+                    foreach (var item in query)
+                    {
+                        query = query.Where(product => Context.Banners.Any(banner => banner.ProductId == item.Id));
+                    }
+                }
+            }
+            int skip = (pageNumber - 1) * pageSize;
+            return await query.Include(c => c.Gallery).Include(p => p.Category).Skip(skip)
+                .Take(pageSize).ToListAsync();
         }
 
         public async Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize)
@@ -164,7 +224,6 @@ namespace ChristianBeauty.Data.Repositories.Products
                 }
 
             }
-
             return await query
                 .Include(p => p.Gallery).Include(p => p.Category)
                 .Select(
@@ -193,10 +252,12 @@ namespace ChristianBeauty.Data.Repositories.Products
         }
 
         public async Task<int> GetTotalCountProductsByFilterAsync(
+            string searchKey,
             int? categoryId,
             int? materialId,
             int? subcategory,
-            int? has_selling_stock
+            int? has_selling_stock,
+            bool? HasConfiguredAsBanner
         )
         {
             IQueryable<Product> query = Context.Products;
@@ -208,6 +269,11 @@ namespace ChristianBeauty.Data.Repositories.Products
                         x.CategoryId == categoryId.Value
                         || x.Category.ParentCategoryId == categoryId.Value
                 );
+            }
+
+            if (searchKey != null)
+            {
+                query = query.Where(x => x.Name.Contains(searchKey));
             }
 
             if (materialId != null)
@@ -234,6 +300,15 @@ namespace ChristianBeauty.Data.Repositories.Products
                 }
 
             }
+            if (HasConfiguredAsBanner == true)
+            {
+                foreach (var item in query)
+                {
+                    query = query.Where(product => Context.Banners.Any(banner => banner.ProductId == item.Id));
+                }
+            }
+
+
             return await query.CountAsync();
         }
 
@@ -315,6 +390,18 @@ namespace ChristianBeauty.Data.Repositories.Products
             };
             return productCountViewModel;
 
+        }
+
+        public async Task<Product> GetProductWithCategoryEagerLoadAsync(int id)
+        {
+            return await Context.Products
+            .Include(c => c.Category)
+            .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public Task<List<Product>> GetProductBySearch(string searchKey)
+        {
+            throw new NotImplementedException();
         }
     }
 }

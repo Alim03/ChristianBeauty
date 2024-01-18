@@ -16,10 +16,14 @@ namespace ChristianBeauty.Areas.Admin.Controllers
     {
         private protected IBlogsRepository _repository;
         private readonly IMapper _mapper;
-        public BlogController(IBlogsRepository blogsRepository, IMapper mapper)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public BlogController(IBlogsRepository blogsRepository, IWebHostEnvironment webHostEnvironment, IMapper mapper)
         {
             _repository = blogsRepository;
             _mapper = mapper;
+            _webHostEnvironment = webHostEnvironment;
+
         }
         public async Task<IActionResult> Index()
         {
@@ -41,7 +45,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 Description = model.Description,
                 Tittle = model.Tittle,
                 ReadingTime = model.ReadingTime,
-                Image = await FileHandler.ImageUploadAsync(model.Image),
+                Image = await FileHandler.ImageUploadAsync(model.Image,_webHostEnvironment),
                 CreateDate = DateTime.Now,
                 Labels = model.Labels
             };
@@ -71,7 +75,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             blog.ReadingTime = viewModel.ReadingTime;
             blog.Tittle = viewModel.Tittle;
             blog.Labels = viewModel.Labels;
-            blog.Image = viewModel.ImageFile == null ? blog.Image : await FileHandler.ImageUploadAsync(viewModel.ImageFile);
+            blog.Image = viewModel.ImageFile == null ? blog.Image : await FileHandler.ImageUploadAsync(viewModel.ImageFile,_webHostEnvironment);
             _repository.Update(blog);
             await _repository.SaveAsync();
             return RedirectToAction("Index");

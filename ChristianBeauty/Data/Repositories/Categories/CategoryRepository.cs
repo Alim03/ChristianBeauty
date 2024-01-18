@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Threading.Tasks;
 using ChristianBeauty.Data.Context;
@@ -19,11 +20,13 @@ namespace ChristianBeauty.Data.Repositories.Categories
             return await Context.Categories.Include(c => c.Subcategories).ToListAsync();
         }
 
-        public async Task<IEnumerable<Category>> GetAllParentCategoriesEagerLoadAsync()
+        public async Task<IEnumerable<Category>> GetAllParentCategoriesEagerLoadAsync(int pageId,int pageSize)
         {
+            int skip = (pageId - 1) * pageSize;
             return await Context.Categories
-                .Where(x => x.ParentCategoryId == null)
-                .Include(c => c.Subcategories)
+                .Include(p => p.Subcategories)
+                .Skip(skip)
+                .Take(pageSize)
                 .ToListAsync();
         }
 
@@ -65,6 +68,11 @@ namespace ChristianBeauty.Data.Repositories.Categories
         {
             var category = await Context.Categories.SingleOrDefaultAsync(x => x.Id == id);
             return category.ParentCategoryId.Value;
+        }
+
+        public async Task<int> GetAllCategoriesCount()
+        {
+            return await Context.Categories.CountAsync();
         }
     }
 }

@@ -13,7 +13,17 @@ namespace ChristianBeauty.Data.Interfaces.Products
         void AddSubcategoryToProduct(Product product, int subcategoryId);
         void AddSubcategoryToProduct(int productId, int subcategoryId);
         Task<Product> GetProductWithImagesEagerLoadAsync(int id);
-        Task<List<Product>> GetAllProductWithImagesEagerLoadAsync();
+        Task<Product> GetProductWithCategoryEagerLoadAsync(int id);
+        Task<List<Product>> GetAllProductWithImagesEagerLoadAsync(int pageNumber, int pageSize);
+        Task<List<Product>> GetProductBySearch(string searchKey);
+        Task<List<Product>> GetAllProductWithImagesEagerByFilterLoadAsync(int pageNumber,
+            string? searchKey,
+            int pageSize,
+            int? categoryId,
+            int? materialId,
+            int? subcategory,
+            int? has_selling_stock,
+            bool? HasConfiguredAsBanner);
 
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize);
         Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize, string query);
@@ -21,10 +31,13 @@ namespace ChristianBeauty.Data.Interfaces.Products
         Task<ProductCountViewModel> GetCountProductsAsync();
         Task<int> GetTotalCountProductsAsync(string query);
         Task<int> GetTotalCountProductsByFilterAsync(
+            string searchKey,
             int? categoryId,
             int? materialId,
             int? subcategory,
-            int? has_selling_stock
+            int? has_selling_stock,
+            bool? HasConfiguredAsBanner
+
         );
         Task<List<Product>> GetPaginatedProductsByFilterAsync(
             int pageNumber,
@@ -33,6 +46,7 @@ namespace ChristianBeauty.Data.Interfaces.Products
             int? materialId,
             int? subcategory,
             int? has_selling_stock
+
         );
         Task<List<Product>> GetProductsByCategoryWithLimitAsync(
             int categoryId,
@@ -42,6 +56,5 @@ namespace ChristianBeauty.Data.Interfaces.Products
         Task<List<Product>> GetRandomProductsAsync(int number);
         Task<List<Product>> GetTopSellerProductsByLimit(int limit);
 
-        Task<Product> GetTestAsync(int id);
     }
 }

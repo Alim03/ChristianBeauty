@@ -1,4 +1,5 @@
-﻿@Html.Partial("PartialViews/Slider/_Slider")
+﻿@await Component.InvokeAsync("Slider")
+
 
 @await Component.InvokeAsync("Category")
 
@@ -194,8 +195,5 @@
             .catch(error => {
                 console.error('Error:', error);
             });
-
-
-
     }
 </script>

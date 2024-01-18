@@ -30,6 +30,8 @@
                             <div class="button-area">
                                 <div class="brows-file-wrapper">
                                     <input onchange="updateImage(this)" name="gallery" id="nipa_@index" type="file">
+                                    <span asp-validation-for="Gallery" class="text-danger"></span>
+
                                 </div>
                             </div>
                         </div>
@@ -138,7 +140,7 @@
                                     <label class="title mt-3">جنس محصول:</label>
                                     <div class="create-collection-input">
                                         <select class="nice-select" asp-for="SelectedMaterialId" asp-items=@Model.Materials>
-                                            <option value="">-- Select --</option>
+                                            <option value="">انتخاب کنید</option>
 
                                         </select>
                                         <span asp-validation-for="SelectedMaterialId" class="text-danger"></span>
@@ -150,7 +152,7 @@
                                     <label class="title mt-3">  دسته بندی:</label>
                                     <div class="create-collection-input">
                                         <select onchange="getComboA(this)" class="nice-select" id="SelectedCategoryId" asp-for="SelectedCategoryId" asp-items=@Model.Categories>
-                                            <option value="">-- Select --</option>
+                                            <option value="">انتخاب کنید</option>
 
                                         </select>
                                         <span asp-validation-for="SelectedCategoryId" class="text-danger"></span>

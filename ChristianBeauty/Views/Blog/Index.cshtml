@@ -70,12 +70,13 @@
                                 </li>
                             }
 
+
                             @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
                             {
                                 if (i >= 1 && i <= Model.Metadata.TotalPages)
                                 {
-                                    <li class="page-item @(i == Model.Metadata.CurrentPage ? "active" : "")">
-                                        <a class="page-link" href="?page=@i">@i</a>
+                                    <li class="page-item">
+                                        <a class="page-link @(i == Model.Metadata.CurrentPage ? "active" : "")" href="?page=@i">@i</a>
                                     </li>
                                 }
                             }

@@ -227,7 +227,7 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: false,
+                arrows: true,
                 cssEase: 'linear',
                 adaptiveHeight: true,
                 rtl:true,

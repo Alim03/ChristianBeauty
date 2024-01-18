@@ -7,7 +7,10 @@ using AutoMapper;
 using ChristianBeauty.Data.Interfaces.Categories;
 using ChristianBeauty.Models;
 using ChristianBeauty.ViewModels.Categories;
+using ChristianBeauty.ViewModels.Common;
+using ChristianBeauty.ViewModels.Products;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 namespace ChristianBeauty.Areas.Admin.Controllers
@@ -16,6 +19,8 @@ namespace ChristianBeauty.Areas.Admin.Controllers
     {
         private protected ICategoryRepository _repository;
         private readonly IMapper _mapper;
+        private const int PAGESIZE = 15;
+
 
         public CategoryController(ICategoryRepository repository, IMapper mapper)
         {
@@ -23,10 +28,21 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var allCategories = await _repository.GetAllParentCategoriesEagerLoadAsync();
-            var viewModel = _mapper.Map<List<CategoryViewModel>>(allCategories);
+            var allCategories = await _repository.GetAllParentCategoriesEagerLoadAsync(page,PAGESIZE);
+            var totalCount = await _repository.GetAllCategoriesCount();
+            PaginationMetadata paginationMetadata = new PaginationMetadata
+            {
+                TotalCount = totalCount,
+                PageSize = PAGESIZE,
+                CurrentPage = page
+            };
+            var viewModel = new PaginatedCatrgoryViewModel
+            {
+                Categories = allCategories.ToList(),
+                Metadata = paginationMetadata,
+            };
             return View(viewModel);
         }
 

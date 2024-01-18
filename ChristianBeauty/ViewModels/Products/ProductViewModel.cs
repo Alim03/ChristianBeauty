@@ -17,8 +17,7 @@ namespace ChristianBeauty.ViewModels.Products
         public string? DigikalLink { get; set; }
         public bool IsFinished { get; set; }
         public bool IsTopSeller { get; set; }
+        public bool HasBannerConfigured { get; set; }
         public List<Gallery> Gallery { get; set; }
-
-
     }
 }

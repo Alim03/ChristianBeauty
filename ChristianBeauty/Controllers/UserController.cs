@@ -30,6 +30,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            _toastNotification.RemoveAll();
             return View();
         }
 

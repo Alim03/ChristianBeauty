@@ -9,7 +9,5 @@
         public int ReadingTime { get; set; }
         public DateTime CreateDate { get; set; }
         public string Labels { get; set; }
-
-
     }
 }

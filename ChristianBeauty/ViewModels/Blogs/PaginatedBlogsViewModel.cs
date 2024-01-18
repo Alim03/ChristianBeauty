@@ -6,7 +6,7 @@ namespace ChristianBeauty.ViewModels.Blogs
 {
     public class PaginatedBlogsViewModel
     {
-        public List<Blog> Blogs { get; set; }
-        public PaginationMetadata Metadata { get; set; }
+            public List<Blog> Blogs { get; set; }
+            public PaginationMetadata Metadata { get; set; }
     }
 }

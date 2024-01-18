@@ -1,4 +1,4 @@
-﻿@model List<ChristianBeauty.ViewModels.Products.ProductViewModel>
+﻿@model ChristianBeauty.ViewModels.Products.AdminPaginatedProductsViewModel
 @using ChristianBeauty.Utilities;
 @{
     int row = 0;
@@ -39,6 +39,130 @@
                     <a asp-action="Add" asp-controller="Product" class="btn btn-primary-alta btn-large"> ایجاد محصول<i style="top:0px!important;margin-left:0px!important;" data-feather="plus"></i></a>
                 </div>
 
+                <div class="row mb--50 ">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt_mobile--15">
+                        <div class="view-more-btn text-end text-sm-start" data-sal-delay="150" data-sal="slide-up"
+                             data-sal-duration="800">
+                            <button class="discover-filter-button discover-filter-activation btn btn-primary">
+                                فیلتر<i class="feather-filter"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="default-exp-wrapper default-exp-expand">
+                    <div class="inner">
+
+                        @{
+                            var query = "";
+                            if (!string.IsNullOrEmpty(Context.Request.Query["q"]))
+                            {
+                                query += $"&q={Context.Request.Query["q"]}";
+                            }
+                            if (!string.IsNullOrEmpty(Context.Request.Query["categoryId"]))
+                            {
+                                query += $"&categoryId={Context.Request.Query["categoryId"]}";
+                            }
+                            if (!string.IsNullOrEmpty(Context.Request.Query["material"]))
+                            {
+                                query += $"&material={Context.Request.Query["material"]}";
+                            }
+                            if (!string.IsNullOrEmpty(Context.Request.Query["subcategory"]))
+                            {
+                                query += $"&subcategory={Context.Request.Query["subcategory"]}";
+                            }
+                            if (!string.IsNullOrEmpty(Context.Request.Query["has_selling_stock"]))
+                            {
+                                query += $"&has_selling_stock={Context.Request.Query["has_selling_stock"]}";
+                            }
+
+                        }
+
+
+                        
+                        <div class="filter-select-option">
+                            <label class="filter-leble">جست و جوی محصول</label>
+                            <form id="header-search-1" asp-action="Index" asp-controller="Product" method="GET"
+                                  class="large-mobile-blog-search">
+                                <div class="rn-search-mobile form-group">
+                                    <input type="text" placeholder="جستجو ..." name="searchKey">
+                                </div>
+                            <button type="submit" class="btn btn-primary-alta btn-small"><i class="feather-search"></i></button>
+                            </form>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="filter-select-option">
+                            <label class="filter-leble">دسته</label>
+                            <select id="categoryId" name="categoryId" onchange="onFilterChange('categoryId', this.value);">
+                                <option selected disabled hidden data-display="دسته" value="">دسته</option>
+                                @if (Model.Categories != null)
+                                {
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <option value="@category.Value">@category.Text</option>
+                                    }
+                                }
+
+                            </select>
+                        </div>
+
+
+                        <div class="filter-select-option">
+                            <label class="filter-leble">زیر دسته</label>
+                            <select id="subCategory" onchange="onFilterChange('subcategory', this.value);">
+                                <option value="">زیر دسته</option>
+
+                            </select>
+                        </div>
+
+                        <div class="filter-select-option">
+                            <label class="filter-leble">جنس</label>
+                            <select id="material" name="material" onchange="onFilterChange('material', this.value);">
+                                <option selected disabled hidden data-display="جنس">جنس</option>
+                                @if (Model.Materials != null)
+                                {
+                                    @foreach (var material in Model.Materials)
+                                    {
+                                        <option value="@material.Value">@material.Text</option>
+                                    }
+                                }
+
+                            </select>
+                        </div>
+
+                        <div class="filter-select-option">
+                            <label class="filter-leble">وضعیت</label>
+                            <select id="has-selling-stock" name="has_selling_stock" onchange="onFilterChange('has_selling_stock', this.value);">
+                                <option value="1" selected data-display="همه">همه</option>
+                                <option value="2" data-display="موجود">موجود</option>
+                                <option value="3" data-display="ناموجود">ناموجود</option>
+                            </select>
+                        </div>
+
+                         <form id="header-search-1" asp-action="Index" asp-controller="Product" method="GET">
+                            <button type="submit" class="btn btn-primary btn-small">حذف فیلتر ها </button>
+                        </form>
+
+                    </div>
+                </div>
+
                 <!-- End Table Title -->
                 <!-- table area Start -->
                 <div class="box-table table-responsive">
@@ -65,6 +189,9 @@
                                 </th>
                                 <th>
                                     <span>در لیست محصولات پرطرفدار</span>
+                                </th>
+                                <th>
+                                    <span>بنر صفحه اصلی</span>
                                 </th>
                                 <th>
                                     <span>عملیات</span>
@@ -108,7 +235,7 @@
 
                         <tbody class="ranking">
                             @{
-                                foreach (var item in Model)
+                                foreach (var item in Model.Products)
                                 {
                                     <tr class="color-light">
                                         <td class="tdRow"><span style="color:#00a3ff">@row</span></td>
@@ -161,6 +288,23 @@
                                             }
                                         </td>
                                         <td>
+                                            @{
+                                                if (item.HasBannerConfigured == true)
+                                                {
+
+                                                    <span>هست</span> <a asp-controller="Banner" asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@item.Id"><i data-feather="x-circle"></i></a>
+                                                }
+                                                else
+                                                {
+                                                    <span>نیست</span>
+
+                                                    <a asp-controller="Banner" asp-action="Add" style="color: #1b8d82 !important;" asp-route-ProductId="@item.Id">
+                                                        <i data-feather="plus-circle"></i>
+                                                    </a>
+                                                }
+                                            }
+                                        </td>
+                                        <td>
 
                                             <a asp-controller="Product" asp-action="Edit" style="color: #1b8d82 !important;" asp-route-id="@item.Id"><i data-feather="edit"></i></a>
                                             |
@@ -177,20 +321,169 @@
                     </table>
                 </div>
                 <!-- table End -->
-                <div class="row">
-                    <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
-                        <nav class="pagination-wrapper" aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">قبلی</a></li>
-                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
+                    <nav class="pagination-wrapper" aria-label="Page navigation example">
+                        <ul class="pagination">
+
+                            @if (Model.Metadata.HasPreviousPage)
+                            {
+
+                                <li class="page-item"><a class="page-link" href="?page=@(Model.Metadata.CurrentPage - 1)@query">قبلی</a></li>
+                            }
+
+                      @*      @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
+                            {
+                                if (i >= 1 && i <= Model.Metadata.TotalPages)
+                                {
+                                    <li class="page-item @(i == Model.Metadata.CurrentPage ? "active" : "")">
+                                        <a class="page-link" href="?page=@i@query">@i</a>
+                                    </li>
+                                }
+                            }*@
+                            @for (int i = Model.Metadata.CurrentPage - 5; i <= Model.Metadata.CurrentPage + 5; i++)
+                            {
+                                if (i >= 1 && i <= Model.Metadata.TotalPages)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link @(i == Model.Metadata.CurrentPage ? "active" : "")" href="?page=@i@query">@i</a>
+                                    </li>
+                                }
+                            }
+
+
+                            @if (Model.Metadata.HasNextPage)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=@(Model.Metadata.CurrentPage + 1)@query">بعدی</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    function removeParameter(url, parameter) {
+        var urlParts = url.split('?');
+        if (urlParts.length >= 2) {
+            var prefix = encodeURIComponent(parameter) + '=';
+            var parameters = urlParts[1].split(/[&;]/g);
+
+            for (var i = parameters.length; i-- > 0;) {
+                if (parameters[i].lastIndexOf(prefix, 0) !== -1) {
+                    parameters.splice(i, 1);
+                }
+            }
+
+            url = urlParts[0] + (parameters.length > 0 ? '?' + parameters.join('&') : '');
+        }
+
+        return url;
+    }
+
+    function onFilterChange(filterName, filterValue) {
+        var baseUrl = '@Url.Action("Index", "Product")';
+        var url = removeParameter(window.location.href, filterName);
+        url = removeParameter(url, 'page');
+        url = url + (url.indexOf('?') === -1 ? '?' : '&') + filterName + '=' + encodeURIComponent(filterValue);
+        // Redirect to the new URL
+        window.location.href = url;
+    }
+
+
+    function getURLParameter(name) {
+        var params = new URLSearchParams(window.location.search);
+        console.log(params.get(name));
+        return params.get(name);
+    }
+
+    function selectDropdownOption(dropdown, parameterValue) {
+        for (let i = 0; i < dropdown.options.length; i++) {
+            if (dropdown.options[i].value === parameterValue) {
+                dropdown.options[i].selected = true;
+                break;
+            }
+        }
+    }
+    const dropdownCategory = document.getElementById("categoryId");
+    var categoryParameterValue = getURLParameter("categoryId");
+
+    var materialParameterValue = getURLParameter("material");
+    const dropdownMaterial = document.getElementById("material");
+
+    var subCategoryParameterValue = getURLParameter("subcategory");
+    const dropdownSubCategory = document.getElementById('subCategory');
+
+    var hasSellingStockParameterValue = getURLParameter("has_selling_stock");
+    const dropdownHasSellingStock = document.getElementById('has-selling-stock');
+
+    if (categoryParameterValue != null) {
+        selectDropdownOption(dropdownCategory, categoryParameterValue);
+
+        dropdownSubCategory.disabled = false;
+        loadSubCategories(categoryParameterValue);
+    }
+    else {
+        dropdownSubCategory.disabled = true;
+        clearSubCategories();
+    }
+    if (materialParameterValue != null) {
+        selectDropdownOption(dropdownMaterial, materialParameterValue);
+    }
+
+
+    if (hasSellingStockParameterValue != null) {
+        selectDropdownOption(dropdownHasSellingStock, hasSellingStockParameterValue);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (subCategoryParameterValue != null) {
+            selectDropdownOption(dropdownSubCategory, subCategoryParameterValue);
+        }
+    })    // Add event listener to the Category select
+
+
+
+    // Function to load Sub Categories from the backend
+    function loadSubCategories(categoryId) {
+        // Make an asynchronous request to the backend API
+        // Replace 'backend/api/subcategories?categoryId=' with the actual endpoint
+        fetch(`/Product/GetSubCategories?categoryId=${categoryId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Populate the Sub Category select with the fetched data
+                populateSubCategories(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    // Function to populate the Sub Category select with options
+    function populateSubCategories(data) {
+        // Clear existing options
+        clearSubCategories();
+
+        // Populate with new options
+        data.forEach(subCategory => {
+            const option = document.createElement('option');
+            option.value = subCategory.id;
+            option.textContent = subCategory.name;
+            dropdownSubCategory.appendChild(option);
+        });
+    }
+
+    // Function to clear the Sub Category select
+    function clearSubCategories() {
+        dropdownSubCategory.innerHTML = '<option value="">زیر دسته</option>';
+    }
+</script>
+

@@ -87,10 +87,12 @@ namespace ChristianBeauty.Controllers
                     has_selling_stock
                 );
                 totalCount = await _productRepository.GetTotalCountProductsByFilterAsync(
+                    null,
                     categoryId,
                     material,
                     subcategory,
                     has_selling_stock
+                    , false
                 );
             }
             else

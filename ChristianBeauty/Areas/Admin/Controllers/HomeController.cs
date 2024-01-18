@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using AutoMapper;
 using ChristianBeauty.Data.Interfaces.Categories;
 using ChristianBeauty.Data.Interfaces.Materials;
@@ -11,6 +12,7 @@ using ChristianBeauty.Data.Interfaces.Products;
 using ChristianBeauty.Data.Interfaces.Users;
 using ChristianBeauty.Data.Repositories.Categories;
 using ChristianBeauty.Data.Repositories.Materials;
+using ChristianBeauty.Utilities;
 using ChristianBeauty.ViewModels.Products;
 using ChristianBeauty.ViewModels.Users;
 using Microsoft.AspNetCore.Authentication;
@@ -22,10 +24,15 @@ namespace ChristianBeauty.Areas.Admin.Controllers
     public class HomeController : AdminBaseController
     {
         private readonly IUserRepository _userRepository;
+        private readonly INotyfService _toastNotification;
 
-        public HomeController(IUserRepository userRepository)
+
+
+        public HomeController(IUserRepository userRepository, INotyfService toastNotification)
         {
             _userRepository = userRepository;
+            _toastNotification = toastNotification;
+
         }
         public async Task<IActionResult> Index()
         {
@@ -47,7 +54,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
              user.Password = Password == null ? user.Password : Password;
             _userRepository.Update(user);
             await _userRepository.SaveAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("SignOut", "Home");
         }
 
         public IActionResult SignOut()

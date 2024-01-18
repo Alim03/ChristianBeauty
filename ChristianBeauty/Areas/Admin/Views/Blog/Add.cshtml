@@ -3,6 +3,9 @@
     ViewData["Title"] = "Add Page";
 }
 
+<script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
+
+
 <<div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
     <div class="container">
         <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
@@ -16,7 +19,6 @@
                         <label class="title">تصویر بلاگ</label>
                         <div class="create-collection-input feature-image">
                             <div class="logo-c-image feature">
-
                                 <img id="rbtinput17" src="https://maxphone.rs/themes/shop/noimage.jpg" alt="Profile-NFT">
                                 <label for="nipa17" title="No File Choosen">
                                     <span class="text-center color-white"><i class="feather-edit"></i></span>
@@ -64,7 +66,7 @@
                                 <div class="collection-single-wized">
                                     <label for="description" class="title">متن بلاگ :</label>
                                     <div class="create-collection-input">
-                                        <textarea asp-for="Description" id="description" class="text-area"></textarea>
+                                        <textarea asp-for="Description" dir="rtl" id="description" class="text-area"></textarea>
                                         <span asp-validation-for="Description" class="text-danger"></span>
 
                                     </div>
@@ -87,6 +89,24 @@
     </div>
 </div>
 <script>
+
+    ClassicEditor
+        .create(document.querySelector('#description'), {
+            alignment: {
+                options: ['left', 'left']
+            },
+            language: 'fa', // 'fa' is the ISO code for Persian
+            ckfinder: {
+                // Add any CKFinder configuration if needed
+            }
+        })
+        .then(editor => {
+            editor.ui.getEditable().setDirection('ltr'); // Set the text direction to left-to-right
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
     function updateImage(input) {
         var hiddenInput = document.createElement("input");
         var formEdit = document.getElementById("formEdit")
