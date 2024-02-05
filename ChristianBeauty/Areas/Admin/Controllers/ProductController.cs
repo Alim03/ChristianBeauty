@@ -53,7 +53,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         }
 
 
-
+        
         public async Task<IActionResult> Index(int page = 1,
             int? categoryId = null,
             string? searchKey = null,
@@ -126,6 +126,8 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             };
             return View(viewModel);
         }
+
+
          [HttpGet]
         public async Task<IActionResult> Add()
         {
@@ -306,9 +308,14 @@ namespace ChristianBeauty.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _repository.GetAsync(id);
+            var banner = await _bannerRepository.GetBannerByProductId(id);
             if (product != null)
             {
                 _repository.Remove(product);
+                if(banner != null)
+                {
+                _bannerRepository.Remove(banner);
+                }
                 await _repository.SaveAsync();
             }
             return RedirectToAction("Index");

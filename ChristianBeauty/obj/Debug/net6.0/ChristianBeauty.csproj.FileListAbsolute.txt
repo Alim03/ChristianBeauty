@@ -4340,15 +4340,6 @@ C:\Users\a.rahmani\Desktop\2\ChristianBeauty\obj\Debug\net6.0\refint\ChristianBe
 C:\Users\a.rahmani\Desktop\2\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.pdb
 C:\Users\a.rahmani\Desktop\2\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.genruntimeconfig.cache
 C:\Users\a.rahmani\Desktop\2\ChristianBeauty\obj\Debug\net6.0\ref\ChristianBeauty.dll
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.csproj.AssemblyReference.cache
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.AssemblyInfoInputs.cache
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.AssemblyInfo.cs
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.csproj.CoreCompileInputs.cache
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cache
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cs
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\appsettings.json
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\ChristianBeauty.staticwebassets.runtime.json
@@ -4866,6 +4857,15 @@ C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\runt
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.csproj.AssemblyReference.cache
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.AssemblyInfoInputs.cache
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.AssemblyInfo.cs
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.csproj.CoreCompileInputs.cache
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cache
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cs
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.ChristianBeauty.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.build.ChristianBeauty.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ChristianBeauty.props
@@ -4882,3 +4882,5 @@ C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\refi
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.pdb
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.genruntimeconfig.cache
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ref\ChristianBeauty.dll
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\SixLabors.ImageSharp.dll
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.sourcelink.json

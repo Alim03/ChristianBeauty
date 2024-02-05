@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "D0KmLsfditkqX1v+05DRe2bJxBF6KtBHmeczDgXUcKkh5HVWm8eGsHNioigt/BaLk4MbikhqKUsb7hBMw/CUdg==",
+  "dgSpecHash": "Bu6lwd76VhFvzEJQKTI/pNHBrwZDvn9wQXPwT4nmHhgQZ6udNVXRQdXnyw7qNoz4cpq2a2fKAVSaKCq/4T/P5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\ChristianBeauty.csproj",
   "expectedPackageFiles": [
@@ -145,6 +145,7 @@
     "C:\\Users\\Ariyan\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Ariyan\\.nuget\\packages\\sixlabors.imagesharp\\3.1.2\\sixlabors.imagesharp.3.1.2.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Ariyan\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

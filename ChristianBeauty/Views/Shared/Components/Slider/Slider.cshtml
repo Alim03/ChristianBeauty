@@ -34,8 +34,12 @@
                         {
                     <div class="slider-thumbnail slide  thumbnail-overlay">
                         <a href="product-details.html">
+
+                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId">
                             <img src="~/images/ProductImages/@item.Image"
                                  alt="NFT_portfolio">
+                                </a>
+
                         </a>
                         <div class="read-wrapper">
                             <h5>@item.Tittle</h5>

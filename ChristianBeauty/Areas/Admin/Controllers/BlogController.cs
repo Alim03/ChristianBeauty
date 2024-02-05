@@ -23,7 +23,6 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             _repository = blogsRepository;
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
-
         }
         public async Task<IActionResult> Index()
         {

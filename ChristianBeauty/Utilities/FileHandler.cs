@@ -1,4 +1,8 @@
-﻿namespace ChristianBeauty.Utilities
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+using System.IO;
+
+namespace ChristianBeauty.Utilities
 {
     public static class FileHandler
     {
@@ -11,22 +15,35 @@
                     webHostEnvironment.WebRootPath,
                     "Images",
                     "ProductImages"
-                );   
+                );
 
-                // Check if the target folder exists, create it if not
                 if (!Directory.Exists(uploadFolderPath))
                 {
                     Directory.CreateDirectory(uploadFolderPath);
                 }
-
                 var filePath = Path.Combine(uploadFolderPath, uniqueFileName);
 
-                using var stream = new FileStream(filePath, FileMode.Create);
-                await formFile.CopyToAsync(stream);
-
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await formFile.CopyToAsync(stream);
+                }
+                ResizeImageAsync(filePath);
                 return uniqueFileName;
             }
             return null;
+        }
+
+        private static void ResizeImageAsync(string originalImagePath)
+        {
+            using (var image = Image.Load(originalImagePath))
+            {
+                image.Mutate(x => x.Resize(new ResizeOptions
+                {
+                    Size = new Size(1000, 1000),
+                    Mode = ResizeMode.Max 
+                }));
+                image.Save(originalImagePath);
+            }
         }
 
         public static void DeleteImage(string imageName, IWebHostEnvironment webHostEnvironment)
@@ -41,8 +58,6 @@
             if (System.IO.File.Exists(filePath))
             {
                 System.IO.File.Delete(filePath);
-
-                // Check if the folder is empty after deleting the file
                 var folderPath = Path.GetDirectoryName(filePath);
                 if (Directory.GetFiles(folderPath).Length == 0)
                 {
