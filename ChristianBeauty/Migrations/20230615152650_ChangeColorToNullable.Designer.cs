@@ -116,7 +116,7 @@ namespace ChristianBeauty.Migrations
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
 
-                    b.Property<bool>("IsFinished")
+                    b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
                     b.Property<int>("MaterialId")

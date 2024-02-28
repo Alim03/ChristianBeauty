@@ -195,10 +195,10 @@ namespace ChristianBeauty.Migrations
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
 
-                    b.Property<bool>("IsEnable")
+                    b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFinished")
+                    b.Property<bool>("IsEnable")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsTopSeller")

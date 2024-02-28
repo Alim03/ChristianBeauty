@@ -1,9 +1,12 @@
 ﻿@model ChristianBeauty.ViewModels.Products.EditProductViewModel
 @{
     ViewData["Title"] = "Home Page";
+    var imageIndex = 1;
+
+
 }
 @{
-    var IsFinishedSelectListItems = new List<SelectListItem>
+    var IsAvailableSelectListItems = new List<SelectListItem>
     {
     new SelectListItem { Text = "موجود", Value = "False" },
     new SelectListItem { Text = "ناموجود", Value = "True" }
@@ -19,24 +22,6 @@
     new SelectListItem { Text = "نیست", Value = "True" }
     };
 }
-@*<div class="rn-breadcrumb-inner ptb--30">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-end">ساختن مجموعه</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="index.html">خانه</a></li>
-                    <li class="separator"><i class="feather-chevron-left"></i></li>
-                    <li class="item current">ساختن مجموعه</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-*@
-
 <div class="creat-collection-area pt--80 pt--50" style="padding-right: 320px !important;">
     <div class="container">
         <div class="table-title-area d-flex" style="justify-content: space-between;display: flex;align-items: baseline;">
@@ -45,36 +30,43 @@
 
         </div>
         <div class="row g-5 ">
-            <form asp-controller="product" asp-action="Edit" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">
-                <div class="col-lg-3 offset-1 ml_md--0 ml_sm--0">
-
+            <form onsubmit="return mySubmitFunction(event)" asp-controller="product" asp-action="Edit" id="formEdit" style="display:contents !important" enctype="multipart/form-data" method="post">
+                <div class="col-lg-3 offset-1 ml_md--0 ml_sm--0" id="image-upload-container">
+                    <button type="button" onclick="addImageInput()"
+                            class="btn btn-primary mb-5">
+                        <i data-feather="plus"></i>
+                        اضافه کردن عکس
+                    </button>
                     @if (Model.Gallery != null && Model.Gallery.Count > 0)
                     {
-                        var index = 1;
                         foreach (var image in Model.Gallery)
                         {
                             <div class="collection-single-wized banner">
-                                <label class="title">تصویر محصول @index</label>
-
+                                <label class="title required">تصویر محصول @imageIndex</label>
+                                <label onclick="deleteExistingImage()" class="lableForAdd" for="title" title="No File Choosen">
+                                    <a asp-controller="Product" class="deleteLink" id="deleteLink-@image.Id" asp-action="DeleteImage" asp-route-imageId="@image.Id"><span class="text-center color-white">حذف<i class="feather-x"></i></span></a>
+                                </label>
                                 <div class="create-collection-input feature-image">
                                     <div class="logo-c-image feature">
-                                        <img id="rbtinput_@index" src="/Images/ProductImages/@image.ImageName" alt="Profile-NFT">
-                                        <label for="nipa_@index" title="No File Choosen">
+                                        <img id="rbtinput_@imageIndex" src="/Images/ProductImages/@image.ImageName" alt="Profile-NFT">
+                                        <label for="nipa_@imageIndex" title="No File Choosen">
                                             <span class="text-center color-white"><i class="feather-edit"></i></span>
                                         </label>
                                     </div>
                                     <div class="button-area">
                                         <div class="brows-file-wrapper">
-                                            <input onchange="updateImage(this)" name="gallery" tabindex="@image.Id" id="nipa_@index" type="file">
+                                            <input onchange="updateImage(this)" data-HasValue="True" name="gallery" tabindex="@image.Id" id="nipa_@imageIndex" type="file">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            index++;
+                            imageIndex++;
                         }
                     }
+           
 
                 </div>
+
 
                 <div class="col-lg-7">
                     <div class="create-collection-form-wrapper">
@@ -91,7 +83,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="collection-single-wized">
-                                    <label for="url" class="title">کد محصول:</label>
+                                    <label for="url" class="title required">کد محصول:</label>
                                     <div class="create-collection-input">
                                         <input asp-for="ProductCode" />
                                         <span asp-validation-for="ProductCode" class="text-danger"></span>
@@ -161,8 +153,8 @@
                                     <label for="url" class="title">وضعیت موجودی:</label>
                                     <div class="single-notice-setting" style="padding: 16px !important;">
                                         <div class="input">
-                                            <input asp-for="IsFinished" type="checkbox" id="IsFinished" name="IsFinished" class="theme-switch__input">
-                                            <label for="IsFinished" class="theme-switch__label">
+                                            <input asp-for="IsAvailable" type="checkbox" id="IsAvailable" name="IsAvailable" class="theme-switch__input">
+                                            <label for="IsAvailable" class="theme-switch__label">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -184,7 +176,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="collection-single-wized">
-                                    <label class="title mt-3">جنس محصول:</label>
+                                    <label class="title required mt-3">جنس محصول:</label>
                                     <div class="create-collection-input">
                                         <select class="nice-select" asp-for="SelectedMaterialId" asp-items=@Model.Materials>
                                             <option value="">-- Select --</option>
@@ -196,8 +188,8 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="collection-single-wized">
-                                    <label class="title mt-3">  دسته بندی:</label>
-                                    <div  class="create-collection-input">
+                                    <label class="title required mt-3">  دسته بندی:</label>
+                                    <div class="create-collection-input">
                                         <select onchange="getComboA(this)" class="nice-select" id="SelectedCategoryId" asp-for="SelectedCategoryId" asp-items=@Model.Categories>
                                             <option value="">-- Select --</option>
 
@@ -210,11 +202,11 @@
                             <div class="col-lg-4">
                                 <div class="collection-single-wized">
                                     <label class="title mt-3">:زیر مجموعه</label>
-                                    <div id ="divSelect" class="create-collection-input">
+                                    <div id="divSelect" class="create-collection-input">
                                         <select class="nice-select" id="SelectedSubCategoryId" asp-for="SelectedSubCategoryId" asp-items=@Model.SubCategories>
                                             @if (Model.SubCategories == null || Model.SubCategories.Count <= 0)
                                             {
-                                                <option >بدون زیر مجموعه </option>
+                                                <option>بدون زیر مجموعه </option>
                                             }
                                         </select>
                                         <span asp-validation-for="SelectedSubCategoryId" class="text-danger"></span>
@@ -233,12 +225,15 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="button-wrapper">
-                                    <!-- <a href="#" class="btn btn-primary btn-large mr--30" data-bs-toggle="modal" data-bs-target="#collectionModal">Preview</a> -->
-                                    <button type="reset" class="btn btn-primary-alta  btn-large" style="
-    margin-left: 10px;">
+                                    <button type="reset" class="btn btn-primary-alta  btn-large" style="margin-left: 10px;">
                                         انصراف
                                     </button>
-                                    <button type="submit" class="btn btn-success btn-large">ثبت</button>
+                                    <button type="submit" class="btn btn-success btn-large" style="padding-right:45px">
+
+                                        ثبت
+                                        <img id="loadingImage" class="d-none" src="~/Images/loader.svg" style="width: 25px; height: 25px;" />
+
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -248,6 +243,8 @@
         </div>
     </div>
 </div>
+<script src="~/js/vendor/jquery.js"></script>
+
 <script>
 
     function getComboA(selectObject) {
@@ -266,7 +263,7 @@
                     sel.setAttribute('id', 'SelectedSubCategoryId')
                     subCategoryDropdown.appendChild(sel);
                     data.forEach(subCategory => {
-                
+
                         const option = document.createElement('option');
                         option.value = subCategory.id;
                         option.textContent = subCategory.name;
@@ -280,10 +277,11 @@
 
 
     function updateImage(input) {
+        input.setAttribute('data-hasvalue', 'True');
         var hiddenInput = document.createElement("input");
         var formEdit = document.getElementById("formEdit")
         hiddenInput.setAttribute("type", "hidden");
-
+        hiddenInput.setAttribute("data-HasValue", "True");
         hiddenInput.setAttribute("name", "ChangedImagesIds");
         hiddenInput.setAttribute("value", input.tabIndex);
         formEdit.appendChild(hiddenInput);
@@ -299,5 +297,141 @@
             reader.readAsDataURL(file);
         }
     }
+    let index = 0;
+    index += @imageIndex;
+
+
+
+    function addImageInput() {
+
+
+        if (index >= 4) {
+            return Swal.fire({
+                icon: "error",
+                title: "خطا ...",
+                text: "حداکثر 3 تصویر میتوان انتخاب کرد",
+            });
+        }
+        var inputs = document.getElementsByName('gallery');
+        for (var p = 0; p < inputs.length; p++) {
+            var hasValue = inputs[p].getAttribute('data-hasvalue');
+            if (hasValue === "False") {
+                return Swal.fire({
+                    icon: "error",
+                    title: "خطا ...",
+                    text: "قبل از ایجاد تصویر جدید باید تصویر قبلی را انتخاب کنید",
+                });
+            }
+        }
+
+
+
+        var container = document.getElementById('image-upload-container');
+        var input = document.createElement('div');
+        input.classList.add("collection-single-wized");
+        input.classList.add("banner");
+        input.setAttribute('id', 'div-' + index);
+        input.innerHTML = `
+                        <label onclick="deleteImageInput(${index})"  class="lableForAdd" for="title" title="No File Choosen">
+                        <span class="text-center color-white">حذف<i class="feather-x"></i></span>
+                                        </label>
+                                <label class="title"> تصویر محصول ${index}</label>
+                            <div class="create-collection-input feature-image">
+                                <div class="logo-c-image feature">
+                                        <img id="rbtinput_${index}" src="https://maxphone.rs/themes/shop/noimage.jpg" alt="Profile-NFT">
+                                            <label for="nipa_${index}" title="No File Choosen">
+                                            <span class="text-center color-white" ><i class="feather-edit"></i></span>
+                                                </label>
+                                                </div>
+                                                <div class="button-area">
+                                                    <div class="brows-file-wrapper">
+                                                                    <input onchange="updateImage(this)" data-HasValue="False" name="gallery"  id="nipa_${index}" type="file">
+                                                            </div>
+                                                            </div>
+                                                            </div>
+                                                        `;
+        container.appendChild(input);
+        const newScript = document.createElement("script");
+        newScript.src = "/js/main.js";
+        const existingScript = document.querySelector("script[src='/js/main.js']");
+        existingScript.parentNode.replaceChild(newScript, existingScript);
+        index++;
+    }
+    function deleteImageInput(element) {
+        // alert(element)
+        document.getElementById('div-' + element).remove();
+        index--;
+    }
+
+
+
+    function confirmDelete(id) {
+        Swal.fire({
+            title: "آیا از حذف این تصویر مطمعن هستید؟",
+            text: "امکان بازگشت  وجود ندارد!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "بله, حذف شود!",
+            cancelButtonText: "خیر",
+            width: '800px'
+
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = document.getElementById(id).getAttribute('href');
+            }
+        });
+    }
+
+    // document.getElementsByClassName('deleteLink').addEventListener('click', function (event) {
+    //     event.preventDefault();
+    //     confirmDelete();
+    // });
+
+    $(document).on('click', '.deleteLink', function (event) {
+        event.preventDefault();
+        var imageId = $(this).attr("id");
+        confirmDelete(imageId);
+    });
+
+
+    function mySubmitFunction() {
+        $('#loadingImage').removeClass('d-none')
+        var name = document.getElementById('Name').value.trim();
+        var productCode = document.getElementById('ProductCode').value.trim();
+        var productMaterial = document.getElementById('SelectedMaterialId').value;
+        var productCategory = document.getElementById('SelectedCategoryId').value;
+
+        let invalids = "";
+
+        if (name === '') {
+            invalids += "*نام محصول\n";
+        }
+        if (productCode === '') {
+            invalids += "*کد محصول\n";
+        }
+        if (productMaterial === '0') {
+            invalids += "*جنس محصول\n";
+        }
+        if (productCategory === '0') {
+            invalids += "*دسته بندی محصول\n";
+        }
+
+        var fileInputs = document.getElementsByClassName("productImages");
+        for (var i = 0; i < fileInputs.length; i++) {
+            if (fileInputs[i].value === '') {
+                invalids += "* تصویر محصول\n";
+            }
+        }
+
+
+        if (invalids !== '') {
+            alert('لطفاً \n' + invalids + ' را وارد نمایید');
+            $('#loadingImage').addClass('d-none');
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
 </script>

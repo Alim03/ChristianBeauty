@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,14 +9,16 @@ namespace ChristianBeauty.ViewModels.Products
 {
     public class AddProductViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="وارد کردن نام محصول الزامیست")]
         [MaxLength(64)]
         public string Name { get; set; }
-        public bool IsFinished { get; set; }
-        public bool IsTopSeller { get; set; }
+        public bool IsAvailable { get; set; } = true ;
+        public bool IsTopSeller { get; set; } 
 
 
         [MaxLength(64)]
+        [Required(ErrorMessage = "وارد کردن کد محصول الزامیست")]
+
         public string ProductCode { get; set; }
 
         [MaxLength(512)]
@@ -35,18 +37,24 @@ namespace ChristianBeauty.ViewModels.Products
 
         [MaxLength(256)]
         public string? BasalamLink { get; set; }
+        [Required(ErrorMessage = "وارد کردن جنس محصول الزامیست")]
+
         public int SelectedMaterialId { get; set; }
 
         public List<SelectListItem>? Materials { get; set; }
+        [Required(ErrorMessage = "وارد کردن دسته بندی محصول الزامیست")]
+
         public int SelectedCategoryId { get; set; }
 
+
         public List<SelectListItem>? Categories { get; set; }
+
 
         public int? SelectedSubCategoryId { get; set; }
 
         public List<SelectListItem>? SubCategories { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "وارد کردن  تصویر محصول الزامیست")]
         public IFormFileCollection Gallery { get; set; }
     }
 }

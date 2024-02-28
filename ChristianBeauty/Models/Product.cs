@@ -13,7 +13,7 @@ namespace ChristianBeauty.Models
         [Required]
         [MaxLength(64)]
         public string Name { get; set; }
-        public bool IsFinished { get; set; }
+        public bool IsAvailable { get; set; }
         public bool IsTopSeller { get; set; }
 
 

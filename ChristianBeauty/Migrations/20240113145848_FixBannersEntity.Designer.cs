@@ -200,7 +200,7 @@ namespace ChristianBeauty.Migrations
                     b.Property<bool>("IsEnable")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFinished")
+                    b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsTopSeller")

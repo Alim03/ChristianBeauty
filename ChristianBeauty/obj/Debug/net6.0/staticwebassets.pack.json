@@ -125,6 +125,10 @@
       "PackagePath": "staticwebassets\\Images\\ProductImages\\1_20230702222742195.jpg"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\20240125_234724_20240224131018186.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\20240125_234724_20240224131018186.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123650909.jpg",
       "PackagePath": "staticwebassets\\Images\\ProductImages\\20mag-still-processing-1-superJumbo-1200x806_20230908123650909.jpg"
     },
@@ -201,6 +205,22 @@
       "PackagePath": "staticwebassets\\Images\\ProductImages\\727399_20230904201958082.png"
     },
     {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\Ali_20240226131818659.png",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\Ali_20240226131818659.png"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\IMG_8017 copy_20240224133613851.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\IMG_8017 copy_20240224133613851.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\IMG_8017 copy_20240228134445708.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\IMG_8017 copy_20240228134445708.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\IMG_8017 copy_20240228135743066.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\IMG_8017 copy_20240228135743066.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\MahoorBack_20230904201958008.png",
       "PackagePath": "staticwebassets\\Images\\ProductImages\\MahoorBack_20230904201958008.png"
     },
@@ -271,6 +291,18 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\main-qimg-5914382a76faa4c3ab821bee57f20e02-lq_20230714124900247.jpeg",
       "PackagePath": "staticwebassets\\Images\\ProductImages\\main-qimg-5914382a76faa4c3ab821bee57f20e02-lq_20230714124900247.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\photo_2023-08-06_10-40-44_20240226131819286.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\photo_2023-08-06_10-40-44_20240226131819286.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\photo_2024-02-19_12-04-07_20240226130548864.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\photo_2024-02-19_12-04-07_20240226130548864.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\photo_2024-02-19_12-04-07_20240226133114681.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProductImages\\photo_2024-02-19_12-04-07_20240226133114681.jpg"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\ProductImages\\radiohead_20230713203417704.jpg",
@@ -427,6 +459,10 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\icons\\vector.svg",
       "PackagePath": "staticwebassets\\Images\\icons\\vector.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\loader.svg",
+      "PackagePath": "staticwebassets\\Images\\loader.svg"
     },
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\Images\\logo\\1111.png",
@@ -1079,6 +1115,14 @@
     {
       "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\lib\\sweetalert2.all.min.js",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2.all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ariyan\\Desktop\\Christianbeauty\\cb\\ChristianBeauty\\wwwroot\\lib\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2.min.css"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChristianBeauty.Microsoft.AspNetCore.StaticWebAssets.props",

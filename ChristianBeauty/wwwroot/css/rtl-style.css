@@ -24215,6 +24215,14 @@ body.active-light-mode {
 }
 
 
+.swal-wide {
+    width: 850px !important;
+}
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+}
+
 
 
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChristianBeauty")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+302375f147defe9b1c6ecf7156f5b909f9187320")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChristianBeauty")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChristianBeauty")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

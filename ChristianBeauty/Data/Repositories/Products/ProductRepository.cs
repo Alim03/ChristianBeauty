@@ -65,7 +65,7 @@ namespace ChristianBeauty.Data.Repositories.Products
         {
             int skip = (pageNumber - 1) * pageSize;
             return await Context.Products.Include(c => c.Gallery).Include(p => p.Category).Skip(skip)
-                .Take(pageSize).ToListAsync();
+                .Take(pageSize).OrderByDescending(x=>x.CreatedDate).ToListAsync();
         }
         public async Task<List<Product>> GetAllProductWithImagesEagerByFilterLoadAsync(int pageNumber, string? searchKey, int pageSize, int? categoryId,
             int? materialId,
@@ -102,15 +102,15 @@ namespace ChristianBeauty.Data.Repositories.Products
             {
                 if (has_selling_stock.Value == 1)
                 {
-                    query = query.Where(x => x.IsFinished != null);
+                    query = query.Where(x => x.IsAvailable != null);
                 }
                 if (has_selling_stock.Value == 2)
                 {
-                    query = query.Where(x => x.IsFinished == false);
+                    query = query.Where(x => x.IsAvailable == false);
                 }
                 if (has_selling_stock.Value == 3)
                 {
-                    query = query.Where(x => x.IsFinished == true);
+                    query = query.Where(x => x.IsAvailable == true);
                 }
 
             }
@@ -128,7 +128,7 @@ namespace ChristianBeauty.Data.Repositories.Products
             }
             int skip = (pageNumber - 1) * pageSize;
             return await query.Include(c => c.Gallery).Include(p => p.Category).Skip(skip)
-                .Take(pageSize).ToListAsync();
+                .Take(pageSize).OrderByDescending(x => x.CreatedDate).ToListAsync();
         }
 
         public async Task<List<Product>> GetPaginatedProductsAsync(int pageNumber, int pageSize)
@@ -212,15 +212,15 @@ namespace ChristianBeauty.Data.Repositories.Products
             {
                 if (has_selling_stock.Value == 1)
                 {
-                    query = query.Where(x => x.IsFinished != null);
+                    query = query.Where(x => x.IsAvailable != null);
                 }
                 if (has_selling_stock.Value==2)
                 {
-                    query = query.Where(x => x.IsFinished == false);
+                    query = query.Where(x => x.IsAvailable == false);
                 }
                 if (has_selling_stock.Value == 3)
                 {
-                    query = query.Where(x => x.IsFinished == true);
+                    query = query.Where(x => x.IsAvailable == true);
                 }
 
             }
@@ -288,15 +288,15 @@ namespace ChristianBeauty.Data.Repositories.Products
             {
                 if (has_selling_stock.Value == 1)
                 {
-                    query = query.Where(x => x.IsFinished != null);
+                    query = query.Where(x => x.IsAvailable != null);
                 }
                 if (has_selling_stock.Value == 2)
                 {
-                    query = query.Where(x => x.IsFinished == true);
+                    query = query.Where(x => x.IsAvailable == true);
                 }
                 if (has_selling_stock.Value == 3)
                 {
-                    query = query.Where(x => x.IsFinished == false);
+                    query = query.Where(x => x.IsAvailable == false);
                 }
 
             }

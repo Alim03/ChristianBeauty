@@ -7,7 +7,7 @@ namespace ChristianBeauty.ViewModels.Products
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsFinished { get; set; }
+        public bool IsAvailable { get; set; }
         public string ProductCode { get; set; }
         public int? Color { get; set; }
         public string? Description { get; set; }

@@ -4693,6 +4693,7 @@ C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\NuGe
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\NuGet.ProjectModel.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\NuGet.Protocol.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\NuGet.Versioning.dll
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\SixLabors.ImageSharp.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\System.Composition.Convention.dll
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\System.Composition.Hosting.dll
@@ -4866,13 +4867,14 @@ C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\Chri
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cache
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.RazorAssemblyInfo.cs
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.sourcelink.json
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.ChristianBeauty.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.build.ChristianBeauty.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ChristianBeauty.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ChristianBeauty.props
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\scopedcss\bundle\ChristianBeauty.styles.css
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\scopedcss\projectbundle\ChristianBeauty.bundle.scp.css
@@ -4882,5 +4884,3 @@ C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\refi
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.pdb
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.genruntimeconfig.cache
 C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ref\ChristianBeauty.dll
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\bin\Debug\net6.0\SixLabors.ImageSharp.dll
-C:\Users\Ariyan\Desktop\Christianbeauty\cb\ChristianBeauty\obj\Debug\net6.0\ChristianBeauty.sourcelink.json

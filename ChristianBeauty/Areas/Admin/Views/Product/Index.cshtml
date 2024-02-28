@@ -28,6 +28,7 @@
     }
 
 </style>
+
 <div class="rn-upcoming-area rn-section-gap pt--50" style="padding-right: 320px !important;">
     <div class="container">
         <div class="row">
@@ -242,7 +243,10 @@
                                         <td>
                                             <div class="product-wrapper d-flex align-items-center" style="padding-right: 18px !important;">
                                                 <a href="product-details.html" class="thumbnail">
-                                                    <img src="~/Images/ProductImages/@item.Gallery.First().ImageName" alt="Nft_Profile">
+                                                    @if (item.Gallery.Any() && item.Gallery.First().ImageName != null)
+                                                    {
+                                                        <img src="~/Images/ProductImages/@item.Gallery.First().ImageName" alt="Nft_Profile">
+                                                    }
                                                 </a>
                                             </div>
                                         </td>
@@ -263,14 +267,13 @@
                                         <td><span>@Utilites.PersianDateConverter(@item.CreatedDate)</span></td>
                                         <td>
                                             @{
-                                                if (item.IsFinished == true)
+                                                if (item.IsAvailable == true)
                                                 {
-                                                    <span><i class="feather-x" style="font-size:25px;"></i></span>
+                                                    <span><i data-feather="check"></i></span>
                                                 }
                                                 else
                                                 {
-                                                    <span><i data-feather="check"></i></span>
-
+                                                    <span><i class="feather-x" style="font-size:25px;"></i></span>
                                                 }
                                             }
                                         </td>
@@ -308,7 +311,7 @@
 
                                             <a asp-controller="Product" asp-action="Edit" style="color: #1b8d82 !important;" asp-route-id="@item.Id"><i data-feather="edit"></i></a>
                                             |
-                                            <a asp-controller="Product" asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@item.Id"><i data-feather="delete"></i></a>
+                                            <a asp-controller="Product" id="deleteLink" asp-action="Delete" style="color: #a70000 !important;" asp-route-id="@item.Id"><i data-feather="trash"></i></a>
                                         </td>
 
                                     </tr>
@@ -369,7 +372,33 @@
 </div>
 
 
+
 <script>
+
+    function confirmDelete() {
+        Swal.fire({
+            title: "آیا از حذف این محصول مطمعن هستید؟",
+            text: "امکان بازگشت  وجود ندارد!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "بله, حذف شود!",
+            cancelButtonText: "خیر",
+            width: '800px'
+
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = document.getElementById('deleteLink').getAttribute('href');
+            }
+        });
+    }
+
+    document.getElementById('deleteLink').addEventListener('click', function (event) {
+        event.preventDefault();
+        confirmDelete();
+    });
+
+
+
     function removeParameter(url, parameter) {
         var urlParts = url.split('?');
         if (urlParts.length >= 2) {

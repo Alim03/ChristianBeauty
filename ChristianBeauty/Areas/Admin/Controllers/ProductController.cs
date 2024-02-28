@@ -286,10 +286,13 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             {
                 foreach (var id in ChangedImagesIds)
                 {
+                    if(id != 0)
+                    {
                     var image = await _galleryRepository.GetImageByIdAsync(id);
                     _galleryRepository.Remove(image);
                     await _galleryRepository.SaveAsync();
                     FileHandler.DeleteImage(image.ImageName,_webHostEnvironment);
+                    }
                 }
                 foreach (var item in Gallery)
                 {
@@ -303,6 +306,7 @@ namespace ChristianBeauty.Areas.Admin.Controllers
                 }
             }
             return RedirectToAction("Index");
+
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -327,5 +331,22 @@ namespace ChristianBeauty.Areas.Admin.Controllers
             var subcategories = _categoryRepository.GetAllParentsSubCategories(categoryId);
             return Json(subcategories);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteImage(int imageId)
+        {
+            var image = await _galleryRepository.GetAsync(imageId);
+            if (image != null)
+            {
+                _galleryRepository.Remove(image);
+                await _repository.SaveAsync();
+                FileHandler.DeleteImage(image.ImageName, _webHostEnvironment);
+                return RedirectToAction("Edit", new { id = image?.ProductId });
+            }
+            return RedirectToAction("Index");
+
+        }
+
+
     }
 }

@@ -48,7 +48,7 @@ namespace ChristianBeauty.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
-                    IsFinished = table.Column<bool>(type: "bit", nullable: false),
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: false),
                     ProductCode = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
                     Color = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(512)", maxLength: 512, nullable: true),
